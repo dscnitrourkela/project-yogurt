@@ -36,9 +36,40 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Background Colors */
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
 
+  /* Primary Brand Colors */
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-soft: var(--color-primary-soft);
+
+  /* Neutral / Gray Scale */
+  --color-gray-50: var(--color-gray-50);
+  --color-gray-100: var(--color-gray-100);
+  --color-gray-200: var(--color-gray-200);
+  --color-gray-300: var(--color-gray-300);
+  --color-gray-400: var(--color-gray-400);
+  --color-gray-500: var(--color-gray-500);
+  --color-gray-600: var(--color-gray-600);
+  --color-gray-700: var(--color-gray-700);
+  --color-gray-800: var(--color-gray-800);
+  --color-gray-900: var(--color-gray-900);
+
+  /* Accent / Secondary */
+  --color-accent: var(--color-accent);
+  --color-purple-dark: var(--color-purple-dark);
+
+  /* Custom Usage */
+  --color-heading: var(--color-heading);
+  --color-subheading: var(--color-subheading);
+  --color-button-primary: var(--color-button-primary);
+  --color-button-secondary: var(--color-button-secondary);
+  --color-border: var(--color-border);
+
+  /* Font Families */
   --font-averta-std: var(--font-averta-std);
   --font-grutch-shaded: var(--font-grutch-shaded);
   --font-museo: var(--font-museo);
