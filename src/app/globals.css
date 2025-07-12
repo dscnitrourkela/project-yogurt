@@ -1,8 +1,38 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background Colors */
+  --color-background: #f2f3f7;
+  --color-foreground: #000000;
+
+  /* Primary Brand Colors */
+  --color-primary: #0534c7;
+  --color-primary-dark: #1f3784;
+  --color-primary-light: #2f5df0;
+  --color-primary-soft: #c9d6ff;
+
+  /* Neutral / Gray Scale */
+  --color-gray-50: #ffffff;
+  --color-gray-100: #f2f3f7;
+  --color-gray-200: #d8d8d8;
+  --color-gray-300: #c7c7c7;
+  --color-gray-400: #a0a0a0;
+  --color-gray-500: #6a6a6a;
+  --color-gray-600: #4f546b;
+  --color-gray-700: #3b3b3b;
+  --color-gray-800: #313131;
+  --color-gray-900: #020202;
+
+  /* Accent / Secondary */
+  --color-accent: #e2e2c2;
+  --color-purple-dark: #190c15;
+
+  /* Custom Usage (if needed) */
+  --color-heading: #000000;
+  --color-subheading: #4f546b;
+  --color-button-primary: #0534c7;
+  --color-button-secondary: #2f5df0;
+  --color-border: #d8d8d8;
 }
 
 @theme inline {
@@ -15,13 +45,6 @@
   --font-sketch-block: var(--font-sketch-block);
   --font-wc-rough-trad: var(--font-wc-rough-trad);
   --font-cabin-sketch: var(--font-cabin-sketch);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
