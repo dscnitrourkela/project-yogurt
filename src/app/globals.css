@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -8,8 +8,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --font-averta-std: var(--font-averta-std);
+  --font-grutch-shaded: var(--font-grutch-shaded);
+  --font-museo: var(--font-museo);
+  --font-sketch-block: var(--font-sketch-block);
+  --font-wc-rough-trad: var(--font-wc-rough-trad);
+  --font-cabin-sketch: var(--font-cabin-sketch);
 }
 
 @media (prefers-color-scheme: dark) {
