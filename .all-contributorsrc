@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "ayussh-2",
+      "name": "Ayush",
+      "avatar_url": "https://avatars.githubusercontent.com/u/135319056?v=4",
+      "profile": "https://ayussh.vercel.app/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "project-yogurt",
+  "projectOwner": "dscnitrourkela"
+}
