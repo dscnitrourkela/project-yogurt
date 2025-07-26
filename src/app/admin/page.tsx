@@ -16,6 +16,7 @@ import {
   where,
 } from 'firebase/firestore';
 
+import AuthGuard from '@/components/admin/auth-guard';
 import DataTable from '@/components/admin/data-table';
 import EmailCell from '@/components/admin/email-cell';
 import Pagination from '@/components/admin/pagination';
@@ -23,6 +24,8 @@ import StatsCard from '@/components/admin/stats-card';
 import StatusCell from '@/components/admin/status-cell';
 import Typography from '@/components/Typography';
 import Loader from '@/components/ui/loader';
+import { useAdminAuth } from '@/hooks/use-admin-auth';
+import { clearAdminSession } from '@/lib/admin-auth';
 import { db } from '@/lib/firebase';
 import { ColumnDef } from '@tanstack/react-table';
 
@@ -49,7 +52,11 @@ export default function Page() {
   const [emailsSent, setEmailsSent] = useState(0);
   const [pendingEmails, setPendingEmails] = useState(0);
 
+  const { isAuthenticated, adminName } = useAdminAuth();
+
   useEffect(() => {
+    if (!isAuthenticated) return;
+
     setLoading(true);
     let q = query(
       collection(db, 'users'),
@@ -98,7 +105,7 @@ export default function Page() {
     );
 
     return () => unsubscribe();
-  }, [page, searchTerm]);
+  }, [page, searchTerm, isAuthenticated]);
 
   useEffect(() => {
     setPage(0);
@@ -125,8 +132,10 @@ export default function Page() {
   };
 
   useEffect(() => {
+    if (!isAuthenticated) return;
+
     fetchStats();
-  }, []);
+  }, [isAuthenticated]);
 
   const handlePageChange = (newPage: number) => {
     setPage(newPage);
@@ -147,11 +156,16 @@ export default function Page() {
     }
   };
 
+  const handleLogout = () => {
+    clearAdminSession();
+    window.location.href = '/admin/login';
+  };
+
   const columns: ColumnDef<User>[] = [
     {
       accessorKey: 'displayName',
       header: () => (
-        <Typography.H4 className="text-left mb-0">Name</Typography.H4>
+        <Typography.H6 className="text-left mb-0">Name</Typography.H6>
       ),
       cell: (info) => (
         <Typography.P className="mb-0 font-medium">
@@ -162,7 +176,7 @@ export default function Page() {
     {
       accessorKey: 'email',
       header: () => (
-        <Typography.H4 className="text-left mb-0">Email</Typography.H4>
+        <Typography.H6 className="text-left mb-0">Email</Typography.H6>
       ),
       cell: (info) => {
         const email = info.getValue() as string;
@@ -178,7 +192,7 @@ export default function Page() {
     {
       accessorKey: 'emailSent',
       header: () => (
-        <Typography.H4 className="text-left mb-0">Status</Typography.H4>
+        <Typography.H6 className="text-left mb-0">Status</Typography.H6>
       ),
       cell: (info) => {
         const user = info.row.original;
@@ -195,61 +209,74 @@ export default function Page() {
   const totalPages = Math.ceil(totalUsers / PAGE_SIZE);
 
   return (
-    <div className="min-h-screen bg-[var(--color-background)] p-4 sm:p-6 lg:p-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-8">
-          <Typography.H2 className="text-[var(--color-heading)] mb-2">
-            Admin Dashboard
-          </Typography.H2>
-        </div>
+    <AuthGuard>
+      <div className="min-h-screen bg-[var(--color-background)] p-4 sm:p-6 lg:p-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-8 flex justify-between items-center">
+            <Typography.H2 className="text-[var(--color-heading)] mb-0">
+              Admin Dashboard
+            </Typography.H2>
+            <div className="flex items-center gap-4">
+              <Typography.P className="text-[var(--color-text)] mb-0">
+                Welcome, {adminName}
+              </Typography.P>
+              <button
+                onClick={handleLogout}
+                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-colors"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          <StatsCard title="Total Users" value={totalUsers} />
-          <StatsCard
-            title="Emails Sent"
-            value={emailsSent}
-            titleColor="text-green-600"
-          />
-          <StatsCard
-            title="Pending"
-            value={pendingEmails}
-            titleColor="text-orange-600"
-          />
-        </div>
-
-        <div className="bg-white rounded-lg shadow-sm border border-[var(--color-border)] overflow-hidden">
-          <div className="p-6 border-b border-[var(--color-border)] flex justify-between items-center">
-            <Typography.H5 className="mb-0">User Management</Typography.H5>
-            <input
-              type="text"
-              placeholder="Search by name..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="p-2 border border-gray-300 rounded-md"
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <StatsCard title="Total Users" value={totalUsers} />
+            <StatsCard
+              title="Emails Sent"
+              value={emailsSent}
+              titleColor="text-green-600"
+            />
+            <StatsCard
+              title="Pending"
+              value={pendingEmails}
+              titleColor="text-orange-600"
             />
           </div>
 
-          {loading ? (
-            <div className="py-10 w-full flex justify-center">
-              <Loader />
+          <div className="bg-white rounded-lg shadow-sm border border-[var(--color-border)] overflow-hidden">
+            <div className="p-6 border-b border-[var(--color-border)] flex justify-between items-center">
+              <Typography.H5 className="mb-0">User Management</Typography.H5>
+              <input
+                type="text"
+                placeholder="Search by name..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="p-2 border border-gray-300 rounded-md"
+              />
             </div>
-          ) : (
-            <>
-              <DataTable data={users} columns={columns} />
 
-              {totalUsers > PAGE_SIZE && (
-                <Pagination
-                  currentPage={page}
-                  totalPages={totalPages}
-                  totalItems={totalUsers}
-                  pageSize={PAGE_SIZE}
-                  onPageChange={handlePageChange}
-                />
-              )}
-            </>
-          )}
+            {loading ? (
+              <div className="py-10 w-full flex justify-center">
+                <Loader />
+              </div>
+            ) : (
+              <>
+                <DataTable data={users} columns={columns} />
+
+                {totalUsers > PAGE_SIZE && (
+                  <Pagination
+                    currentPage={page}
+                    totalPages={totalPages}
+                    totalItems={totalUsers}
+                    pageSize={PAGE_SIZE}
+                    onPageChange={handlePageChange}
+                  />
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </AuthGuard>
   );
 }

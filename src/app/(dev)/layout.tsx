@@ -1,5 +1,6 @@
-import { Typography } from '@/components';
 import Link from 'next/link';
+
+import { Typography } from '@/components';
 
 export default function DevLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -29,6 +30,11 @@ export default function DevLayout({ children }: { children: React.ReactNode }) {
           <li>
             <Link href="/upload" className="hover:underline">
               <Typography.P className="text-white">Upload Asset</Typography.P>
+            </Link>
+          </li>
+          <li>
+            <Link href="/admin" className="hover:underline">
+              <Typography.P className="text-white">Admin</Typography.P>
             </Link>
           </li>
         </ul>

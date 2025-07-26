@@ -8,7 +8,7 @@ import {
   signInWithPopup,
   User,
 } from 'firebase/auth';
-import { collection, doc, setDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
 
 import { auth, db } from '@/lib/firebase';
 
@@ -17,11 +17,25 @@ import Loader from '../ui/loader';
 
 export default function PreRegisterButton() {
   const [user, setUser] = useState<User | null>(null);
+  const [isRegistered, setIsRegistered] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
+
+      if (currentUser) {
+        try {
+          const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
+          setIsRegistered(userDoc.exists());
+        } catch (error) {
+          console.error('Error checking user registration:', error);
+          setIsRegistered(false);
+        }
+      } else {
+        setIsRegistered(false);
+      }
+
       setLoading(false);
     });
     return () => unsubscribe();
@@ -38,9 +52,11 @@ export default function PreRegisterButton() {
           displayName: result.user.displayName,
           email: result.user.email,
           photoURL: result.user.photoURL,
+          registeredAt: new Date().toISOString(),
         },
         { merge: true }
       );
+      setIsRegistered(true);
     } catch (error) {
       console.error('Error during Google sign-in:', error);
     } finally {
@@ -52,7 +68,7 @@ export default function PreRegisterButton() {
     return <Loader />;
   }
 
-  if (user) {
+  if (user && isRegistered) {
     return (
       <div className="flex items-center gap-2">
         <Typography.Badge>Pre Registered</Typography.Badge>
