@@ -8,7 +8,7 @@ export default function Clouds() {
 
   useEffect(() => {
     const checkScreen = () =>
-      setIsSmall(window.innerWidth < 450);
+      setIsSmall(window.innerWidth < 550);
     checkScreen();
     window.addEventListener('resize', checkScreen);
     return () => window.removeEventListener('resize', checkScreen);
@@ -34,19 +34,19 @@ export default function Clouds() {
       {/* Robot positioned above the clouds */}
       <div
         className="absolute 
-          top-[67%]
-          sm:top-[70%] 
-          md:top-[63%] 
-          lg:top-[55%] 
+          top-[57%]
+          sm:top-[57%] 
+          md:top-[53%] 
+          lg:top-[48%] 
           xl:top-[30%] 
           left-[46%] 
           transform -translate-x-1/2 
           z-5
-          w-60 h-60 
-          sm:w-32 sm:h-40 
-          md:w-40 md:h-52 
-          lg:w-48 lg:h-64 
-          xl:w-48 xl:h-75"
+          w-80 h-80 
+          sm:w-80 sm:h-80 
+          md:w-80 md:h-80 
+          lg:w-80 lg:h-80 
+          xl:w-80 xl:h-80"
       >
         <Image
           src="https://res.cloudinary.com/dscnitrourkela/image/upload/v1754161214/hacknitr/oislvrabhocrrdfojsdq.png"
