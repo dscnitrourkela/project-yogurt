@@ -77,12 +77,19 @@ export default function PreRegisterButton() {
   }
 
   return (
-    <button
-      className="cursor-pointer bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-      onClick={handleGoogleLogin}
-      disabled={loading}
-    >
-      <Typography.Muted className="text-white">Pre-register</Typography.Muted>
-    </button>
+    <div className="w-fit mt-4 mx-auto">
+      <div className="relative inline-block">
+        <div className="absolute inset-0 bg-black rounded -z-10 translate-x-1.5 translate-y-1.5" />
+        <button
+          onClick={handleGoogleLogin}
+          disabled={loading}
+          className="cursor-pointer bg-[#0534C7] px-6 py-4 h-14  rounded transition-colors hover:brightness-110 "
+        >
+          <Typography.P className="text-white  text-xl md:text-xl leading-snug text-center">
+            Pre register
+          </Typography.P>
+        </button>
+      </div>
+    </div>
   );
 }
