@@ -16,7 +16,6 @@ export default function Clouds() {
 
   return (
     <div className="w-full h-screen overflow-hidden">
-      {/* Background clouds */}
       <div className="absolute inset-0 z-10 w-full h-[100vh] sm:h-[97vh] md:h-[97vh] lg:h-[97vh] xl:h-[100vh] ">
         <Image
           src={
@@ -31,7 +30,6 @@ export default function Clouds() {
         />
       </div>
 
-      {/* Robot positioned above the clouds */}
       <div
         className="absolute 
           top-[57%]
