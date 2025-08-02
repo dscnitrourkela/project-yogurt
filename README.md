@@ -56,7 +56,7 @@
 
 ## About The Project
 
-HackNITR, one of the largest hackathons in India's eastern region, is a kind of hackathon that endeavours to bring and integrate talent, innovation, and creativity under one roof to build solutions for real-world problems using the latest technologies. It is organized by a bunch of tech enthusiasts from Developer Student Clubs (DSC) NIT Rourkela in collaboration with OpenCode, Opensource community, registered under the technical society of Student Activity Centre (SAC), NIT Rourkela.
+HackNITR, one of the largest student run hackathons in India, is a kind of hackathon that endeavours to bring and integrate talent, innovation, and creativity under one roof to build solutions for real-world problems using the latest technologies. It is organized by a bunch of tech enthusiasts from Developer Student Clubs (DSC) NIT Rourkela in collaboration with OpenCode, Opensource community, registered under the technical society of Student Activity Centre (SAC), NIT Rourkela.
 
 ## Built With
 
