@@ -7,8 +7,7 @@ export default function Clouds() {
   const [isSmall, setIsSmall] = useState(false);
 
   useEffect(() => {
-    const checkScreen = () =>
-      setIsSmall(window.innerWidth < 640);
+    const checkScreen = () => setIsSmall(window.innerWidth < 640);
     checkScreen();
     window.addEventListener('resize', checkScreen);
     return () => window.removeEventListener('resize', checkScreen);
