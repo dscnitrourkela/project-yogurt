@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { HERO_CLOUDS_CONFIG } from '@/config/hero/clouds';
 
 export default function Clouds() {
   const [isSmall, setIsSmall] = useState(false);
@@ -19,8 +20,8 @@ export default function Clouds() {
         <Image
           src={
             isSmall
-              ? 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1754168465/hacknitr/epu560uyf3sjdq0yh1ar.png'
-              : 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1754161201/hacknitr/nzfk0b1z8daed013mtep.png'
+              ? HERO_CLOUDS_CONFIG.backgrounds.mobile
+              : HERO_CLOUDS_CONFIG.backgrounds.desktop
           }
           alt="clouds"
           fill
@@ -46,7 +47,7 @@ export default function Clouds() {
           xl:w-120 xl:h-120"
       >
         <Image
-          src="https://res.cloudinary.com/dscnitrourkela/image/upload/v1754196559/hacknitr/fektho4mzqvef7pztkuh.png"
+          src={HERO_CLOUDS_CONFIG.robot}
           alt="robot"
           fill
           style={{ objectFit: 'contain' }}

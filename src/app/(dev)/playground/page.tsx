@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Typography } from '@/components';
 import PreRegisterButton from '@/components/pre-register/pre-register';
+import Clouds from '@/components/hero/clouds';
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
           Todo: add the updated preregister button in navbar
         </Typography.Muted>
         <PreRegisterButton />
+        <Clouds/>
       </div>
     </div>
   );
