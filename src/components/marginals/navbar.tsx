@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 import PreRegisterButton from '../pre-register/pre-register';
 import Typography from '../Typography';
 import Image from 'next/image';
-import { navItems, logo } from '@/config/marginals';
+import { navItems, logo, hamburgerIcon } from '@/config/marginals';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +52,16 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? (
+                <X size={24} />
+              ) : (
+                <Image
+                  src={hamburgerIcon.src}
+                  alt={hamburgerIcon.alt}
+                  width={hamburgerIcon.width}
+                  height={hamburgerIcon.height}
+                />
+              )}
             </button>
           </div>
         </div>

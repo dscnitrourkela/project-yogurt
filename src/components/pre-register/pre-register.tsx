@@ -65,7 +65,26 @@ export default function PreRegisterButton() {
   }
 
   if (loading) {
-    return <Loader />;
+    return (
+      <div className="w-fit mt-4 mx-auto relative">
+        {/* Outer navy blue base */}
+        <div className="bg-[#000E4A] rounded-md pt-[2px] pb-[8px] px-[2px]">
+          {/* Middle dark blue border */}
+          <div className="bg-[#002196] rounded-sm pt-[2px] pb-[3px] px-[2px]">
+            {/* Inner blue button */}
+            <button
+              onClick={handleGoogleLogin}
+              disabled={loading}
+              className="bg-[#0035d5] px-8 py-4 h-14 rounded transition-transform hover:scale-[1.02] hover:brightness-110 duration-150 active:scale-[0.98] w-full"
+            >
+              <Typography.P className="text-white text-xl md:text-xl leading-snug text-center">
+                Loading...
+              </Typography.P>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   if (user && isRegistered) {
@@ -77,18 +96,22 @@ export default function PreRegisterButton() {
   }
 
   return (
-    <div className="w-fit mt-4 mx-auto">
-      <div className="relative inline-block">
-        <div className="absolute inset-0 bg-black rounded -z-10 translate-x-1.5 translate-y-1.5" />
-        <button
-          onClick={handleGoogleLogin}
-          disabled={loading}
-          className="cursor-pointer bg-[#0534C7] px-6 py-4 h-14  rounded transition-colors hover:brightness-110 "
-        >
-          <Typography.P className="text-white  text-xl md:text-xl leading-snug text-center">
-            Pre register
-          </Typography.P>
-        </button>
+    <div className="w-fit mt-4 mx-auto relative">
+      {/* Outer navy blue base */}
+      <div className="bg-[#000E4A] rounded-md pt-[2px] pb-[8px] px-[2px]">
+        {/* Middle dark blue border */}
+        <div className="bg-[#002196] rounded-sm pt-[2px] pb-[3px] px-[2px]">
+          {/* Inner blue button */}
+          <button
+            onClick={handleGoogleLogin}
+            disabled={loading}
+            className="bg-[#0035d5] px-8 py-4 h-14 rounded transition-transform hover:scale-[1.02] hover:brightness-110 duration-150 active:scale-[0.98] w-full"
+          >
+            <Typography.P className="text-white text-5xl font-semibold text-center">
+              {loading ? 'Loading...' : 'Pre register'}
+            </Typography.P>
+          </button>
+        </div>
       </div>
     </div>
   );

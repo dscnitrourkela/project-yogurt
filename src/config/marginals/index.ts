@@ -15,3 +15,10 @@ export const logo = {
   width: 70,
   height: 70,
 };
+
+export const hamburgerIcon = {
+  src: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1754192797/hacknitr/uy4pube8vuqfkylqchge.png',
+  alt: 'Menu',
+  width: 50,
+  height: 50,
+};
