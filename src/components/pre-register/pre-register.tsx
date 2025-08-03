@@ -66,7 +66,7 @@ export default function PreRegisterButton() {
 
   if (loading) {
     return (
-      <div className="w-fit mt-4 mx-auto relative">
+      <div className="w-[170px] mt-4 mx-auto relative">
         {/* Outer navy blue base */}
         <div className="bg-[#000E4A] rounded-md pt-[2px] pb-[8px] px-[2px]">
           {/* Middle dark blue border */}
@@ -75,10 +75,10 @@ export default function PreRegisterButton() {
             <button
               onClick={handleGoogleLogin}
               disabled={loading}
-              className="bg-[#0035d5] px-8 py-4 h-14 rounded transition-transform hover:scale-[1.02] hover:brightness-110 duration-150 active:scale-[0.98] w-full"
+              className="bg-[#0035d5] px-8 py-4 h-14 rounded transition-transform  hover:brightness-110 duration-150  w-full"
             >
-              <Typography.P className="text-white text-xl md:text-xl leading-snug text-center">
-                Loading...
+              <Typography.P className="text-white text-5xl font-semibold text-center">
+                Loading.....
               </Typography.P>
             </button>
           </div>
@@ -96,7 +96,7 @@ export default function PreRegisterButton() {
   }
 
   return (
-    <div className="w-fit mt-4 mx-auto relative">
+    <div className="w-[170px] mt-4 mx-auto relative">
       {/* Outer navy blue base */}
       <div className="bg-[#000E4A] rounded-md pt-[2px] pb-[8px] px-[2px]">
         {/* Middle dark blue border */}
@@ -105,7 +105,7 @@ export default function PreRegisterButton() {
           <button
             onClick={handleGoogleLogin}
             disabled={loading}
-            className="bg-[#0035d5] px-8 py-4 h-14 rounded transition-transform hover:scale-[1.02] hover:brightness-110 duration-150 active:scale-[0.98] w-full"
+            className="bg-[#0035d5] px-8 py-4 h-14 rounded transition-transform  hover:brightness-110 duration-150  w-full"
           >
             <Typography.P className="text-white text-5xl font-semibold text-center">
               {loading ? 'Loading...' : 'Pre register'}
