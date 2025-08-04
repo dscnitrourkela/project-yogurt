@@ -64,50 +64,16 @@ export default function PreRegisterButton() {
     }
   }
 
-  if (loading) {
-    return (
-      <div className="w-[170px] mt-4 mx-auto relative">
-        {/* Outer navy blue base */}
-        <div className="bg-[#000E4A] rounded-md pt-[2px] pb-[8px] px-[2px]">
-          {/* Middle dark blue border */}
-          <div className="bg-[#002196] rounded-sm pt-[2px] pb-[3px] px-[2px]">
-            {/* Inner blue button */}
-            <button
-              onClick={handleGoogleLogin}
-              disabled={loading}
-              className="bg-[#0035d5] px-8 py-4 h-14 rounded transition-transform  hover:brightness-110 duration-150  w-full"
-            >
-              <Typography.P className="text-white text-5xl font-semibold text-center">
-                Loading.....
-              </Typography.P>
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (user && isRegistered) {
-    return (
-      <div className="flex items-center gap-2">
-        <Typography.Badge>Pre Registered</Typography.Badge>
-      </div>
-    );
-  }
-
   return (
-    <div className="w-[170px] mt-4 mx-auto relative">
-      {/* Outer navy blue base */}
-      <div className="bg-[#000E4A] rounded-md pt-[2px] pb-[8px] px-[2px]">
-        {/* Middle dark blue border */}
-        <div className="bg-[#002196] rounded-sm pt-[2px] pb-[3px] px-[2px]">
-          {/* Inner blue button */}
+    <div className="w-[160px] mt-4 mx-auto relative">
+      <div className="bg-[#000E4A] rounded-md pt-[2px] pb-[7px] px-[2px]">
+        <div className="bg-[#002196] rounded-sm pt-[2px] pb-[2px] px-[2px]">
           <button
             onClick={handleGoogleLogin}
             disabled={loading}
-            className="bg-[#0035d5] px-8 py-4 h-14 rounded transition-transform  hover:brightness-110 duration-150  w-full"
+            className="bg-[#0035d5] px-6 py-3 h-12 rounded transition-transform hover:brightness-110 duration-150 w-full"
           >
-            <Typography.P className="text-white text-5xl font-semibold text-center">
+            <Typography.P className="text-white text-3xl font-semibold text-center">
               {loading ? 'Loading...' : 'Pre register'}
             </Typography.P>
           </button>
