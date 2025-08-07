@@ -64,25 +64,21 @@ export default function PreRegisterButton() {
     }
   }
 
-  if (loading) {
-    return <Loader />;
-  }
-
-  if (user && isRegistered) {
-    return (
-      <div className="flex items-center gap-2">
-        <Typography.Badge>Pre Registered</Typography.Badge>
-      </div>
-    );
-  }
-
   return (
-    <button
-      className="cursor-pointer bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-      onClick={handleGoogleLogin}
-      disabled={loading}
-    >
-      <Typography.Muted className="text-white">Pre-register</Typography.Muted>
-    </button>
+    <div className="w-[160px] mt-4 mx-auto relative">
+      <div className="bg-[#000E4A] rounded-md pt-[2px] pb-[7px] px-[2px]">
+        <div className="bg-[#002196] rounded-sm pt-[2px] pb-[2px] px-[2px]">
+          <button
+            onClick={handleGoogleLogin}
+            disabled={loading}
+            className="bg-[#0035d5] px-6 py-3 h-12 rounded transition-transform hover:brightness-110 duration-150 w-full"
+          >
+            <Typography.P className="text-white text-3xl font-semibold text-center">
+              {loading ? 'Loading...' : 'Pre register'}
+            </Typography.P>
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
