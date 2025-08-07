@@ -5,7 +5,7 @@ import { Typography } from '@/components';
 export default function DevLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col">
-      <nav>
+      {/* <nav>
         <ul className="flex space-x-4 p-4 bg-gray-800 text-white">
           <li>
             <Link href="/" className="hover:underline">
@@ -38,7 +38,7 @@ export default function DevLayout({ children }: { children: React.ReactNode }) {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
       <main>{children}</main>
     </div>
   );
