@@ -73,7 +73,7 @@ export default function PreRegisterButton() {
             disabled={loading}
             className="bg-[#0035d5] px-6 py-3 h-12 rounded transition-transform hover:brightness-110 duration-150 w-full"
           >
-            <Typography.P className="text-white lg:text-3xl font-semibold text-center">
+            <Typography.P className="text-white  font-semibold text-center">
               {loading ? 'Loading...' : 'Pre register'}
             </Typography.P>
           </button>
