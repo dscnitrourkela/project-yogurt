@@ -11,10 +11,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white fixed top-0 mt-2 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
+    <nav className="bg-white fixed top-0 left-0 w-full z-50">
+      <div className="px-4 sm:px-6 lg:px-20">
+        <div className="flex items-center justify-between h-full ">
+          <div className="flex-1/3  h-full">
             <Link href={logo.href}>
               <Image
                 src={logo.src}
@@ -25,15 +25,15 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden min-[800px]:flex flex-1 justify-center">
-            <div className="flex gap-5 max-w-[720px] w-full justify-center">
+          <div className="flex-1/3 h-full hidden lg:flex">
+            <div className="flex gap-5 w-full justify-center">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className="transition-colors"
                 >
-                  <Typography.P className="text-sm sm:text-base md:text-lg text-gray-700 hover:text-primary mb-0 text-center">
+                  <Typography.P className="!text-sm md:!text-base  text-gray-700 hover:text-primary mb-0 text-center">
                     {item.name}
                   </Typography.P>
                 </Link>
@@ -41,13 +41,13 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden min-[800px]:flex items-center px-2">
+          <div className="hidden lg:flex justify-end items-center flex-1/3">
             <div className="transform scale-90 lg:scale-100">
               <PreRegisterButton />
             </div>
           </div>
 
-          <div className="flex min-[800px]:hidden z-50">
+          <div className="flex lg:hidden z-50">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700"
