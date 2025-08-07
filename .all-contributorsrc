@@ -24,11 +24,21 @@
       "contributions": [
         "code"
       ]
-    },{
+    },
+    {
       "login": "Amphere1",
       "name": "Krishnakant Sahu",
       "avatar_url": "https://avatars.githubusercontent.com/u/185503757?v=4",
       "profile": "https://github.com/Amphere1",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "PratyushPanda2005",
+      "name": "Ptrock2005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175925778?v=4",
+      "profile": "https://pratyush-portfolio.vercel.app/",
       "contributions": [
         "code"
       ]
