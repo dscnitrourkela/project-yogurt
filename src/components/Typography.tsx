@@ -23,7 +23,7 @@ export const Heading: React.FC<HeadingProps> = ({
     'font-averta-std font-bold text-[var(--color-heading)] leading-tight';
 
   const levelStyles = {
-    1: 'text-5xl md:text-6xl lg:text-7xl mb-6',
+    1: 'text-[6vw] mb-6',
     2: 'text-4xl md:text-5xl lg:text-6xl mb-5',
     3: 'text-3xl md:text-4xl lg:text-5xl mb-4',
     4: 'text-2xl md:text-3xl lg:text-4xl mb-4',
@@ -307,7 +307,7 @@ export const Caption: React.FC<TypographyProps> = ({ children, className }) => (
 export const Display: React.FC<TypographyProps> = ({ children, className }) => (
   <h1
     className={cn(
-      'text-6xl md:text-7xl lg:text-8xl font-bold text-[var(--color-heading)] font-averta-std leading-none mb-8',
+      ' text-[10vw] font-bold text-[color:var(--color-heading)] font-averta-std leading-none ',
       className
     )}
   >

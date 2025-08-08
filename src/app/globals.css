@@ -78,12 +78,38 @@
   --font-cabin-sketch: var(--font-cabin-sketch);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* It's good practice to ensure the html element is the full height */
+html {
+  height: 100%;
 }
 
+body {
+  position: relative;
+
+  z-index: 1;
+
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+
+  min-height: 100%;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url(https://res.cloudinary.com/dscnitrourkela/image/upload/v1754225393/hacknitr/kih0gsyskoslbgd9frvz.png);
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.4;
+
+  z-index: -1;
+}
 .loader {
   border: 4px solid #e0e0e0;
   border-top: 4px solid #2563eb;

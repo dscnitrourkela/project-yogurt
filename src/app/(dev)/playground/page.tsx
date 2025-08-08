@@ -1,18 +1,17 @@
 import React from 'react';
+import { HackNitr } from '@/components/hero/hackNitr';
 
-import { Typography } from '@/components';
-import PreRegisterButton from '@/components/pre-register/pre-register';
+import { HeroMobile } from '@/components/hero/heroMobile';
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="container mx-auto px-4">
-        <Typography.H1>Playground</Typography.H1>
-        <Typography.Muted className="text-left mb-4">
-          Todo: add the updated preregister button in navbar
-        </Typography.Muted>
-        <PreRegisterButton />
+    <>
+      <div className=" min-h-screen py-10 hidden md:flex justify-center items-center">
+        <HackNitr />
       </div>
-    </div>
+      <div className=" min-h-screen py-10 md:hidden ">
+        <HeroMobile />
+      </div>
+    </>
   );
 }
