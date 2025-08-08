@@ -1,0 +1,32 @@
+'use client';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { HERO_CLOUDS_CONFIG } from '@/config/hero/clouds';
+
+export default function Clouds() {
+  const [isSmall, setIsSmall] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => setIsSmall(window.innerWidth < 449);
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
+
+  return (
+    <div className="relative">
+      <Image
+        src={
+          isSmall
+            ? HERO_CLOUDS_CONFIG.backgrounds.mobile
+            : HERO_CLOUDS_CONFIG.backgrounds.desktop
+        }
+        alt="clouds"
+        width={19200}
+        height={1280}
+        className="w-full object-cover h-full"
+        priority
+      />
+    </div>
+  );
+}

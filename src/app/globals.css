@@ -123,3 +123,23 @@ body::before {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 1000px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .show-on-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1001px) {
+  .hide-on-mobile {
+    display: flex !important;
+  }
+
+  .show-on-mobile {
+    display: none !important;
+  }
+}

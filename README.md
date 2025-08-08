@@ -1,6 +1,9 @@
 [![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -56,7 +59,7 @@
 
 ## About The Project
 
-HackNITR, one of the largest hackathons in India's eastern region, is a kind of hackathon that endeavours to bring and integrate talent, innovation, and creativity under one roof to build solutions for real-world problems using the latest technologies. It is organized by a bunch of tech enthusiasts from Developer Student Clubs (DSC) NIT Rourkela in collaboration with OpenCode, Opensource community, registered under the technical society of Student Activity Centre (SAC), NIT Rourkela.
+HackNITR, one of the largest student run hackathons in India, is a kind of hackathon that endeavours to bring and integrate talent, innovation, and creativity under one roof to build solutions for real-world problems using the latest technologies. It is organized by a bunch of tech enthusiasts from Developer Student Clubs (DSC) NIT Rourkela in collaboration with OpenCode, Opensource community, registered under the technical society of Student Activity Centre (SAC), NIT Rourkela.
 
 ## Built With
 
@@ -192,6 +195,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://ayussh.vercel.app/"><img src="https://avatars.githubusercontent.com/u/135319056?v=4?s=100" width="100px;" alt="Ayush"/><br /><sub><b>Ayush</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=ayussh-2" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mshalom27"><img src="https://avatars.githubusercontent.com/u/179662248?v=4?s=100" width="100px;" alt="Shalom Mendonca"/><br /><sub><b>Shalom Mendonca</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=mshalom27" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Amphere1"><img src="https://avatars.githubusercontent.com/u/185503757?v=4?s=100" width="100px;" alt="Krishnakant Sahu"/><br /><sub><b>Krishnakant Sahu</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=Amphere1" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://pratyush-portfolio.vercel.app/"><img src="https://avatars.githubusercontent.com/u/175925778?v=4?s=100" width="100px;" alt="Ptrock2005"/><br /><sub><b>Ptrock2005</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=PratyushPanda2005" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
