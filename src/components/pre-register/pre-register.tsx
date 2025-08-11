@@ -6,24 +6,19 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
-  User,
 } from 'firebase/auth';
 import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
 
 import { auth, db } from '@/lib/firebase';
 
 import Typography from '../Typography';
-import Loader from '../ui/loader';
 
 export default function PreRegisterButton() {
-  const [user, setUser] = useState<User | null>(null);
   const [isRegistered, setIsRegistered] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
-
       if (currentUser) {
         try {
           const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
@@ -65,7 +60,7 @@ export default function PreRegisterButton() {
   }
 
   return (
-    <div className="w-[160px] mt-4 mx-auto relative">
+    <div className="w-[180px] mt-4 mx-auto relative">
       <div className="bg-[#000E4A] rounded-md pt-[2px] pb-[7px] px-[2px]">
         <div className="bg-[#002196] rounded-sm pt-[2px] pb-[2px] px-[2px]">
           <button
@@ -73,8 +68,12 @@ export default function PreRegisterButton() {
             disabled={loading}
             className="bg-[#0035d5] px-6 py-3 h-12 rounded transition-transform hover:brightness-110 duration-150 w-full"
           >
-            <Typography.P className="text-white  font-semibold text-center">
-              {loading ? 'Loading...' : 'Pre register'}
+            <Typography.P className="text-white text-lg font-semibold text-center">
+              {loading
+                ? 'Loading...'
+                : isRegistered
+                  ? 'Pre Registered'
+                  : 'Pre Register'}
             </Typography.P>
           </button>
         </div>

@@ -15,14 +15,14 @@ export default function Home() {
                   NITR
                 </Typography.Display>
               </div>
-              <div className="absolute -bottom-20 right-0">
+              {/* <div className="absolute -bottom-20  md:-bottom-28 right-0">
                 <Typography.H1 className="font-sketch-block font-normal">
                   7.0
                 </Typography.H1>
-              </div>
+              </div> */}
             </div>
           </div>
-          <Typography.H6 className=" font-normal text-center  font-sketch-block text-black mt-24">
+          <Typography.H6 className=" font-normal text-center  font-sketch-block text-black mt-10 md:mt-24 max-w-[400px] md:max-w-full px-5">
             India's Largest Student Run Hackathon |
             <span className="text-primary"> Coming Soon</span>
           </Typography.H6>
