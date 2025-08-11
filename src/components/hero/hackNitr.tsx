@@ -65,7 +65,7 @@ const measurementData = {
     { label: '20cm', style: { top: '0%', left: '24.9%' } },
     { label: '25cm', style: { top: '7.6%', left: '67.3%' } },
     { label: '0.5cm', style: { top: '78%', left: '50%' }, isSmall: true },
-    { label: '5cm', style: { top: '76.6%', left: '96%' } },
+    { label: '5cm', style: { top: '76.6%', left: '97%' } },
   ],
 };
 
@@ -101,7 +101,6 @@ const filesToKeepAsImages = ['line-132.svg', 'line-134.svg', 'line-133.svg'];
 export const HackNitr = () => {
   return (
     <div className="w-full overflow-hidden pt-10">
-      {/* Desktop Layout */}
       <div className="flex flex-row px-4 xl:px-16">
         {/* Left Column */}
         <div className="flex flex-col h-[25dvh] justify-between pt-5  flex-shrink-0">
@@ -117,9 +116,9 @@ export const HackNitr = () => {
         </div>
 
         {/* Center Column */}
-        <div className="flex-1 max-w-5xl mx-auto p-2 xl:p-4">
+        <div className="flex-1  mx-auto p-2 xl:p-4">
           <div className="relative w-full" style={{ paddingTop: '37.09%' }}>
-            <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-0 -left-5 w-full h-full">
               {/* Measurement Lines */}
               {measurementData.lines.map((line, index) => {
                 if (
@@ -152,9 +151,9 @@ export const HackNitr = () => {
                 }
               })}
 
-              {/* Text Elements - Positioned with same percentage system */}
               {textElements.map((textEl, index) => {
-                const TypographyComponent = Typography[textEl.type];
+                const TypographyComponent =
+                  Typography[textEl.type as keyof typeof Typography];
                 return (
                   <div
                     key={`text-${index}`}

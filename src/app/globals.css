@@ -78,7 +78,6 @@
   --font-cabin-sketch: var(--font-cabin-sketch);
 }
 
-/* It's good practice to ensure the html element is the full height */
 html {
   height: 100%;
 }
@@ -142,4 +141,8 @@ body::before {
   .show-on-mobile {
     display: none !important;
   }
+}
+
+@theme {
+  --breakpoint-lg: 54rem;
 }
