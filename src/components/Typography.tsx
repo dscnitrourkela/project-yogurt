@@ -23,7 +23,7 @@ export const Heading: React.FC<HeadingProps> = ({
     'font-averta-std font-bold text-[var(--color-heading)] leading-tight';
 
   const levelStyles = {
-    1: 'text-[6vw] mb-6',
+    1: 'text-[6vw] ',
     2: 'text-4xl md:text-5xl lg:text-6xl mb-5',
     3: 'text-3xl md:text-4xl lg:text-5xl mb-4',
     4: 'text-2xl md:text-3xl lg:text-4xl mb-4',

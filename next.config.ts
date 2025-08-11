@@ -6,9 +6,6 @@ const nextConfig: NextConfig = {
       {
         hostname: 'res.cloudinary.com',
       },
-      {
-        hostname: 'c.animaapp.com',
-      },
     ],
   },
 };

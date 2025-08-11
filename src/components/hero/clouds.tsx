@@ -25,7 +25,7 @@ export default function Clouds() {
         alt="clouds"
         width={19200}
         height={1280}
-        className={`w-full object-cover h-full ${isSmall ? '' : '-my-[20%]'}`}
+        className={`w-full object-cover h-full ${isSmall ? '' : '-my-[17%]'}`}
         priority
       />
       {isSmall && (
