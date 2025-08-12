@@ -84,22 +84,22 @@ const textElements = [
   {
     id: 'te1',
     component: 'Hack',
-    style: { top: '0%', left: '-15%' },
-    className: 'font-sketch-block font-normal text-primary text-[23vw]',
+    style: { top: '6%', left: '-14.5%' },
+    className: 'font-sketch-block font-normal text-primary text-[24.6vw]',
     type: 'Display',
   },
   {
     id: 'te2',
     component: 'NITR',
-    style: { top: '75%', left: '-9%' },
-    className: 'font-grutch-shaded font-normal text-[21vw]',
+    style: { top: '80%', left: '-2%' },
+    className: 'font-grutch-shaded font-normal text-[20vw]',
     type: 'Display',
   },
   {
     id: 'te3',
     component: '7.0',
-    style: { top: '150%', left: '55%' },
-    className: 'font-sketch-block font-normal text-[15vw]',
+    style: { top: '150%', left: '53.5%' },
+    className: 'font-sketch-block font-normal text-[17vw]',
     type: 'H1',
   },
 ];
@@ -113,7 +113,7 @@ const textItems = [
 export const HeroMobile = React.memo(() => {
   return (
     <div className="w-full">
-      <div className="flex flex-col px-4">
+      <div className="flex flex-col ">
         {/* Top Section */}
         <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-5 pb-18">
           <div className="text-black text-center text-sm xl:text-base font-light font-averta-std leading-[22.4px] tracking-widest">
@@ -201,7 +201,7 @@ export const HeroMobile = React.memo(() => {
                 {item.text.split('').map((char, charIndex) => (
                   <div
                     key={`${item.id}-${charIndex}`}
-                    className={`text-black text-center text-base leading-snug text-[clamp(0.5rem,2vw,5rem)] ${
+                    className={`text-black text-center text-base leading-snug text-[clamp(0.5rem,1.7vw,5rem)] ${
                       item.isBold ? 'font-bold' : 'font-light'
                     }`}
                   >
@@ -210,7 +210,7 @@ export const HeroMobile = React.memo(() => {
                 ))}
               </div>
             ))}
-            <div className="w-7 h-7 bg-[#EAEAEA] mt-2 xl:mt-4" />
+            <div className="w-[6vw] h-[6vw] bg-[#EAEAEA] mt-2 xl:mt-4" />
           </div>
         </div>
       </div>

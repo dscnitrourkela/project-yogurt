@@ -307,7 +307,7 @@ export const Caption: React.FC<TypographyProps> = ({ children, className }) => (
 export const Display: React.FC<TypographyProps> = ({ children, className }) => (
   <h1
     className={cn(
-      ' text-[10vw] font-bold text-[color:var(--color-heading)] font-averta-std leading-none ',
+      ' text-[9vw] font-bold text-[color:var(--color-heading)] font-averta-std leading-none ',
       className
     )}
   >
