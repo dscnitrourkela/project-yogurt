@@ -41,11 +41,11 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden lg:flex justify-end items-center flex-1/3">
+          {/* <div className="hidden lg:flex justify-end items-center flex-1/3">
             <div className="transform scale-90 lg:scale-100">
               <PreRegisterButton />
             </div>
-          </div>
+          </div> */}
 
           <div className="flex lg:hidden z-50">
             <button

@@ -87,7 +87,7 @@ export const textElements = [
   {
     id: 'te2',
     component: 'NITR',
-    style: { top: '80%', left: '-2%' },
+    style: { top: '86%', left: '-2%' },
     className: 'font-grutch-shaded font-normal text-[20vw]',
     type: 'Display',
   },
