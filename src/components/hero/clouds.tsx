@@ -28,11 +28,11 @@ export default function Clouds() {
         className={`w-full object-cover h-full ${isSmall ? '' : '-my-[17%]'}`}
         priority
       />
-      {isSmall && (
+      {/* {isSmall && (
         <div className="absolute bottom-1/3 left-0 w-full flex justify-center items-center ">
           <PreRegisterButton />
         </div>
-      )}
+      )} */}
     </div>
   );
 }
