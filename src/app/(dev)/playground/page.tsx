@@ -18,7 +18,7 @@ export default function Page() {
         </div>
 
         <Clouds />
-        <div className="h-[60vh] md:h-[80vh] lg:h-[40vh]" aria-hidden />
+        <div className="h-[0vh] md:h-[80vh] lg:h-[40vh]" aria-hidden />
         <Gallery />
       </div>
     </>
