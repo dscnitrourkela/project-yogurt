@@ -4,6 +4,7 @@ import { HackNitr } from '@/components/hero/hackNitr';
 import { HeroMobile } from '@/components/hero/heroMobile';
 
 import Clouds from '@/components/hero/clouds';
+import Gallery from '@/components/gallery/gallery';
 
 export default function Page() {
   return (
@@ -17,6 +18,8 @@ export default function Page() {
         </div>
 
         <Clouds />
+        <div className="h-[60vh] md:h-[80vh] lg:h-[40vh]" aria-hidden />
+        <Gallery />
       </div>
     </>
   );
