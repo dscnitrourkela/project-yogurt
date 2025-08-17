@@ -5,6 +5,8 @@ import { HeroMobile } from '@/components/hero/heroMobile';
 
 import Clouds from '@/components/hero/clouds';
 
+import Footer from '@/components/marginals/footer';
+
 export default function Page() {
   return (
     <>
@@ -17,6 +19,8 @@ export default function Page() {
         </div>
 
         <Clouds />
+
+        <Footer />
       </div>
     </>
   );
