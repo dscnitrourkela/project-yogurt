@@ -4,20 +4,16 @@ import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 export default function Footer() {
   return (
     <main className="min-h-screen mt-50 w-full flex flex-col justify-end relative">
-      <div className="w-full flex justify-between items-center px-18 pt-6 mb-35">
-        <div className=" gap-15 flex items-center">
+      <div className="w-full flex flex-col lg:flex-row justify-between items-center px-4 sm:px-8 lg:px-18 pt-6 mb-8 lg:mb-35 gap-6 lg:gap-0">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-15 items-center">
           <a
             href="https://instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-5 text-black"
+            className="flex items-center gap-2 sm:gap-3 lg:gap-5 text-black"
           >
-            <Instagram className="w-6 h-6 " />
-            <Typography.H6
-              className="text-[50px] leading-none relative -top-[-5px]"
-              style={{ fontSize: '32px' }}
-            >
-              {' '}
+            <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
+            <Typography.H6 className="text-lg sm:text-xl lg:text-[32px] leading-none relative -top-[-5px]">
               INSTAGRAM
             </Typography.H6>
           </a>
@@ -26,13 +22,13 @@ export default function Footer() {
             href="https://twitter.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-5 text-black"
+            className="flex items-center gap-2 sm:gap-3 lg:gap-5 text-black"
           >
             <svg
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
+              className="w-5 h-5 sm:w-6 sm:h-6"
             >
               <title>X</title>
               <path
@@ -41,25 +37,22 @@ export default function Footer() {
              20.644h2.039L6.486 3.24H4.298Z"
               />
             </svg>
-            <Typography.H6
-              className="text-[36px] leading-none relative -top-[-5px]"
-              style={{ fontSize: '32px' }}
-            >
+            <Typography.H6 className="text-lg sm:text-xl lg:text-[32px] leading-none relative -top-[-5px]">
               TWITTER
             </Typography.H6>
           </a>
         </div>
 
-        <div className="flex gap-15 items-center">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-15 items-center">
           <a
             href="https://linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-5 text-black"
+            className="flex items-center gap-2 sm:gap-3 lg:gap-5 text-black"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 fill-black"
+              className="w-5 h-5 sm:w-6 sm:h-6 fill-black"
               viewBox="0 0 56.693 56.693"
             >
               <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z" />
@@ -73,10 +66,7 @@ export default function Footer() {
               />
             </svg>
 
-            <Typography.H6
-              className="text-[36px] leading-none relative -top-[-5px]"
-              style={{ fontSize: '32px' }}
-            >
+            <Typography.H6 className="text-lg sm:text-xl lg:text-[32px] leading-none relative -top-[-5px]">
               LINKEDIN
             </Typography.H6>
           </a>
@@ -85,11 +75,11 @@ export default function Footer() {
             href="https://github.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-5 text-black"
+            className="flex items-center gap-2 sm:gap-3 lg:gap-5 text-black"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 fill-black"
+              className="w-5 h-5 sm:w-6 sm:h-6 fill-black"
               viewBox="0 0 32 32"
             >
               <path
@@ -107,23 +97,20 @@ export default function Footer() {
               />
             </svg>
 
-            <Typography.H6
-              className="leading-none relative -top-[-5px]"
-              style={{ fontSize: '32px' }}
-            >
+            <Typography.H6 className="text-lg sm:text-xl lg:text-[32px] leading-none relative -top-[-5px]">
               GITHUB
             </Typography.H6>
           </a>
         </div>
       </div>
 
-      <div className="w-full flex items-center justify-center pb-12 mb-8 relative z-0">
+      <div className="w-full flex items-center justify-center pb-6 sm:pb-8 lg:pb-12 mb-4 sm:mb-6 lg:mb-8 relative z-0">
         <div className="relative flex items-center justify-center">
-          <div className="flex items-center gap-6 relative -translate-y-13">
-            <Typography.Display className="text-center font-sketch-block font-normal text-primary text-[17vw] leading-none">
+          <div className="flex items-center gap-2 sm:gap-4 lg:gap-6 relative lg:-translate-y-13">
+            <Typography.Display className="text-center font-sketch-block font-normal text-primary text-[25vw] sm:text-[20vw] lg:text-[17vw] leading-none">
               Hack
             </Typography.Display>
-            <Typography.Display className="text-center font-grutch-shaded font-normal text-[17vw] leading-none">
+            <Typography.Display className="text-center font-grutch-shaded font-normal text-[25vw] sm:text-[20vw] lg:text-[17vw] leading-none">
               NITR
             </Typography.Display>
           </div>
@@ -131,22 +118,22 @@ export default function Footer() {
           <img
             src="https://res.cloudinary.com/dscnitrourkela/image/upload/v1755437147/hacknitr/si7ci7j5xowo2ytkj54q.png"
             alt="HackNITR Logo Overlay"
-            className="absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[70%] w-[37vw] pointer-events-none"
+            className="absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[50%] sm:-translate-y-[60%] lg:-translate-y-[70%] w-[45vw] sm:w-[40vw] lg:w-[37vw] pointer-events-none"
           />
         </div>
       </div>
 
-      <div className="absolute bottom-[6%] w-full flex justify-between items-center px-20">
-        <div className="flex items-center gap-2">
-          <span className="text-[30px] leading-none relative top-[-9px]">
+      <div className="absolute bottom-[2%] sm:bottom-[4%] lg:bottom-[6%] w-full flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 lg:px-20 gap-2 sm:gap-0">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <span className="text-xl sm:text-2xl lg:text-[30px] leading-none relative top-[-5px] sm:top-[-7px] lg:top-[-9px]">
             ©
           </span>
-          <Typography.Lead className=" text-black leading-none">
+          <Typography.Lead className="text-black leading-none text-sm sm:text-base lg:text-lg">
             Copyright HackNITR 2025
           </Typography.Lead>
         </div>
 
-        <Typography.Lead className="text-[30px] text-black">
+        <Typography.Lead className="text-sm sm:text-lg lg:text-lg text-black text-center ">
           Crafted with <span className="text-pink-500">💖</span> by DSC NIT
           Rourkela
         </Typography.Lead>
