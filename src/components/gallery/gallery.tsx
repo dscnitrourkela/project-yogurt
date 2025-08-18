@@ -11,7 +11,7 @@ import { GALLERY_PARALLAX_IMAGES } from '@/config/gallery/parallax';
 
 export default function Gallery() {
   const overlay = (
-    <div className="flex flex-row px-[5vw] py-[15vh] z-10 relative">
+    <div className="flex flex-row lg:gap-50 px-[5vw] py-[15vh] z-10 relative">
       {/* Left Column */}
       <div className="flex flex-col h-[25dvh] justify-between pt-5 -mt-8 sm:mt-0 flex-shrink-0">
         <div className="relative w-[clamp(4rem,8vw,6.75rem)] h-[clamp(4rem,8vw,6.75rem)] mx-auto">
