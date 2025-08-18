@@ -1,152 +1,73 @@
 'use client';
-import { useScroll, useTransform } from 'motion/react';
-import { useRef, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { useScroll, useTransform, motion } from 'motion/react';
+import { useRef } from 'react';
 import { cn } from '@/lib/utils';
 import PortraitSVG from './portrait-svg';
 
 interface ParallaxScrollProps {
   images: string[];
-  className?: string;
-  /** Optional static content shown while images animate */
-  overlay?: React.ReactNode;
-  /** If true, images render above overlay; else behind */
-  imagesOnTop?: boolean;
-  /** If true, component takes full screen height; else uses natural height */
-  fullScreen?: boolean;
+  overlay?: React.ReactNode; // Heading/text layer
 }
 
-// Pinned parallax: page scroll drives progress; images start below and move upward until done.
-export const ParallaxScroll = ({
-  images,
-  className,
-  overlay,
-  imagesOnTop = true,
-  fullScreen = true,
-}: ParallaxScrollProps) => {
+export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // Observe scroll progress across the whole pinned region
+  // Scroll progress across the whole pinned region
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: fullScreen ? ['start end', 'end start'] : ['start 80%', 'end 20%'],
+    offset: ['start start', 'end end'],
   });
 
-  // Images start from below viewport and move up into view
-  // Using viewport height to start images off-screen at bottom
-  const viewportHeight =
-    typeof window !== 'undefined' ? window.innerHeight : 800;
-  const col1 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    fullScreen ? [viewportHeight + 200, -100] : [200, -100]
-  );
-  const col2 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    fullScreen ? [viewportHeight + 300, -50] : [300, -50]
-  );
-  const col3 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    fullScreen ? [viewportHeight + 150, -150] : [150, -150]
-  );
+  // Layered movement for depth
+  const col1Y = useTransform(scrollYProgress, [0, 1], [200, -150]); // slower (background)
+  const col2Y = useTransform(scrollYProgress, [0, 1], [300, -250]); // medium
+  const col3Y = useTransform(scrollYProgress, [0, 1], [400, -350]); // fastest (foreground)
+
+  // Fade effect for images
+  const fadeIn = useTransform(scrollYProgress, [0.05, 0.2], [0, 1]);
+  const fadeOut = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
   const third = Math.ceil(images.length / 3);
-  const firstPart = images.slice(0, third);
-  const secondPart = images.slice(third, 2 * third);
-  const thirdPart = images.slice(2 * third);
+  const col1 = images.slice(0, third);
+  const col2 = images.slice(third, 2 * third);
+  const col3 = images.slice(2 * third);
 
-  if (!images || images.length === 0) {
-    return null;
-  }
-
-  // Columns markup extracted for reuse front/back layering
-  const Columns = (
-    <div className="w-full max-w-6xl mx-auto px-6 md:px-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div className="grid gap-10">
-          {firstPart.map((el, idx) => (
-            <motion.div key={`pcol1-${idx}`} style={{ y: col1 }}>
-              <div className="h-80 w-full">
-                <PortraitSVG
-                  src={el}
-                  id={`1-${idx}`}
-                  className="w-full h-full"
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        <div className="grid gap-10">
-          {secondPart.map((el, idx) => (
-            <motion.div key={`pcol2-${idx}`} style={{ y: col2 }}>
-              <div className="h-80 w-full">
-                <PortraitSVG
-                  src={el}
-                  id={`2-${idx}`}
-                  className="w-full h-full"
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        <div className="grid gap-10">
-          {thirdPart.map((el, idx) => (
-            <motion.div key={`pcol3-${idx}`} style={{ y: col3 }}>
-              <div className="h-80 w-full">
-                <PortraitSVG
-                  src={el}
-                  id={`3-${idx}`}
-                  className="w-full h-full"
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+  const renderColumn = (column: string[], colY: any, colKey: string) => (
+    <div className="grid gap-8">
+      {column.map((el, idx) => (
+        <motion.div
+          key={`${colKey}-${idx}`}
+          style={{
+            y: colY, // vertical parallax motion
+            opacity: fadeIn, // fade in early
+          }}
+          className="relative w-full h-72 sm:h-80 md:h-96"
+        >
+          <PortraitSVG
+            src={el}
+            id={`${colKey}-${idx}`}
+            className="w-full h-full"
+          />
+        </motion.div>
+      ))}
     </div>
   );
 
   return (
     <div
       ref={containerRef}
-      className={cn(
-        'relative w-full',
-        fullScreen ? 'h-screen' : 'h-auto',
-        className
-      )}
+      className={cn('relative w-full h-[300vh] bg-[#181818]')}
     >
-      <div className="relative w-full h-full overflow-hidden flex items-center">
-        {/* Behind layer if imagesOnTop is false */}
-        {!imagesOnTop && (
-          <div className="absolute inset-0 z-10 flex items-center pointer-events-none">
-            {Columns}
-          </div>
-        )}
-        {/* Overlay content */}
-        {overlay && (
-          <div
-            className={cn(
-              'absolute inset-0 z-20 flex flex-col justify-center',
-              imagesOnTop ? 'pointer-events-auto' : 'pointer-events-auto'
-            )}
-          >
-            {overlay}
-          </div>
-        )}
-        {/* Images front layer */}
-        {imagesOnTop && (
-          <div className="absolute inset-0 z-30 flex items-center pointer-events-none">
-            {Columns}
-          </div>
-        )}
-        {/* Fallback if no overlay: still show columns */}
-        {!overlay && (
-          <div className="absolute inset-0 z-30 flex items-center pointer-events-none">
-            {Columns}
-          </div>
-        )}
+      {/* Overlay pinned heading */}
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center z-20 px-4">
+        {overlay}
+      </div>
+
+      {/* Parallax photo layers */}
+      <div className="absolute inset-0 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-[20vh]">
+        {renderColumn(col1, col1Y, 'col1')}
+        {renderColumn(col2, col2Y, 'col2')}
+        {renderColumn(col3, col3Y, 'col3')}
       </div>
     </div>
   );
