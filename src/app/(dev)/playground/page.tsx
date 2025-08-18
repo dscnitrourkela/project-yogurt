@@ -20,6 +20,7 @@ export default function Page() {
         <Clouds />
         <div className="h-[20vh] md:h-[40vh] lg:h-[20vh]" aria-hidden />
         <Gallery />
+        <div className="h-[20vh] md:h-[40vh] lg:h-[50vh]" aria-hidden />
       </div>
     </>
   );

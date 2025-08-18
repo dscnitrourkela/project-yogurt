@@ -6,24 +6,23 @@ import PortraitSVG from './portrait-svg';
 
 interface ParallaxScrollProps {
   images: string[];
-  overlay?: React.ReactNode; // Heading/text layer
+  overlay?: React.ReactNode;
 }
 
 export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // Scroll progress across the whole pinned region
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end end'],
   });
 
-  // Layered movement for depth
-  const col1Y = useTransform(scrollYProgress, [0, 1], [200, -150]); // slower (background)
-  const col2Y = useTransform(scrollYProgress, [0, 1], [300, -250]); // medium
-  const col3Y = useTransform(scrollYProgress, [0, 1], [400, -350]); // fastest (foreground)
+  // Parallax depths
+  const col1Y = useTransform(scrollYProgress, [0, 1], [250, -150]);
+  const col2Y = useTransform(scrollYProgress, [0, 1], [350, -250]);
+  const col3Y = useTransform(scrollYProgress, [0, 1], [450, -350]);
 
-  // Fade effect for images
+  // Fade in / out
   const fadeIn = useTransform(scrollYProgress, [0.05, 0.2], [0, 1]);
   const fadeOut = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
@@ -32,20 +31,17 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
   const col2 = images.slice(third, 2 * third);
   const col3 = images.slice(2 * third);
 
-  const renderColumn = (column: string[], colY: any, colKey: string) => (
+  const renderColumn = (column: string[], colY: any, key: string) => (
     <div className="grid gap-8">
       {column.map((el, idx) => (
         <motion.div
-          key={`${colKey}-${idx}`}
-          style={{
-            y: colY, // vertical parallax motion
-            opacity: fadeIn, // fade in early
-          }}
+          key={`${key}-${idx}`}
+          style={{ y: colY, opacity: fadeIn }}
           className="relative w-full h-72 sm:h-80 md:h-96"
         >
           <PortraitSVG
             src={el}
-            id={`${colKey}-${idx}`}
+            id={`${key}-${idx}`}
             className="w-full h-full"
           />
         </motion.div>
@@ -58,13 +54,13 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
       ref={containerRef}
       className={cn('relative w-full h-[300vh] bg-[#181818]')}
     >
-      {/* Overlay pinned heading */}
-      <div className="sticky top-0 h-screen flex flex-col items-center justify-center z-20 px-4">
+      {/* Overlay (your Gallery content) */}
+      <div className="sticky top-0 h-screen z-20 flex items-center justify-center">
         {overlay}
       </div>
 
-      {/* Parallax photo layers */}
-      <div className="absolute inset-0 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-[20vh]">
+      {/* Images layer ABOVE content */}
+      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-[20vh]">
         {renderColumn(col1, col1Y, 'col1')}
         {renderColumn(col2, col2Y, 'col2')}
         {renderColumn(col3, col3Y, 'col3')}
