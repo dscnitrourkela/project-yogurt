@@ -43,10 +43,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Grid for devices below 940px */}
       <div className="hidden max-[900px]:grid grid-cols-4 gap-x-6 gap-y-6 px-6 max-[939px]:pt-[25%] max-[899px]:pt-[15%]">
-        {/* First row */}
-        <div /> {/* empty */}
+        <div />
         <Link
           key={SOCIALS[0].name}
           href={SOCIALS[0].href}
@@ -63,7 +61,7 @@ export default function Footer() {
             {SOCIALS[0].name.toUpperCase()}
           </Typography.H6>
         </Link>
-        <div /> {/* empty */}
+        <div />
         <Link
           key={SOCIALS[3].name}
           href={SOCIALS[3].href}
@@ -80,7 +78,7 @@ export default function Footer() {
             {SOCIALS[3].name.toUpperCase()}
           </Typography.H6>
         </Link>
-        {/* Second row */}
+
         <Link
           key={SOCIALS[1].name}
           href={SOCIALS[1].href}
@@ -97,7 +95,7 @@ export default function Footer() {
             {SOCIALS[1].name.toUpperCase()}
           </Typography.H6>
         </Link>
-        <div /> {/* empty */}
+        <div />
         <Link
           key={SOCIALS[2].name}
           href={SOCIALS[2].href}
@@ -114,10 +112,9 @@ export default function Footer() {
             {SOCIALS[2].name.toUpperCase()}
           </Typography.H6>
         </Link>
-        <div /> {/* empty */}
+        <div />
       </div>
 
-      {/* HackNITR Logo & Text */}
       <div className="w-full flex items-center justify-center xl:pb-10 lg:pb-8 relative z-0">
         <div className="relative flex items-center justify-center">
           <div className="hidden min-[900px]:flex items-center gap-6 relative -translate-y-13 max-[899px]:translate-y-0">
