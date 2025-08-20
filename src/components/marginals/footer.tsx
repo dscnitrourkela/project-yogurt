@@ -8,7 +8,7 @@ export default function Footer() {
   const rightSocials = SOCIALS.slice(2);
   return (
     <footer className="relative w-full flex flex-col justify-end min-h-screen lg:mt-25 xl:mt-30">
-      <div className="hidden min-[940px]:flex w-full justify-between px-8 absolute xl:top-[20%] lg:top-[20%] lg:px-20 py-6">
+      <div className="hidden min-[900px]:flex w-full justify-between px-8 absolute xl:top-[20%] lg:top-[20%] lg:px-20 py-6">
         <div className="flex gap-6">
           {leftSocials.map((social) => (
             <Link
@@ -44,7 +44,7 @@ export default function Footer() {
       </div>
 
       {/* Grid for devices below 940px */}
-      <div className="hidden max-[939px]:grid grid-cols-4 gap-x-6 gap-y-6 px-6 max-[939px]:pt-[25%] max-[899px]:pt-[15%]">
+      <div className="hidden max-[900px]:grid grid-cols-4 gap-x-6 gap-y-6 px-6 max-[939px]:pt-[25%] max-[899px]:pt-[15%]">
         {/* First row */}
         <div /> {/* empty */}
         <Link
