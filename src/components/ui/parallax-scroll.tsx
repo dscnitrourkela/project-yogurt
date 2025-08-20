@@ -17,19 +17,20 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
     offset: ['start start', 'end end'],
   });
 
-  // Parallax depths
-  const col1Y = useTransform(scrollYProgress, [0, 1], [250, -150]);
-  const col2Y = useTransform(scrollYProgress, [0, 1], [350, -250]);
-  const col3Y = useTransform(scrollYProgress, [0, 1], [450, -350]);
+  // Parallax depths (two columns only now)
+  const colLeftY = useTransform(scrollYProgress, [0, 1], [250, -150]);
+  const colRightY = useTransform(scrollYProgress, [0, 1], [350, -250]);
 
-  // Fade in / out
+  // Fade in
   const fadeIn = useTransform(scrollYProgress, [0.05, 0.2], [0, 1]);
-  const fadeOut = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
-  const third = Math.ceil(images.length / 3);
-  const col1 = images.slice(0, third);
-  const col2 = images.slice(third, 2 * third);
-  const col3 = images.slice(2 * third);
+  // Build two columns by strict alternation so no two sequential images share a column
+  const leftCol: string[] = [];
+  const rightCol: string[] = [];
+  images.forEach((img, idx) => {
+    if (idx % 2 === 0) leftCol.push(img);
+    else rightCol.push(img);
+  });
 
   const renderColumn = (column: string[], colY: any, key: string) => (
     <div className="grid gap-8">
@@ -60,10 +61,9 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
       </div>
 
       {/* Images layer ABOVE content */}
-      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-[20vh]">
-        {renderColumn(col1, col1Y, 'col1')}
-        {renderColumn(col2, col2Y, 'col2')}
-        {renderColumn(col3, col3Y, 'col3')}
+      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 gap-4 sm:gap-6 pt-[20vh]">
+        {renderColumn(leftCol, colLeftY, 'left')}
+        {renderColumn(rightCol, colRightY, 'right')}
       </div>
     </div>
   );
