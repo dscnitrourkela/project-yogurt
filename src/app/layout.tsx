@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { metaDataObject } from '@/config/seo';
+import AsciiLogger from '../components/AsciiLogger/AsciiLogger';
 import {
   avertaStd,
   grutchShaded,
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body
         className={` ${avertaStd.variable} ${grutchShaded.variable} ${museo.variable} ${sketchBlock.variable} ${wcRoughTrad.variable} ${cabinSketch.variable}  antialiased`}
       >
+        <AsciiLogger />
         {children}
       </body>
     </html>
