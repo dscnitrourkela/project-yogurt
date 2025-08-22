@@ -43,21 +43,21 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="hidden max-[900px]:grid grid-cols-4 gap-x-6 gap-y-6 px-6 max-[939px]:pt-[25%] max-[899px]:pt-[15%]">
+      <div className="hidden max-[900px]:grid grid-cols-4 gap-x-6 gap-y-6 px-6 max-[939px]:pt-[25%] max-[899px]:pt-[15%] max-[450px]:hidden">
         <div />
         <Link
           key={SOCIALS[0].name}
           href={SOCIALS[0].href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center"
+          className="flex flex-col items-center gap-y-2"
         >
           <img
             src={SOCIALS[0].icon}
             alt={SOCIALS[0].name}
             className="w-6 h-6"
           />
-          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] leading-none text-center">
+          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px]  leading-none text-center">
             {SOCIALS[0].name.toUpperCase()}
           </Typography.H6>
         </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
           href={SOCIALS[3].href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center"
+          className="flex flex-col items-center gap-y-2"
         >
           <img
             src={SOCIALS[3].icon}
@@ -84,7 +84,7 @@ export default function Footer() {
           href={SOCIALS[1].href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center"
+          className="flex flex-col items-center gap-y-2"
         >
           <img
             src={SOCIALS[1].icon}
@@ -101,7 +101,7 @@ export default function Footer() {
           href={SOCIALS[2].href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center"
+          className="flex flex-col items-center gap-y-2"
         >
           <img
             src={SOCIALS[2].icon}
@@ -113,6 +113,20 @@ export default function Footer() {
           </Typography.H6>
         </Link>
         <div />
+      </div>
+
+      <div className="flex max-[450px]:flex w-full justify-center gap-6 px-2 py-4 min-[451px]:hidden">
+        {SOCIALS.map((social) => (
+          <Link
+            key={social.name}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <img src={social.icon} alt={social.name} className="w-8 h-8" />
+          </Link>
+        ))}
       </div>
 
       <div className="w-full flex items-center justify-center xl:pb-10 lg:pb-8 relative z-0">
