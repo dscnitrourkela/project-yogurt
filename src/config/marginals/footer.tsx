@@ -1,35 +1,32 @@
-// config.ts
-
 export type Social = {
   name: string;
   href: string;
-  icon: string; // cloudinary URL
+  icon: string;
 };
 
 export const SOCIALS: Social[] = [
   {
     name: 'INSTAGRAM',
-    href: 'https://instagram.com/',
+    href: 'https://www.instagram.com/hacknitr/',
     icon: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755710454/hacknitr/cd0lyrhdlzfrevhbgluk.png',
   },
   {
     name: 'LINKEDIN',
-    href: 'https://linkedin.com/',
+    href: 'https://www.linkedin.com/company/hacknitr/',
     icon: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755710453/hacknitr/ljpzd4qbjttmkqrz3se0.png',
   },
   {
     name: 'TWITTER',
-    href: 'https://twitter.com/',
+    href: 'https://x.com/hacknitr',
     icon: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755710453/hacknitr/wi5kohs8crycruil6pfk.png',
   },
   {
     name: 'GITHUB',
-    href: 'https://github.com/',
+    href: 'https://github.com/dscnitrourkela/project-yogurt',
     icon: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755710453/hacknitr/xspkjzkj2uhjgiypnefh.png',
   },
 ];
 
-// Hero section images with mobile/desktop variants
 export const HERO_IMAGES = {
   main: {
     desktop:
@@ -45,7 +42,6 @@ export const HERO_IMAGES = {
   },
 };
 
-// Footer text
 export const FOOTER_TEXT = [
   {
     text: (

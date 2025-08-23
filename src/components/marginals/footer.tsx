@@ -8,7 +8,7 @@ export default function Footer() {
   const rightSocials = SOCIALS.slice(2);
   return (
     <footer className="relative w-full flex flex-col justify-end min-h-screen lg:mt-25 xl:mt-30">
-      <div className="hidden min-[900px]:flex w-full justify-between px-8 absolute xl:top-[20%] lg:top-[20%] lg:px-20 py-6">
+      <div className="hidden min-[900px]:flex w-full justify-between px-8 absolute xl:top-[25%] lg:top-[30%] lg:px-8 xl:px-15 2xl:px-20 py-6">
         <div className="flex gap-6">
           {leftSocials.map((social) => (
             <Link
@@ -16,10 +16,10 @@ export default function Footer() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-6 text-black"
+              className="flex items-center gap-4 text-black"
             >
               <img src={social.icon} alt={social.name} className="w-6 h-6" />
-              <Typography.H6 className="lg:text-[26px] xl:text-[32px] 2xl:text-[32px] leading-none relative -top-[-5px]">
+              <Typography.H6 className=" text-[24px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px] leading-none relative -top-[-5px]">
                 {social.name.toUpperCase()}
               </Typography.H6>
             </Link>
@@ -32,10 +32,10 @@ export default function Footer() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-5 text-black"
+              className="flex items-center gap-4 text-black"
             >
               <img src={social.icon} alt={social.name} className="w-6 h-6" />
-              <Typography.H6 className="lg:text-[26px] xl:text-[32px] 2xl:text-[32px] leading-none relative -top-[-5px]">
+              <Typography.H6 className="lg:text-[26px] xl:text-[28px] 2xl:text-[30px] leading-none relative -top-[-5px]">
                 {social.name.toUpperCase()}
               </Typography.H6>
             </Link>
@@ -43,21 +43,24 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="hidden max-[900px]:grid grid-cols-4 gap-x-6 gap-y-6 px-6 max-[939px]:pt-[25%] max-[899px]:pt-[15%] max-[450px]:hidden">
+      <div className="hidden max-[900px]:grid grid-cols-4 gap-x-6 gap-y-6 px-6 max-[939px]:pt-[25%] max-[899px]:pt-[15%] max-[768px]:hidden">
         <div />
         <Link
           key={SOCIALS[0].name}
           href={SOCIALS[0].href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center gap-y-2"
+          className="flex flex-col items-center gap-y-2
+          "
         >
           <img
             src={SOCIALS[0].icon}
             alt={SOCIALS[0].name}
-            className="w-6 h-6"
+            className="w-8 h-8
+            [@media(min-width:864px)_and_(max-width:900px)]:w-10 
+          [@media(min-width:860px)_and_(max-width:900px)]:h-10 "
           />
-          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px]  leading-none text-center">
+          <Typography.H6 className="text-32px sm:text-[30px] md:text-[32px] lg:text-[32px] leading-none text-center">
             {SOCIALS[0].name.toUpperCase()}
           </Typography.H6>
         </Link>
@@ -72,9 +75,11 @@ export default function Footer() {
           <img
             src={SOCIALS[3].icon}
             alt={SOCIALS[3].name}
-            className="w-6 h-6"
+            className="w-8 h-8
+            [@media(min-width:864px)_and_(max-width:900px)]:w-10 
+          [@media(min-width:860px)_and_(max-width:900px)]:h-10"
           />
-          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] leading-none text-center">
+          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] lg:text-[32px] leading-none text-center">
             {SOCIALS[3].name.toUpperCase()}
           </Typography.H6>
         </Link>
@@ -89,9 +94,11 @@ export default function Footer() {
           <img
             src={SOCIALS[1].icon}
             alt={SOCIALS[1].name}
-            className="w-6 h-6"
+            className="w-8 h-8
+            [@media(min-width:864px)_and_(max-width:900px)]:w-10 
+          [@media(min-width:860px)_and_(max-width:900px)]:h-10"
           />
-          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] leading-none text-center">
+          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] lg:text-[32px] leading-none text-center">
             {SOCIALS[1].name.toUpperCase()}
           </Typography.H6>
         </Link>
@@ -106,25 +113,36 @@ export default function Footer() {
           <img
             src={SOCIALS[2].icon}
             alt={SOCIALS[2].name}
-            className="w-6 h-6"
+            className="w-8 h-8
+            [@media(min-width:864px)_and_(max-width:900px)]:w-9
+          [@media(min-width:860px)_and_(max-width:900px)]:h-9"
           />
-          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] leading-none text-center">
+          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] lg:text-[32px] leading-none text-center">
             {SOCIALS[2].name.toUpperCase()}
           </Typography.H6>
         </Link>
         <div />
       </div>
 
-      <div className="flex max-[450px]:flex w-full justify-center gap-6 px-2 py-4 min-[451px]:hidden">
+      <div className="flex max-[768px]:flex w-full justify-center gap-6 px-2 py-4 min-[768px]:hidden">
         {SOCIALS.map((social) => (
           <Link
             key={social.name}
             href={social.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center"
+            className="flex items-center "
           >
-            <img src={social.icon} alt={social.name} className="w-8 h-8" />
+            <img
+              src={social.icon}
+              alt={social.name}
+              className="w-8 h-8
+            [@media(min-width:450px)_and_(max-width:650px)]:w-10 
+          [@media(min-width:450px)_and_(max-width:650px)]:h-10  
+          
+          [@media(min-width:650px)_and_(max-width:768px)]:w-11 
+          [@media(min-width:650px)_and_(max-width:768px)]:h-11"
+            />
           </Link>
         ))}
       </div>
@@ -165,7 +183,7 @@ export default function Footer() {
       </div>
 
       <div className="w-full flex justify-center items-end">
-        <Typography.Lead className="text-xs sm:text-sm lg:text-lg text-black text-center leading-snug">
+        <Typography.Lead className="text-xs sm:text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-black text-center leading-snug">
           Crafted with <span className="text-pink-500">❤️</span> by HackNITR
           Team
         </Typography.Lead>
