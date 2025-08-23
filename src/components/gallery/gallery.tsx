@@ -22,7 +22,7 @@ export default function Gallery() {
           <div className="mb-6 sm:mb-10 lg:mb-14 w-full px-1 sm:px-2">
             <Typography.H2
               className="font-wc-rough-trad text-white leading-[0.95] tracking-tight 
-                         text-[clamp(2rem,9vw,8rem)] 
+                         text-[clamp(3rem,9vw,9rem)] 
                          md:text-[clamp(4rem,8vw,9rem)] 
                          lg:text-[clamp(5rem,7.5vw,10rem)] 
                          xl:text-[clamp(6rem,6.5vw,12rem)]
