@@ -8,34 +8,70 @@ export default function Footer() {
   const rightSocials = SOCIALS.slice(2);
   return (
     <footer className="relative w-full flex flex-col justify-end min-h-screen lg:mt-25 xl:mt-30">
-      <div className="hidden min-[900px]:flex w-full justify-between px-8 absolute xl:top-[25%] lg:top-[30%] lg:px-8 xl:px-15 2xl:px-20 py-6">
-        <div className="flex gap-6">
+      <div
+        className="hidden min-[900px]:flex w-full justify-between items-center 
+  px-20 lg:px-15 xl:px-17 2xl:px-40  absolute 
+  top-[46%] xl:top-[30%] 2xl:top-[20%] lg:top-[39%]
+  [@media(min-width:1000px)_and_(max-width:1050px)]:top-[43%]
+  [@media(min-width:1050px)_and_(max-width:1100px)]:top-[41%]
+  [@media(min-width:1000px)_and_(max-width:1100px)]:px-4
+  [@media(min-width:950px)_and_(max-width:1000px)]:top-[44%]
+  [@media(min-width:900px)_and_(max-width:950px)]:top-[47%]
+  [@media(min-width:900px)_and_(max-width:950px)]:px-4
+  [@media(min-width:950px)_and_(max-width:1000px)]:px-2
+  [@media(min-width:1150px)_and_(max-width:1250px)]:top-[35%]
+  [@media(min-width:1250px)_and_(max-width:1300px)]:top-[33%]
+  [@media(min-width:1300px)_and_(max-width:1400px)]:top-[31%]
+  [@media(min-width:1400px)_and_(max-width:1500px)]:top-[28%]
+  [@media(min-width:1400px)]:px-20
+  [@media(min-width:1500px)]:top-[28%]"
+      >
+        <div className="flex min-[900px]:gap-10">
           {leftSocials.map((social) => (
             <Link
               key={social.name}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 text-black"
+              className="flex items-center gap-2 min-[900px]:gap-1 text-black"
             >
-              <img src={social.icon} alt={social.name} className="w-6 h-6" />
-              <Typography.H6 className=" text-[24px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px] leading-none relative -top-[-5px]">
+              <img
+                src={social.icon}
+                alt={social.name}
+                className="w-5 h-5 lg:w-6 lg:h-6 relative -top-[1px] min-[900px]:w-6 min-[900px]:h-6"
+              />
+              <Typography.H6
+                className="m-0 p-0 flex items-center leading-none
+                     text-[16px] md:text-[22px] lg:text-[24px] xl:text-[28px] 2xl:text-[30px]
+                     min-[900px]:text-[20px]
+                     [@media(min-width:900px)_and_(max-width:950px)]:text-[21px]"
+              >
                 {social.name.toUpperCase()}
               </Typography.H6>
             </Link>
           ))}
         </div>
-        <div className="flex gap-6">
+
+        <div className="flex gap-6 min-[900px]:gap-10">
           {rightSocials.map((social) => (
             <Link
               key={social.name}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 text-black"
+              className="flex items-center gap-2 min-[900px]:gap-1 text-black"
             >
-              <img src={social.icon} alt={social.name} className="w-6 h-6" />
-              <Typography.H6 className="lg:text-[26px] xl:text-[28px] 2xl:text-[30px] leading-none relative -top-[-5px]">
+              <img
+                src={social.icon}
+                alt={social.name}
+                className="w-5 h-5 lg:w-6 lg:h-6 relative -top-[1px] min-[900px]:w-6 min-[900px]:h-6"
+              />
+              <Typography.H6
+                className="m-0 p-0 flex items-center leading-none
+                     text-[16px] md:text-[22px] lg:text-[24px] xl:text-[28px] 2xl:text-[30px]
+                     min-[900px]:text-[14px]
+                     [@media(min-width:900px)_and_(max-width:950px)]:text-[21px]"
+              >
                 {social.name.toUpperCase()}
               </Typography.H6>
             </Link>
