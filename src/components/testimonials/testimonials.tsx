@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ScrollingCards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const headingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (cardsRef.current.length > 0) {
@@ -35,6 +36,21 @@ const ScrollingCards: React.FC = () => {
       });
     }
 
+    if (headingRef.current && cardsRef.current.length > 0) {
+      const firstCard = cardsRef.current[0];
+      if (firstCard) {
+        gsap.to(headingRef.current, {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: firstCard,
+            start: 'top center',
+            end: 'bottom center',
+            scrub: true,
+          },
+        });
+      }
+    }
+
     return () => {
       ScrollTrigger.getAll().forEach((instance) => instance.kill());
     };
@@ -47,13 +63,18 @@ const ScrollingCards: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#181818] min-h-screen font-sans ">
-      <H1 className="text-5xl md:text-7xl lg:text-8xl uppercase fixed text-white font-wc-rough-trad top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
-        Testimonials
-      </H1>
+    <div className="bg-[#181818] min-h-screen font-sans relative">
+      <div className="sticky top-0 h-screen flex items-center justify-center pointer-events-none z-0">
+        <div ref={headingRef} className="text-center">
+          <H1 className="text-5xl md:text-7xl lg:text-8xl uppercase text-white font-wc-rough-trad">
+            Testimonials
+          </H1>
+        </div>
+      </div>
+
       <div
         ref={containerRef}
-        className="container w-[300px] sm:w-[420px] mx-auto py-8 pt-[20vh]"
+        className="container w-[300px] sm:w-[420px] mx-auto py-8 relative z-10"
       >
         <ul
           id="cards"
