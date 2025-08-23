@@ -148,7 +148,7 @@ export const P: React.FC<TypographyProps> = ({
 }) => (
   <p
     className={cn(
-      'text-base md:text-lg text-[var(--color-subheading)] font-averta-std leading-relaxed mb-4',
+      'text-[var(--color-subheading)] font-averta-std leading-relaxed mb-4',
       className
     )}
     style={style}
