@@ -9,7 +9,7 @@ import Testimonials from '@/components/testimonials/testimonials';
 export default function Page() {
   return (
     <>
-      {/* <div className="">
+      <div className="">
         <div className=" min-h-[90vh] hidden lg:flex justify-center items-center">
           <HackNitr />
         </div>
@@ -18,7 +18,7 @@ export default function Page() {
         </div>
 
         <Clouds />
-      </div> */}
+      </div>
       <Testimonials />
     </>
   );

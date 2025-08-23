@@ -3,7 +3,8 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-import { twitterLogo } from '@/config/testimonials';
+import { testimonialInfo, twitterLogo } from '@/config/testimonials';
+import { H1, H2, H5, Heading, Muted, P, Small } from '../Typography';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,10 +47,10 @@ const ScrollingCards: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#181818] min-h-screen font-sans">
-      <h1 className="text-5xl md:text-7xl lg:text-8xl uppercase fixed text-white font-wc-rough-trad top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
+    <div className="bg-[#181818] min-h-screen font-sans ">
+      <H1 className="text-5xl md:text-7xl lg:text-8xl uppercase fixed text-white font-wc-rough-trad top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
         Testimonials
-      </h1>
+      </H1>
       <div
         ref={containerRef}
         className="container w-[300px] sm:w-[420px] mx-auto py-8 pt-[20vh]"
@@ -58,9 +59,9 @@ const ScrollingCards: React.FC = () => {
           id="cards"
           className="list-none p-0 grid grid-cols-1 gap-[36vh] pb-[calc(var(--cards)_*_1.5em)] mb-[4vw]"
         >
-          {[1, 2, 3, 4].map((cardNum, index) => (
+          {testimonialInfo.map((cardNum, index) => (
             <li
-              key={`card${cardNum}`}
+              key={`card${cardNum.id}`}
               ref={(el) => addToRefs(el, index)}
               id={`card${cardNum}`}
               className="card sticky top-[30vh]"
@@ -78,12 +79,12 @@ const ScrollingCards: React.FC = () => {
                     <div className="flex gap-[2vw]">
                       <div className="w-[48px] bg-[#D9D9D9] rounded-[50%]"></div>
                       <div>
-                        <h1 className="font-averta-std font-[600] text-sm sm:text-base">
-                          Alexendro
-                        </h1>
-                        <h2 className="text-[#919191] font-averta-std text-sm sm:text-base">
-                          @sora_47
-                        </h2>
+                        <H1 className="font-averta-std font-[600] text-sm sm:text-base">
+                          {cardNum.title}
+                        </H1>
+                        <Muted className="text-[#919191] font-averta-std text-sm sm:text-base">
+                          {cardNum.subtitle}
+                        </Muted>
                       </div>
                     </div>
                     <div>
@@ -97,16 +98,14 @@ const ScrollingCards: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="font-averta-std text-sm sm:text-base">
-                      Thank you for this truly AMAZING event! It was so nice
-                      meeting with everyone and hearing such inspiring talks!!!
-                      Can’t wait for the next one already!
-                    </p>
+                    <P className="font-averta-std text-sm sm:text-base">
+                      {cardNum.content}
+                    </P>
                   </div>
                   <div className="flex gap-[1vw] font-averta-std text-[#9B9B9B] text-sm sm:text-base">
-                    <h1>2:21 PM</h1>
-                    <h1>Jul 12, 2024</h1>
-                    <h1>HackNITR 5.0</h1>
+                    <Small>{cardNum.time}</Small>
+                    <Small>{cardNum.date}</Small>
+                    <Small>{cardNum.hacknitr}</Small>
                   </div>
                 </div>
               </div>
