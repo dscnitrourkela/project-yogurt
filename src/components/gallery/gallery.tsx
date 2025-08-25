@@ -19,14 +19,14 @@ export default function Gallery() {
 
         {/* Middle Content */}
         <div className="flex flex-col items-center text-center max-w-[1000px] mx-auto px-1 sm:px-2">
-          <div className="mb-6 sm:mb-10 lg:mb-14 w-full px-1 sm:px-2">
+          <div className="mb-3 sm:mb-10 md:mb-5 lg:mb-9 xl:mb-1 w-full px-1 sm:px-2">
             <Typography.H2
               className="font-wc-rough-trad text-white leading-[0.95] tracking-tight 
                          text-[clamp(3rem,9vw,9rem)]
                          sm:text-[clamp(5rem,8vw,10rem)] 
                          md:text-[clamp(5rem,8vw,10rem)] 
                          lg:text-[clamp(5rem,7.5vw,10rem)] 
-                         xl:text-[clamp(6rem,6.5vw,12rem)]
+                         xl:text-[clamp(4rem,6.4vw,8rem)]
                          flex flex-col gap-[0.1em] sm:gap-[0.1em] md:gap-[0.1em] lg:gap-[0.1em] pt-[1.2em] md:pt-[1.2em] lg:pt-[1.2em]"
             >
               <span className="block">HOW'S THE</span>
@@ -36,7 +36,7 @@ export default function Gallery() {
           </div>
           <Typography.P
             className="text-white font-averta-std font-normal leading-[1.4] 
-            text-[clamp(0.8rem,2.3vw,1.5rem)] max-w-[65ch] mx-auto px-2 sm:px-4 lg:pb-[0.5em]"
+            text-[clamp(0.7rem,2.2vw,1.4rem)] md:text-[clamp(0.3rem,1.8vw,1rem)] lg:text-[clamp(0.2rem,1.7vw,0.8rem)] xl:text-[clamp(0.2rem,1.7vw,0.9rem)] 2xl:text-[clamp(0.2rem,1.7vw,1.6rem)] max-w-[65ch] mx-auto px-2 sm:px-4 lg:pb-[0.5em]"
           >
             {text.desc}
           </Typography.P>
@@ -44,7 +44,7 @@ export default function Gallery() {
 
         {/* Right Column */}
         <div className="flex items-center justify-center font-averta-std pt-2 md:pt-4 lg:pt-18">
-          <div className="flex flex-col items-center gap-1 sm:gap-2 xl:gap-5">
+          <div className="flex flex-col items-center gap-2 sm:gap-2 xl:gap-5">
             {textItems.map((item, index) => (
               <div key={index} className="flex flex-col items-center">
                 {item.text.split('').map((char, charIndex) => (
@@ -59,7 +59,6 @@ export default function Gallery() {
                 ))}
               </div>
             ))}
-            <div className="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 xl:w-[3vw] xl:h-[3vw] bg-[#EAEAEA] mt-1 sm:mt-2 xl:mt-4" />
           </div>
         </div>
       </div>
@@ -67,7 +66,7 @@ export default function Gallery() {
   );
 
   return (
-    <div className="relative w-full -z-10 bg-[#181818] pt-100 pb-100">
+    <div className="relative w-full -z-10 bg-[#181818] pt-40 pb-40 sm:pt-70 sm:pb-70 md:pb-70 md:pt-70 lg:pb-70 lg:pt-70">
       <ParallaxScroll images={GALLERY_PARALLAX_IMAGES} overlay={overlay} />
     </div>
   );
