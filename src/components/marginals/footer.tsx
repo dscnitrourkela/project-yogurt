@@ -7,7 +7,7 @@ export default function Footer() {
   const leftSocials = SOCIALS.slice(0, 2);
   const rightSocials = SOCIALS.slice(2);
   return (
-    <footer className="relative w-full flex flex-col justify-end min-h-screen lg:mt-25 xl:mt-30">
+    <footer className="relative w-full flex flex-col justify-end min-h-screen lg:mt-25 xl:mt-50 2xl:mt-60">
       <div
         className="hidden min-[850px]:flex w-full justify-between items-center 
   px-20 lg:px-15 xl:px-17 2xl:px-40  absolute 
@@ -27,7 +27,8 @@ export default function Footer() {
   [@media(min-width:1300px)_and_(max-width:1400px)]:top-[31%]
   [@media(min-width:1400px)_and_(max-width:1500px)]:top-[28%]
   [@media(min-width:1400px)]:px-20
-  [@media(min-width:1500px)]:top-[28%]"
+  [@media(min-width:1500px)]:top-[28%]
+  [@media(min-width:1800px)]:top-[26%]"
       >
         <div className="flex min-[850px]:gap-8">
           {leftSocials.map((social) => (
@@ -41,14 +42,19 @@ export default function Footer() {
               <img
                 src={social.icon}
                 alt={social.name}
-                className="w-5 h-5 lg:w-6 lg:h-6 relative -top-[1px] min-[850px]:w-6 min-[850px]:h-6"
+                className="w-5 h-5 relative -top-[1px] min-[850px]:w-6 min-[850px]:h-6 
+                min-[1000px]:w-7 min-[1000px]:h-7 min-[1500px]:w-7 min-[1500px]:h-7  min-[1800px]:w-9 min-[1800px]:h-9 min-[2000px]:w-11 min-[2000px]:h-11"
               />
               <Typography.H6
                 className="m-0 p-0 flex items-center leading-none
                      text-[16px] md:text-[22px] lg:text-[24px] xl:text-[28px] 2xl:text-[30px]
                      min-[900px]:text-[20px]
                      [@media(min-width:900px)_and_(max-width:950px)]:text-[21px]
-                     [@media(min-width:850px)_and_(max-width:900px)]:text-[18px]"
+                     [@media(min-width:850px)_and_(max-width:900px)]:text-[18px]
+                     [@media(min-width:1800px)]:text-[38px]
+                     [@media(min-width:2000px)]:text-[43px]
+                     [@media(min-width:2200px)]:text-[48px]
+                     [@media(min-width:2400px)]:text-[52px]"
               >
                 {social.name.toUpperCase()}
               </Typography.H6>
@@ -68,14 +74,19 @@ export default function Footer() {
               <img
                 src={social.icon}
                 alt={social.name}
-                className="w-5 h-5 lg:w-6 lg:h-6 relative -top-[1px] min-[850px]:w-6 min-[850px]:h-6"
+                className="w-5 h-5 relative -top-[1px] min-[850px]:w-6 min-[850px]:h-6 
+                 min-[1000px]:w-7 min-[1000px]:h-7 min-[1500px]:w-7 min-[1500px]:h-7 min-[1800px]:w-9 min-[1800px]:h-9 min-[2000px]:w-11 min-[2000px]:h-11"
               />
               <Typography.H6
                 className="m-0 p-0 flex items-center leading-none
                      text-[16px] md:text-[22px] lg:text-[24px] xl:text-[28px] 2xl:text-[30px]
                      min-[900px]:text-[14px]
                      [@media(min-width:900px)_and_(max-width:950px)]:text-[21px]
-                     [@media(min-width:850px)_and_(max-width:900px)]:text-[18px]"
+                     [@media(min-width:850px)_and_(max-width:900px)]:text-[18px]
+                     [@media(min-width:1800px)]:text-[38px]
+                     [@media(min-width:2000px)]:text-[43px]
+                     [@media(min-width:2200px)]:text-[48px]
+                     [@media(min-width:2400px)]:text-[52px]"
               >
                 {social.name.toUpperCase()}
               </Typography.H6>
@@ -165,7 +176,14 @@ export default function Footer() {
         <div />
       </div> */}
 
-      <div className="flex max-[850px]:flex w-full justify-center gap-6 px-2 py-4 min-[850px]:hidden">
+      <div
+        className="flex max-[850px]:flex w-full px-15 justify-between gap-6 py-4 min-[850px]:hidden
+      [@media(min-width:350px)_and_(max-width:400px)]:px-[38px]
+      [@media(min-width:400px)_and_(max-width:490px)]:px-[48px]
+      [@media(min-width:490px)_and_(max-width:550px)]:px-[58px]
+      [@media(min-width:550px)_and_(max-width:700px)]:px-[78px]
+      [@media(min-width:700px)_and_(max-width:850px)]:px-[100px]"
+      >
         {SOCIALS.map((social) => (
           <Link
             key={social.name}
