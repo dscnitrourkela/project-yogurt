@@ -17,28 +17,31 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
     offset: ['start start', 'end end'],
   });
 
-  // Parallax depths (two columns only now)
-  const colLeftY = useTransform(scrollYProgress, [0, 1], [250, -150]);
-  const colRightY = useTransform(scrollYProgress, [0, 1], [350, -250]);
+  // Parallax depths - different starting heights for dramatic effect with more spacing
+  const colLeftY = useTransform(scrollYProgress, [0, 1], [600, -400]);
+  const colCenterY = useTransform(scrollYProgress, [0, 1], [200, -600]);
+  const colRightY = useTransform(scrollYProgress, [0, 1], [800, -200]);
 
   // Fade in
   const fadeIn = useTransform(scrollYProgress, [0.05, 0.2], [0, 1]);
 
-  // Build two columns by strict alternation so no two sequential images share a column
+  // Build three columns with round-robin distribution
   const leftCol: string[] = [];
+  const centerCol: string[] = [];
   const rightCol: string[] = [];
   images.forEach((img, idx) => {
-    if (idx % 2 === 0) leftCol.push(img);
+    if (idx % 3 === 0) leftCol.push(img);
+    else if (idx % 3 === 1) centerCol.push(img);
     else rightCol.push(img);
   });
 
   const renderColumn = (column: string[], colY: any, key: string) => (
-    <div className="grid gap-8">
+    <div className="grid gap-12 md:gap-16 lg:gap-20">
       {column.map((el, idx) => (
         <motion.div
           key={`${key}-${idx}`}
           style={{ y: colY, opacity: fadeIn }}
-          className="relative w-full h-72 sm:h-80 md:h-96"
+          className="relative w-full h-72 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem]"
         >
           <PortraitSVG
             src={el}
@@ -61,8 +64,12 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
       </div>
 
       {/* Images layer ABOVE content */}
-      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 gap-4 sm:gap-6 pt-[20vh]">
+      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 pt-[15vh]">
         {renderColumn(leftCol, colLeftY, 'left')}
+        {/* Center column only shows on lg+ screens */}
+        <div className="hidden lg:block">
+          {renderColumn(centerCol, colCenterY, 'center')}
+        </div>
         {renderColumn(rightCol, colRightY, 'right')}
       </div>
     </div>
