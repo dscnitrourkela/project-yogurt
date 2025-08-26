@@ -17,10 +17,10 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
     offset: ['start start', 'end end'],
   });
 
-  // Parallax depths - different starting heights for dramatic effect with more spacing
-  const colLeftY = useTransform(scrollYProgress, [0, 1], [600, -400]);
-  const colCenterY = useTransform(scrollYProgress, [0, 1], [200, -600]);
-  const colRightY = useTransform(scrollYProgress, [0, 1], [800, -200]);
+  // Parallax depths - create the staggered waterfall pattern like in the screenshot
+  const colLeftY = useTransform(scrollYProgress, [0, 1], [500, -300]);
+  const colCenterY = useTransform(scrollYProgress, [0, 1], [1800, -500]);
+  const colRightY = useTransform(scrollYProgress, [0, 1], [950, -400]);
 
   // Fade in
   const fadeIn = useTransform(scrollYProgress, [0.05, 0.2], [0, 1]);
@@ -64,7 +64,7 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
       </div>
 
       {/* Images layer ABOVE content */}
-      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 pt-[15vh]">
+      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 pt-[25vh]">
         {renderColumn(leftCol, colLeftY, 'left')}
         {/* Center column only shows on lg+ screens */}
         <div className="hidden lg:block">
