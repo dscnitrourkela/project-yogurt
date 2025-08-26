@@ -3,8 +3,10 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-import { testimonialInfo, twitterLogo } from '@/config/testimonials';
-import { H1, H2, H5, Heading, Muted, P, Small } from '../Typography';
+import { globeLogo, testimonialInfo, twitterLogo } from '@/config/testimonials';
+import { H1, Muted, P, Small } from '../Typography';
+import Marquee from 'react-fast-marquee';
+import ScrollVelocity from './scrollvelocity';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +68,7 @@ const ScrollingCards: React.FC = () => {
     <div className="bg-[#181818] min-h-screen font-sans relative">
       <div className="sticky top-0 h-screen flex items-center justify-center pointer-events-none z-0">
         <div ref={headingRef} className="text-center">
-          <H1 className="text-5xl md:text-7xl lg:text-8xl uppercase text-white font-wc-rough-trad">
+          <H1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl uppercase text-white font-wc-rough-trad">
             Testimonials
           </H1>
         </div>
@@ -74,7 +76,7 @@ const ScrollingCards: React.FC = () => {
 
       <div
         ref={containerRef}
-        className="container w-[300px] sm:w-[420px] mx-auto py-8 relative z-10"
+        className="container w-[300px] sm:w-[420px] 2xl:w-[560px] mx-auto py-8 relative z-10"
       >
         <ul
           id="cards"
@@ -93,17 +95,17 @@ const ScrollingCards: React.FC = () => {
               }}
             >
               <div
-                className={`card-body box-border p-6 rounded-xl shadow-[0_0_30px_0_rgba(0,0,0,0.3)] flex justify-center items-center transition-all duration-500 bg-white border border-black`}
+                className={`card-body box-border p-6 2xl:p-10 rounded-xl shadow-[0_0_30px_0_rgba(0,0,0,0.3)] flex justify-center items-center transition-all duration-500 bg-white border border-black`}
               >
                 <div className="w-full flex flex-col gap-6">
                   <div className="flex justify-between w-full">
-                    <div className="flex gap-[2vw]">
-                      <div className="w-[48px] bg-[#D9D9D9] rounded-[50%]"></div>
+                    <div className="flex gap-6">
+                      <div className="w-[48px] 2xl:w-[64px] bg-[#D9D9D9] rounded-[50%]"></div>
                       <div>
-                        <H1 className="font-averta-std font-[600] text-sm sm:text-base">
+                        <H1 className="font-averta-std font-[600] text-sm sm:text-base 2xl:text-2xl">
                           {cardNum.title}
                         </H1>
-                        <Muted className="text-[#919191] font-averta-std text-sm sm:text-base">
+                        <Muted className="text-[#919191] font-averta-std text-sm sm:text-base 2xl:text-2xl">
                           {cardNum.subtitle}
                         </Muted>
                       </div>
@@ -114,16 +116,16 @@ const ScrollingCards: React.FC = () => {
                         alt=""
                         width={300}
                         height={300}
-                        className="sm:h-[2vw] sm:w-[2vw] h-6 w-6"
+                        className="sm:h-[2vw] sm:w-[2vw] h-6 w-6 "
                       />
                     </div>
                   </div>
                   <div>
-                    <P className="font-averta-std text-sm sm:text-base">
+                    <P className="font-averta-std text-sm sm:text-base 2xl:text-xl">
                       {cardNum.content}
                     </P>
                   </div>
-                  <div className="flex gap-[1vw] font-averta-std text-[#9B9B9B] text-sm sm:text-base">
+                  <div className="flex gap-[1vw] font-averta-std text-[#9B9B9B] text-sm sm:text-base 2xl:text-xl">
                     <Small>{cardNum.time}</Small>
                     <Small>{cardNum.date}</Small>
                     <Small>{cardNum.hacknitr}</Small>
@@ -133,6 +135,34 @@ const ScrollingCards: React.FC = () => {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="w-full bg-black text-white relative z-10">
+        <Marquee autoFill={true}>
+          <Image
+            src={globeLogo}
+            alt="Globe Logo"
+            width={400}
+            height={400}
+            className="h-8 w-8 ml-4 2xl:ml-6"
+          />
+          <h1 className="ml-4 2xl:ml-6 uppercase font-bold font-averta-std text-xl lg:text-3xl py-3">
+            student run
+          </h1>
+        </Marquee>
+      </div>
+      <div className="w-full bg-[#0617B0] text-white -rotate-5 -translate-y-[20px] lg:-translate-y-[40px]">
+        <Marquee autoFill={true}>
+          <Image
+            src={globeLogo}
+            alt="Globe Logo"
+            width={400}
+            height={400}
+            className="h-8 w-8 ml-4 2xl:ml-6"
+          />
+          <h1 className="ml-4 2xl:ml-6 uppercase font-bold font-averta-std text-xl lg:text-3xl py-3">
+            student run
+          </h1>
+        </Marquee>
       </div>
     </div>
   );
