@@ -35,8 +35,13 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
     else rightCol.push(img);
   });
 
-  const renderColumn = (column: string[], colY: any, key: string) => (
-    <div className="grid gap-12 md:gap-16 lg:gap-20">
+  const renderColumn = (
+    column: string[],
+    colY: any,
+    key: string,
+    customGap?: string
+  ) => (
+    <div className={`grid ${customGap || 'gap-12 md:gap-16 lg:gap-20'}`}>
       {column.map((el, idx) => (
         <motion.div
           key={`${key}-${idx}`}
@@ -68,7 +73,12 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
         {renderColumn(leftCol, colLeftY, 'left')}
         {/* Center column only shows on lg+ screens */}
         <div className="hidden lg:block">
-          {renderColumn(centerCol, colCenterY, 'center')}
+          {renderColumn(
+            centerCol,
+            colCenterY,
+            'center',
+            'gap-16 md:gap-20 lg:gap-190'
+          )}
         </div>
         {renderColumn(rightCol, colRightY, 'right')}
       </div>
