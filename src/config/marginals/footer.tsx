@@ -16,7 +16,7 @@ export const SOCIALS: Social[] = [
     icon: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755710453/hacknitr/ljpzd4qbjttmkqrz3se0.png',
   },
   {
-    name: 'TWITTER',
+    name: 'X',
     href: 'https://x.com/hacknitr',
     icon: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755710453/hacknitr/wi5kohs8crycruil6pfk.png',
   },
