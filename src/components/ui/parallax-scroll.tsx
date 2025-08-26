@@ -1,7 +1,11 @@
 'use client';
-import { useScroll, useTransform, motion } from 'motion/react';
 import { useRef } from 'react';
+
+import { motion, useScroll, useTransform } from 'motion/react';
+
+import { background } from '@/config/marginals';
 import { cn } from '@/lib/utils';
+
 import PortraitSVG from './portrait-svg';
 
 interface ParallaxScrollProps {
@@ -38,17 +42,17 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
     key: string,
     customGap?: string
   ) => (
-    <div className={`grid ${customGap || 'gap-12 md:gap-16 lg:gap-20'}`}>
+    <div className={`grid  ${customGap || 'gap-12 md:gap-16 lg:gap-20'}`}>
       {column.map((el, idx) => (
         <motion.div
           key={`${key}-${idx}`}
           style={{ y: colY, opacity: fadeIn }}
-          className="relative w-full h-72 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem]"
+          className="relative  w-full h-72 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem]"
         >
           <PortraitSVG
             src={el}
             id={`${key}-${idx}`}
-            className="w-full h-full"
+            className="w-full h-full  "
           />
         </motion.div>
       ))}
@@ -56,12 +60,15 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
   );
 
   return (
-    <div
-      ref={containerRef}
-      className={cn('relative w-full h-[300vh] bg-[#181818]')}
-    >
+    <div ref={containerRef} className={cn('relative w-full h-[300vh]')}>
       {/* Overlay */}
-      <div className="sticky top-0 h-screen z-20 flex items-center justify-center">
+      <div
+        className="sticky top-0 h-screen z-20 flex items-center justify-center bg-[#181818]"
+        style={{
+          backgroundImage: `url(${background})`,
+          backgroundRepeat: 'cover',
+        }}
+      >
         {overlay}
       </div>
 

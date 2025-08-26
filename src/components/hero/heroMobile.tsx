@@ -1,11 +1,10 @@
 import React from 'react';
-import Typography from '../Typography';
+
 import Image from 'next/image';
-import {
-  measurementData,
-  textElements,
-  textItems,
-} from '@/config/hero/heroMobile';
+
+import { measurementData, textElements } from '@/config/hero/heroMobile';
+
+import Typography from '../Typography';
 
 export const HeroMobile = React.memo(() => {
   return (
@@ -91,7 +90,7 @@ export const HeroMobile = React.memo(() => {
         </div>
 
         {/* Vertical Text on the Right */}
-        <div className="absolute top-[16%] left-[90%] flex-shrink-0">
+        {/* <div className="absolute top-[16%] left-[90%] flex-shrink-0">
           <div className="flex flex-col items-center gap-4 font-averta-std">
             {textItems.map((item) => (
               <div key={item.id} className="flex flex-col items-center">
@@ -109,7 +108,7 @@ export const HeroMobile = React.memo(() => {
             ))}
             <div className="w-[6vw] h-[6vw] bg-[#EAEAEA] mt-2 xl:mt-4" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

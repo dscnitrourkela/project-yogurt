@@ -1,9 +1,11 @@
 'use client';
 import React from 'react';
+
 import { text, textItems } from '@/config/gallery/background';
-import { ParallaxScroll } from '../ui/parallax-scroll';
 import { GALLERY_PARALLAX_IMAGES } from '@/config/gallery/parallax';
+
 import Typography from '../Typography';
+import { ParallaxScroll } from '../ui/parallax-scroll';
 
 export default function Gallery() {
   const overlay = (
@@ -21,7 +23,7 @@ export default function Gallery() {
         <div className="flex flex-col items-center text-center max-w-[1000px] mx-auto px-1 sm:px-2">
           <div className="mb-3 sm:mb-10 md:mb-5 lg:mb-9 xl:mb-1 w-full px-1 sm:px-2">
             <Typography.H2
-              className="font-wc-rough-trad text-white leading-[0.95] tracking-tight 
+              className="font-wc-rough-trad font-normal text-white leading-[0.95] tracking-tight 
                          text-[clamp(3rem,9vw,9rem)]
                          sm:text-[clamp(5rem,8vw,10rem)] 
                          md:text-[clamp(5rem,8vw,10rem)] 
@@ -66,7 +68,7 @@ export default function Gallery() {
   );
 
   return (
-    <div className="relative w-full -z-10 bg-[#181818] pt-40 pb-40 sm:pt-70 sm:pb-70 md:pb-70 md:pt-70 lg:pb-70 lg:pt-70">
+    <div className="relative w-full z-0 pt-40 pb-40 sm:pt-70 sm:pb-70 md:pb-70 md:pt-70 lg:pb-70 lg:pt-70">
       <ParallaxScroll images={GALLERY_PARALLAX_IMAGES} overlay={overlay} />
     </div>
   );

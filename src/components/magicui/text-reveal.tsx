@@ -1,8 +1,11 @@
 'use client';
 
-import { motion, MotionValue, useScroll, useTransform } from 'motion/react';
 import { ComponentPropsWithoutRef, FC, ReactNode, useRef } from 'react';
+
+import { motion, MotionValue, useScroll, useTransform } from 'motion/react';
+
 import { cn } from '@/lib/utils';
+
 import Typography from '../Typography';
 
 export interface TextRevealProps extends ComponentPropsWithoutRef<'div'> {
@@ -31,16 +34,16 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <Typography.H1 className="text-center font-wc-rough-trad text-4xl font-bold text-black md:text-5xl lg:text-6xl">
+            <Typography.H1 className="text-center font-wc-rough-trad text-5xl text-black lg:text-6xl font-normal">
               <span className="block sm:inline">What is</span>
-              <span className="font-wc-rough-trad text-[#150BDE] block sm:inline">
+              <span className="font-wc-rough-trad text-[#150BDE] block sm:inline font-normal">
                 {' '}
                 Hack NITR &#63;
               </span>
             </Typography.H1>
           </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-x-2 gap-y-3 text-center text-lg font-normal md:text-xl lg:text-2xl">
+          <div className="flex flex-wrap justify-center gap-x-2 gap-y-3 text-left md:text-center text-lg font-normal md:text-xl lg:text-2xl">
             {words.map((word, i) => {
               const start = i / words.length;
               const end = start + 1 / words.length;
@@ -66,7 +69,7 @@ interface WordProps {
 const Word: FC<WordProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <span className="relative">
+    <span className="relative ">
       <span className="absolute opacity-30 dark:opacity-20">{children}</span>
       <motion.span
         style={{ opacity }}
