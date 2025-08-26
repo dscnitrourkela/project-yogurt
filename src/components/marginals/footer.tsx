@@ -2,6 +2,9 @@ import { Typography } from '@/components';
 import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { SOCIALS } from '@/config/marginals/footer';
+import Image from 'next/image';
+import { HERO_IMAGES } from '@/config/marginals/footer';
+import { FOOTER_TEXT } from '@/config/marginals/footer';
 
 export default function Footer() {
   const leftSocials = SOCIALS.slice(0, 2);
@@ -39,12 +42,16 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 min-[850px]:gap-1 text-black"
             >
-              <img
+              <Image
                 src={social.icon}
                 alt={social.name}
+                width={44}
+                height={44}
                 className="w-5 h-5 relative -top-[1px] min-[850px]:w-6 min-[850px]:h-6 
-                min-[1000px]:w-7 min-[1000px]:h-7 min-[1500px]:w-7 min-[1500px]:h-7  min-[1800px]:w-9 min-[1800px]:h-9 min-[2000px]:w-11 min-[2000px]:h-11"
+             min-[1000px]:w-7 min-[1000px]:h-7 min-[1500px]:w-7 min-[1500px]:h-7  
+             min-[1800px]:w-9 min-[1800px]:h-9 min-[2000px]:w-11 min-[2000px]:h-11"
               />
+
               <Typography.H6
                 className="m-0 p-0 flex items-center leading-none
                      text-[16px] md:text-[22px] lg:text-[24px] xl:text-[28px] 2xl:text-[30px]
@@ -71,12 +78,19 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 min-[900px]:gap-1 text-black"
             >
-              <img
+              <Image
                 src={social.icon}
                 alt={social.name}
-                className="w-5 h-5 relative -top-[1px] min-[850px]:w-6 min-[850px]:h-6 
-                 min-[1000px]:w-7 min-[1000px]:h-7 min-[1500px]:w-7 min-[1500px]:h-7 min-[1800px]:w-9 min-[1800px]:h-9 min-[2000px]:w-11 min-[2000px]:h-11"
+                width={44}
+                height={44}
+                className="w-5 h-5 relative -top-[1px] 
+             min-[850px]:w-6 min-[850px]:h-6 
+             min-[1000px]:w-7 min-[1000px]:h-7 
+             min-[1500px]:w-7 min-[1500px]:h-7 
+             min-[1800px]:w-9 min-[1800px]:h-9 
+             min-[2000px]:w-11 min-[2000px]:h-11"
               />
+
               <Typography.H6
                 className="m-0 p-0 flex items-center leading-none
                      text-[16px] md:text-[22px] lg:text-[24px] xl:text-[28px] 2xl:text-[30px]
@@ -95,87 +109,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* <div className="hidden max-[900px]:grid grid-cols-4 gap-x-6 gap-y-6 px-6 max-[939px]:pt-[25%] max-[899px]:pt-[15%] max-[768px]:hidden">
-        <div />
-        <Link
-          key={SOCIALS[0].name}
-          href={SOCIALS[0].href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center gap-y-2
-          "
-        >
-          <img
-            src={SOCIALS[0].icon}
-            alt={SOCIALS[0].name}
-            className="w-8 h-8
-            [@media(min-width:864px)_and_(max-width:900px)]:w-10 
-          [@media(min-width:860px)_and_(max-width:900px)]:h-10 "
-          />
-          <Typography.H6 className="text-32px sm:text-[30px] md:text-[32px] lg:text-[32px] leading-none text-center">
-            {SOCIALS[0].name.toUpperCase()}
-          </Typography.H6>
-        </Link>
-        <div />
-        <Link
-          key={SOCIALS[3].name}
-          href={SOCIALS[3].href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center gap-y-2"
-        >
-          <img
-            src={SOCIALS[3].icon}
-            alt={SOCIALS[3].name}
-            className="w-8 h-8
-            [@media(min-width:864px)_and_(max-width:900px)]:w-10 
-          [@media(min-width:860px)_and_(max-width:900px)]:h-10"
-          />
-          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] lg:text-[32px] leading-none text-center">
-            {SOCIALS[3].name.toUpperCase()}
-          </Typography.H6>
-        </Link>
-
-        <Link
-          key={SOCIALS[1].name}
-          href={SOCIALS[1].href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center gap-y-2"
-        >
-          <img
-            src={SOCIALS[1].icon}
-            alt={SOCIALS[1].name}
-            className="w-8 h-8
-            [@media(min-width:864px)_and_(max-width:900px)]:w-10 
-          [@media(min-width:860px)_and_(max-width:900px)]:h-10"
-          />
-          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] lg:text-[32px] leading-none text-center">
-            {SOCIALS[1].name.toUpperCase()}
-          </Typography.H6>
-        </Link>
-        <div />
-        <Link
-          key={SOCIALS[2].name}
-          href={SOCIALS[2].href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center gap-y-2"
-        >
-          <img
-            src={SOCIALS[2].icon}
-            alt={SOCIALS[2].name}
-            className="w-8 h-8
-            [@media(min-width:864px)_and_(max-width:900px)]:w-9
-          [@media(min-width:860px)_and_(max-width:900px)]:h-9"
-          />
-          <Typography.H6 className="text-28px sm:text-[30px] md:text-[32px] lg:text-[32px] leading-none text-center">
-            {SOCIALS[2].name.toUpperCase()}
-          </Typography.H6>
-        </Link>
-        <div />
-      </div> */}
-
       <div
         className="flex max-[850px]:flex w-full px-15 justify-between gap-6 py-4 min-[850px]:hidden
       [@media(min-width:350px)_and_(max-width:400px)]:px-[38px]
@@ -192,18 +125,18 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="flex items-center "
           >
-            <img
+            <Image
               src={social.icon}
               alt={social.name}
+              width={48}
+              height={48}
               className="w-8 h-8
-            [@media(min-width:450px)_and_(max-width:650px)]:w-10 
-          [@media(min-width:450px)_and_(max-width:650px)]:h-10  
-          
-          [@media(min-width:650px)_and_(max-width:768px)]:w-11 
-          [@media(min-width:650px)_and_(max-width:768px)]:h-11
-          
-          [@media(min-width:768px)_and_(max-width:850px)]:w-12 
-          [@media(min-width:768px)_and_(max-width:850px)]:h-12"
+             [@media(min-width:450px)_and_(max-width:650px)]:w-10 
+             [@media(min-width:450px)_and_(max-width:650px)]:h-10  
+             [@media(min-width:650px)_and_(max-width:768px)]:w-11 
+             [@media(min-width:650px)_and_(max-width:768px)]:h-11
+             [@media(min-width:768px)_and_(max-width:850px)]:w-12 
+             [@media(min-width:768px)_and_(max-width:850px)]:h-12"
             />
           </Link>
         ))}
@@ -222,10 +155,14 @@ export default function Footer() {
 
           <div className="flex min-[850px]:hidden flex-col items-center relative mt-[5vh] max-[849px]:mt-[2vh]">
             <div className="flex flex-col items-center">
-              <img
-                src="https://res.cloudinary.com/dscnitrourkela/image/upload/v1755437147/hacknitr/si7ci7j5xowo2ytkj54q.png"
+              <Image
+                src={HERO_IMAGES.main.desktop}
                 alt="HackNITR Logo"
-                className="min-[900px]:block absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[36%] w-[50vw] pointer-events-none"
+                width={800}
+                height={800}
+                className="min-[900px]:block absolute left-1/2 top-1/2 
+             -translate-x-[45%] -translate-y-[36%] 
+             w-[50vw] pointer-events-none"
               />
               <Typography.Display className="text-center font-sketch-block font-normal text-primary text-[30vw] leading-none">
                 Hack
@@ -236,18 +173,24 @@ export default function Footer() {
             </div>
           </div>
 
-          <img
-            src="https://res.cloudinary.com/dscnitrourkela/image/upload/v1755437147/hacknitr/si7ci7j5xowo2ytkj54q.png"
+          <Image
+            src={HERO_IMAGES.overlay.desktop}
             alt="HackNITR Logo Overlay"
-            className="hidden min-[850px]:block absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[70%] w-[37vw] pointer-events-none"
+            width={600}
+            height={600}
+            className="hidden min-[850px]:block absolute left-1/2 top-1/2 
+             -translate-x-[45%] -translate-y-[70%] 
+             w-[37vw] pointer-events-none"
           />
         </div>
       </div>
 
       <div className="w-full flex justify-center items-end">
-        <Typography.Lead className="text-xs sm:text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-black text-center leading-snug">
-          Crafted with <span className="text-pink-500">❤️</span> by HackNITR
-          Team
+        <Typography.Lead
+          className="text-xs sm:text-sm lg:text-lg xl:text-xl 2xl:text-2xl 
+                              text-black text-center leading-snug"
+        >
+          {FOOTER_TEXT}
         </Typography.Lead>
       </div>
     </footer>

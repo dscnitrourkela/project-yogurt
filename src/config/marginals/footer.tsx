@@ -42,12 +42,4 @@ export const HERO_IMAGES = {
   },
 };
 
-export const FOOTER_TEXT = [
-  {
-    text: (
-      <>
-        Crafted with <span className="text-pink-500">💖</span> by HackNITR Team
-      </>
-    ),
-  },
-];
+export const FOOTER_TEXT = 'Crafted with ❤️ by HackNITR Team';
