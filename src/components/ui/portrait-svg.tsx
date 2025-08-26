@@ -24,7 +24,6 @@ export const PortraitSVG: React.FC<PortraitProps> = ({
       className={`relative ${className}`}
       aria-hidden={alt ? 'false' : 'true'}
     >
-      {/* Next.js Image Component */}
       <Image
         src={src}
         alt={alt}
