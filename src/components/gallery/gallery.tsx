@@ -10,7 +10,7 @@ export default function Gallery() {
     <div className="w-full max-w-screen px-4 sm:px-[5vw] pt-24 md:pt-32 lg:pt-50 pb-28 md:pb-36 lg:pb-50 relative z-10">
       <div className="grid grid-cols-[auto_1fr_auto] items-start gap-4 sm:gap-6 md:gap-12 lg:gap-20">
         {/* Left Column */}
-        <div className="flex flex-col items-center justify-center pt-2 md:pt-4 lg:pt-18">
+        <div className="flex flex-col items-center justify-center pt-19 sm:pt-31 md:pt-28 lg:pt-27 xl:pt-33">
           <div className="relative w-[clamp(2rem,6vw,6rem)] h-[clamp(2rem,6vw,6rem)]">
             <div className="absolute top-0 left-[40%] w-[clamp(0.8rem,2.5vw,2.75rem)] h-[clamp(0.8rem,3vw,2.75rem)] bg-[#EAEAEA]" />
             <div className="absolute bottom-0 right-[60%] w-[clamp(0.8rem,2.5vw,2.75rem)] h-[clamp(0.8rem,3vw,2.75rem)] bg-[#EAEAEA]" />
@@ -27,7 +27,7 @@ export default function Gallery() {
                          md:text-[clamp(5rem,8vw,10rem)] 
                          lg:text-[clamp(5rem,7.5vw,10rem)] 
                          xl:text-[clamp(4rem,6.4vw,8rem)]
-                         flex flex-col gap-[0.1em] sm:gap-[0.1em] md:gap-[0.1em] lg:gap-[0.1em] pt-[1.2em] md:pt-[1.2em] lg:pt-[1.2em]"
+                         flex flex-col pt-[1.2em] md:pt-[1.2em] lg:pt-[1.2em]"
             >
               <span className="block">HOW'S THE</span>
               <span className="block">JOURNEY</span>
@@ -43,7 +43,7 @@ export default function Gallery() {
         </div>
 
         {/* Right Column */}
-        <div className="flex items-center justify-center font-averta-std pt-2 md:pt-4 lg:pt-18">
+        <div className="flex items-center justify-center font-averta-std pt-19 sm:pt-31 md:pt-28 lg:pt-27 xl:pt-33">
           <div className="flex flex-col items-center gap-2 sm:gap-2 xl:gap-5">
             {textItems.map((item, index) => (
               <div key={index} className="flex flex-col items-center">
