@@ -31,7 +31,7 @@ interface VelocityTextProps {
 
 interface ScrollVelocityProps {
   scrollContainerRef?: React.RefObject<HTMLElement>;
-  texts: string[];
+  texts: React.ReactNode[];
   velocity?: number;
   className?: string;
   damping?: number;
@@ -166,7 +166,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
 
   return (
     <section>
-      {texts.map((text: string, index: number) => (
+      {texts.map((text, index: number) => (
         <VelocityText
           key={index}
           className={className}
