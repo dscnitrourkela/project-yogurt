@@ -6,9 +6,7 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <div className="lg:h-[30vh]"></div>
       <Gallery />
-      <div className="lg:h-[30vh]"></div>
     </>
   );
 }

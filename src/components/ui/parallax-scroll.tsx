@@ -17,15 +17,12 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
     offset: ['start start', 'end end'],
   });
 
-  // Parallax depths - create the staggered waterfall pattern like in the screenshot
   const colLeftY = useTransform(scrollYProgress, [0, 1], [500, -300]);
   const colCenterY = useTransform(scrollYProgress, [0, 1], [1800, -500]);
   const colRightY = useTransform(scrollYProgress, [0, 1], [950, -400]);
 
-  // Fade in
   const fadeIn = useTransform(scrollYProgress, [0.05, 0.2], [0, 1]);
 
-  // Build three columns with round-robin distribution
   const leftCol: string[] = [];
   const centerCol: string[] = [];
   const rightCol: string[] = [];
@@ -63,7 +60,7 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
       ref={containerRef}
       className={cn('relative w-full h-[300vh] bg-[#181818]')}
     >
-      {/* Overlay (your Gallery content) */}
+      {/* Overlay */}
       <div className="sticky top-0 h-screen z-20 flex items-center justify-center">
         {overlay}
       </div>
@@ -71,7 +68,7 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
       {/* Images layer ABOVE content */}
       <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 pt-[25vh]">
         {renderColumn(leftCol, colLeftY, 'left')}
-        {/* Center column only shows on lg+ screens */}
+        {/* Center column */}
         <div className="hidden lg:block">
           {renderColumn(
             centerCol,

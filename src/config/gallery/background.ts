@@ -21,5 +21,5 @@ export const textItems2 = [
 ];
 
 export const text = {
-  desc: 'HackNITR 2025 brought together over 50,00 passionate innovators and tech enthusiasts from across the country. Three days filled with intense coding, collaboration, and unforgettable memories. This year, we’re gearing up to make it even bigger!',
+  desc: 'HackNITR  united 11,500+ registrations, 600+ colleges, and 4,000+ community innovators under one banner of creativity and collaboration. In just 3 action-packed days, participants built 1,000+ groundbreaking projects, forged lifelong connections, and pushed the boundaries of what’s possible. This year, we’re going even bigger  are you ready to make history at HackNITR 7.0',
 };

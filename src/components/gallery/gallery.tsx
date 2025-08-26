@@ -36,7 +36,7 @@ export default function Gallery() {
           </div>
           <Typography.P
             className="text-center text-white font-averta-std font-normal leading-[1.4] 
-            text-[clamp(0.7rem,2.2vw,1.4rem)] md:text-[clamp(0.3rem,1.8vw,1rem)] lg:text-[clamp(0.2rem,1.7vw,0.8rem)] xl:text-[clamp(0.2rem,1.7vw,0.9rem)] 2xl:text-[clamp(0.2rem,1.7vw,1.6rem)] max-w-[65ch] mx-auto px-2 sm:px-4 lg:pb-[0.5em]"
+            text-[clamp(0.6rem,2.2vw,1.4rem)] md:text-[clamp(0.3rem,1.8vw,0.7rem)] lg:text-[clamp(0.2rem,1.7vw,0.7rem)] xl:text-[clamp(0.2rem,1.7vw,0.8rem)] 2xl:text-[clamp(0.2rem,1.7vw,1.6rem)] max-w-[65ch] mx-auto px-2 sm:px-4 lg:pb-[0.5em]"
           >
             {text.desc}
           </Typography.P>
