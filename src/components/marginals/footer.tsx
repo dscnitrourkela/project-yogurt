@@ -1,5 +1,4 @@
 import { Typography } from '@/components';
-import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { SOCIALS } from '@/config/marginals/footer';
 import Image from 'next/image';
