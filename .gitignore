@@ -43,3 +43,6 @@ next-env.d.ts
 .yarn/
 .idea/
 temp/
+yarn.lock
+.idea/
+temp/

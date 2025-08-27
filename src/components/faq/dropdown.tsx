@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import { Plus } from 'lucide-react';
+
 import Typography from '../Typography';
 
 type DropdownProps = {
@@ -60,14 +62,14 @@ export const Dropdown: React.FC<DropdownProps> = ({
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
         >
-          <div className="w-full flex items-center justify-between relative top-[0.4em] z-1 min-h-5">
+          <div className="w-full flex items-center justify-between relative top-[0.4em] z-1 min-h-5 hover:cursor-pointer">
             <Typography.H6 className="  text-white">{question}</Typography.H6>
             <div>
               <Plus
                 size={32}
                 color="white"
                 className={`relative -top-[0.3em] transition-transform duration-300 origin-center 
-                ${!isHover ? 'rotate-0' : 'rotate-135'} ${!isOpen ? 'rotate-0' : 'rotate-135'}`}
+                ${!isHover ? 'rotate-0' : 'rotate-90'} ${!isOpen ? 'rotate-0' : 'rotate-135'}`}
               />
             </div>
           </div>
