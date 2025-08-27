@@ -29,7 +29,7 @@ export const questions: Question[] = [
       'Only a creative mind, enthusiasm, and interest are required to participate in the hackathon. In short, the hackathon is entirely free and without monetary charges.',
     answerStyle: 'h-40',
     questionStyle: 'mb-30 -bottom-30',
-    fontSizeScaling: 'text-[clamp(0.7rem,3vw,1rem)]',
+    fontSizeScaling: 'text-[clamp(0.72rem,3vw,1rem)]',
   },
   {
     question: 'Will my travel expenses be reimbursed?',
@@ -65,7 +65,7 @@ export const questions: Question[] = [
       'For further information please look at Things to carry for HackNITR 7.0 notion link. Students failing to submit the MoU within the stipulated time will be disqualified from the event.',
     answerStyle: 'h-85',
     questionStyle: 'mb-73 -bottom-73',
-    fontSizeScaling: 'text-[clamp(0.75rem,3vw,1rem)]',
+    fontSizeScaling: 'text-[clamp(0.7rem,3.4vw,.9rem)]',
   },
   {
     question: 'Will food be provided at the hackathon?',
