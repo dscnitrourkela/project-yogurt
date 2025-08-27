@@ -4,6 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+
+  /*Background Image*/
+  --bg-img: url('https://res.cloudinary.com/dscnitrourkela/image/upload/v1754225393/hacknitr/kih0gsyskoslbgd9frvz.png');
+
     /* Background Colors */
     --color-background: #f2f3f7;
     --color-foreground: #000000;
@@ -156,7 +160,7 @@ body {
 }
 
 body::before {
-    content: '';
+   content: '';
     position: fixed;
     top: 0;
     left: 0;
@@ -168,6 +172,14 @@ body::before {
     z-index: -10;
     background-color: #fefefe;
 }
+
+.bg-on-black {
+  background:
+          linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),
+          var(--bg-img) 0 0 / 1000px 550px,
+          #181818;
+}
+
 
 .loader {
     border: 4px solid #e0e0e0;
