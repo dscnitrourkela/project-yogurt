@@ -12,7 +12,7 @@ export const HeroMobile = React.memo(() => {
     <div className="w-full">
       <div className="flex flex-col ">
         {/* Top Section */}
-        <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-5 pb-18">
+        <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-8 pb-18">
           <div className="text-black text-center text-sm xl:text-base font-light font-averta-std leading-[22.4px] tracking-widest">
             LARGEST STUDENT
             <br />
@@ -25,8 +25,8 @@ export const HeroMobile = React.memo(() => {
         </div>
 
         {/* Main */}
-        <div className="relative w-full" style={{ paddingTop: '37.09%' }}>
-          <div className="absolute top-0 left-0 w-full h-full">
+        <div className="relative w-[100vw] pt-[37.09%] lg:pt-[39.09%] ">
+          <div className="absolute top-0 left-0 w-[100vw] h-full ">
             {/* Measurement Lines */}
             {measurementData.lines.map((line) => {
               if (line.isSvg) {

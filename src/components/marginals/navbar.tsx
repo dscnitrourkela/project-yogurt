@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white fixed top-0 left-0 w-full z-50">
+    <nav className=" fixed top-0 left-0 w-full z-50">
       <div className="px-4 sm:px-6 lg:px-16 py-2">
         <div className="flex items-center justify-between h-full ">
           <div className="flex-1/3  h-full">
@@ -43,7 +43,7 @@ export default function Navbar() {
                   </Link>
                 ))}
             </div>
-          </div> */}
+          </div> 
 
           {/* <div className="hidden lg:flex justify-end items-center flex-1/3">
             <div className="transform scale-90 lg:scale-100">

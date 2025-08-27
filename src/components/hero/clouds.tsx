@@ -8,7 +8,10 @@ export default function Clouds() {
   const [isSmall, setIsSmall] = useState(false);
 
   useEffect(() => {
-    const checkScreen = () => setIsSmall(window.innerWidth < 54 * 16);
+    const checkScreen = () =>
+      setIsSmall(
+        window.innerWidth < 54 * 16 || window.innerHeight > window.innerWidth
+      );
     checkScreen();
     window.addEventListener('resize', checkScreen);
     return () => window.removeEventListener('resize', checkScreen);
@@ -25,7 +28,7 @@ export default function Clouds() {
         alt="clouds"
         width={19200}
         height={1280}
-        className={`w-full object-cover h-full ${isSmall ? '' : '-my-[17%]'}`}
+        className={`w-full object-cover h-full ${isSmall ? '' : '-my-[8%]'}`}
         priority
       />
       {/* {isSmall && (
