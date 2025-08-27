@@ -86,7 +86,7 @@ body {
   position: relative;
 
   z-index: 1;
-
+  overflow-x: hidden; 
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 

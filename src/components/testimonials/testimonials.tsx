@@ -7,6 +7,7 @@ import { globeLogo, testimonialInfo, twitterLogo } from '@/config/testimonials';
 import { H1, Muted, P, Small } from '../Typography';
 import Marquee from 'react-fast-marquee';
 import ScrollVelocity from './scrollvelocity';
+import ScrollMarquee from './marquee';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,51 +67,11 @@ const ScrollingCards: React.FC = () => {
 
   return (
     <div className="bg-[#181818] min-h-screen font-sans relative">
-      <div className="relative w-full">
-        <div className="w-full bg-black text-white relative z-10">
-          <ScrollVelocity
-            texts={[
-              <>
-                <Image
-                  src={globeLogo}
-                  alt="Globe Logo"
-                  width={400}
-                  height={400}
-                  className="h-8 w-8 ml-4 2xl:ml-6 inline-block"
-                />
-                <span className="ml-4 2xl:ml-6 uppercase font-bold font-averta-std text-xl lg:text-3xl py-3 inline-block">
-                  student run
-                </span>
-              </>,
-            ]}
-            velocity={-100}
-            className="flex items-center"
-          />
-        </div>
-        <div className="w-full bg-[#0617B0] text-white absolute top-0 -rotate-12 lg:-rotate-[8deg]">
-          <ScrollVelocity
-            texts={[
-              <>
-                <Image
-                  src={globeLogo}
-                  alt="Globe Logo"
-                  width={400}
-                  height={400}
-                  className="h-8 w-8 ml-4 2xl:ml-6 inline-block"
-                />
-                <span className="ml-4 2xl:ml-6 uppercase font-bold font-averta-std text-xl lg:text-3xl py-3 inline-block">
-                  biggest hackathon
-                </span>
-              </>,
-            ]}
-            velocity={100}
-            className="flex items-center"
-          />
-        </div>
-      </div>
+      <ScrollMarquee />
+
       <div className="sticky top-0 h-screen flex items-center justify-center pointer-events-none z-0">
         <div ref={headingRef} className="text-center">
-          <H1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl uppercase text-white font-wc-rough-trad">
+          <H1 className="text-4xl sm:text-7xl lg:text-8xl 2xl:text-9xl uppercase text-white font-wc-rough-trad font-normal">
             Testimonials
           </H1>
         </div>
@@ -118,7 +79,7 @@ const ScrollingCards: React.FC = () => {
 
       <div
         ref={containerRef}
-        className="container w-[300px] sm:w-[420px] 2xl:w-[560px] mx-auto py-8 relative z-10"
+        className="container w-[300px] sm:w-[420px] 2xl:w-[560px] mx-auto py-8 relative z-10 px-4"
       >
         <ul
           id="cards"
@@ -142,7 +103,7 @@ const ScrollingCards: React.FC = () => {
                 <div className="w-full flex flex-col gap-6">
                   <div className="flex justify-between w-full">
                     <div className="flex gap-6">
-                      <div className="w-[48px] 2xl:w-[64px] bg-[#D9D9D9] rounded-[50%]"></div>
+                      <div className="w-[48px] h-[48px] 2xl:w-[64px] 2xl:h-[64px] bg-[#D9D9D9] rounded-[50%]"></div>
                       <div>
                         <H1 className="font-averta-std font-[600] text-sm sm:text-base 2xl:text-2xl">
                           {cardNum.title}
@@ -178,49 +139,8 @@ const ScrollingCards: React.FC = () => {
           ))}
         </ul>
       </div>
-      <div className="relative w-full">
-        <div className="w-full bg-black text-white relative z-10">
-          <ScrollVelocity
-            texts={[
-              <>
-                <Image
-                  src={globeLogo}
-                  alt="Globe Logo"
-                  width={400}
-                  height={400}
-                  className="h-8 w-8 ml-4 2xl:ml-6 inline-block"
-                />
-                <span className="ml-4 2xl:ml-6 uppercase font-bold font-averta-std text-xl lg:text-3xl py-3 inline-block">
-                  student run
-                </span>
-              </>,
-            ]}
-            velocity={-100}
-            className="flex items-center"
-          />
-        </div>
 
-        <div className="w-full bg-[#0617B0] text-white absolute top-0 -rotate-12 lg:-rotate-[8deg]">
-          <ScrollVelocity
-            texts={[
-              <>
-                <Image
-                  src={globeLogo}
-                  alt="Globe Logo"
-                  width={400}
-                  height={400}
-                  className="h-8 w-8 ml-4 2xl:ml-6 inline-block"
-                />
-                <span className="ml-4 2xl:ml-6 uppercase font-bold font-averta-std text-xl lg:text-3xl py-3 inline-block">
-                  biggest hackathon
-                </span>
-              </>,
-            ]}
-            velocity={100}
-            className="flex items-center"
-          />
-        </div>
-      </div>
+      <ScrollMarquee />
     </div>
   );
 };
