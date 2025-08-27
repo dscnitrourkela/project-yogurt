@@ -4,14 +4,21 @@ import Hero from '@/components/hero/hero';
 import { FaqList } from '@/components/faq/faq-list';
 import Gallery from '@/components/gallery/gallery';
 import Footer from '@/components/marginals/footer';
+import Testimonials from '@/components/testimonials/testimonials';
+import ScrollMarquee from '@/components/ui/marquee';
 
 export default function Page() {
   return (
     <>
       <Hero />
-      <FaqList />
       <About />
       <Gallery />
+      <Testimonials />
+      <div className="py-20 bg-on-black">
+        <ScrollMarquee />
+      </div>
+      <FaqList />
+      <ScrollMarquee />
       <Footer />
     </>
   );

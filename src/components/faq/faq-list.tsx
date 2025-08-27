@@ -5,7 +5,7 @@ import { Typography } from '@/components';
 
 export const FaqList: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center py-20 w-full bg-on-black mt-60">
+    <section className="min-h-screen flex flex-col items-center justify-center py-24 w-full bg-on-black">
       <div className="relative w-full">
         {/* Squares fixed at top-left */}
         <div className="absolute top-5 left-6 sm:top-9 sm:left-15 md:top-20 md:left-20">
