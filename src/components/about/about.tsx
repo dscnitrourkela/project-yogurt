@@ -6,7 +6,6 @@ import { aboutConfig } from '@/config/about';
 
 const About: React.FC = () => {
   const textRevealRef = useRef<HTMLDivElement>(null);
-
   return (
     <section className=" grid place-items-center min-h-screen  pt-10">
       <div ref={textRevealRef} className="w-full flex justify-center">

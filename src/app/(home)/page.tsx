@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { TEMP_HERO_CONFIG } from '@/config/hero/clouds';
+import DevfolioButton from '@/components/devfolio/devfolio-button';
 
 export default function Home() {
   return (
@@ -20,6 +21,11 @@ export default function Home() {
             width={500}
             className="scale-100"
             alt="dates"
+          />
+          <DevfolioButton
+            hackathonSlug="hacknitr7"
+            theme="light"
+            className="mt-8"
           />
         </div>
       </div>

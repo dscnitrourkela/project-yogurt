@@ -23,6 +23,11 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
   }
 
   const words = children.split(' ');
+  const headingOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [0.5, 1, 1, 1]
+  );
 
   return (
     <div ref={targetRef} className={cn('relative h-[200vh]', className)}>
@@ -30,9 +35,7 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
         <div className="mx-auto flex max-w-3xl flex-col items-center space-y-8 px-4">
           <motion.div
             className="w-full select-none"
-            initial={{ opacity: 0.2 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
+            style={{ opacity: headingOpacity }}
           >
             <Typography.H1 className="text-center font-wc-rough-trad text-5xl text-black lg:text-6xl font-normal">
               <span className="block sm:inline">What is</span>
@@ -43,7 +46,7 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
             </Typography.H1>
           </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-x-2 gap-y-3 text-left md:text-center text-lg font-normal md:text-xl lg:text-2xl">
+          <div className="flex flex-wrap justify-center gap-x-2 gap-y-3 text-center text-lg font-normal md:text-xl lg:text-2xl">
             {words.map((word, i) => {
               const start = i / words.length;
               const end = start + 1 / words.length;
