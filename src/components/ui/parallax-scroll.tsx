@@ -3,7 +3,6 @@ import { useRef } from 'react';
 
 import { motion, useScroll, useTransform } from 'motion/react';
 
-import { background } from '@/config/marginals';
 import { cn } from '@/lib/utils';
 
 import PortraitSVG from './portrait-svg';
@@ -62,13 +61,7 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
   return (
     <div ref={containerRef} className={cn('relative w-full h-[300vh]')}>
       {/* Overlay */}
-      <div
-        className="sticky top-0 h-screen z-20 flex items-center justify-center bg-[#181818]"
-        style={{
-          backgroundImage: `url(${background})`,
-          backgroundRepeat: 'cover',
-        }}
-      >
+      <div className="sticky top-0 h-screen z-20 flex items-center justify-center">
         {overlay}
       </div>
 

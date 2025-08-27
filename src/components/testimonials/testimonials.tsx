@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { testimonialInfo, twitterLogo } from '@/config/testimonials';
 
 import { H1, Muted, P, Small } from '../Typography';
-import ScrollMarquee from '../ui/marquee';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,9 +66,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className=" bg-on-black min-h-screen font-sans relative">
-      <ScrollMarquee />
-
+    <div className="min-h-screen font-sans relative" id="testimonials">
       <div className="sticky top-0 h-screen flex items-center justify-center pointer-events-none z-0">
         <div ref={headingRef} className="text-center">
           <H1 className="text-4xl sm:text-7xl lg:text-8xl 2xl:text-9xl uppercase text-white font-wc-rough-trad font-normal">

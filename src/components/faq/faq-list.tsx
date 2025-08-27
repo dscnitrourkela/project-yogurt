@@ -1,11 +1,15 @@
 import React from 'react';
+
+import { Typography } from '@/components';
 import { Dropdown } from '@/components/faq/dropdown';
 import { questions } from '@/config/faq';
-import { Typography } from '@/components';
 
 export const FaqList: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center py-24 w-full bg-on-black">
+    <section
+      className="min-h-screen flex flex-col items-center justify-center py-24 w-full"
+      id="faqs"
+    >
       <div className="relative w-full">
         {/* Squares fixed at top-left */}
         <div className="absolute top-5 left-6 sm:top-9 sm:left-15 md:top-20 md:left-20">

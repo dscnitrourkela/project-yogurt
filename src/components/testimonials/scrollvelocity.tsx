@@ -1,13 +1,14 @@
 'use client';
-import React, { useRef, useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
+
 import {
   motion,
+  useAnimationFrame,
+  useMotionValue,
   useScroll,
   useSpring,
   useTransform,
-  useMotionValue,
   useVelocity,
-  useAnimationFrame,
 } from 'motion/react';
 
 interface VelocityMapping {
@@ -28,6 +29,7 @@ interface VelocityTextProps {
   scrollerClassName?: string;
   parallaxStyle?: React.CSSProperties;
   scrollerStyle?: React.CSSProperties;
+  instanceId: string; // Add instanceId to make keys unique
 }
 
 interface ScrollVelocityProps {
@@ -64,6 +66,9 @@ function useElementWidth<T extends HTMLElement>(
   return width;
 }
 
+// Generate a unique ID for each component instance
+let componentInstanceCounter = 0;
+
 export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
   scrollContainerRef,
   texts = [],
@@ -78,6 +83,11 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
   parallaxStyle,
   scrollerStyle,
 }) => {
+  // Generate a unique instance ID for this component
+  const [instanceId] = useState(
+    () => `scroll-velocity-${++componentInstanceCounter}-${Date.now()}`
+  );
+
   function VelocityText({
     children,
     baseVelocity = velocity,
@@ -91,6 +101,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     scrollerClassName,
     parallaxStyle,
     scrollerStyle,
+    instanceId,
   }: VelocityTextProps) {
     const baseX = useMotionValue(0);
     const scrollOptions = scrollContainerRef
@@ -142,7 +153,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
       spans.push(
         <span
           className={`flex-shrink-0 ${className}`}
-          key={i}
+          key={`${instanceId}-span-${i}`}
           ref={i === 0 ? copyRef : null}
         >
           {children}
@@ -169,7 +180,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     <section>
       {texts.map((text, index: number) => (
         <VelocityText
-          key={index}
+          key={`${instanceId}-text-${index}`}
           className={className}
           baseVelocity={index % 2 !== 0 ? -velocity : velocity}
           scrollContainerRef={scrollContainerRef}
@@ -181,6 +192,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
           scrollerClassName={scrollerClassName}
           parallaxStyle={parallaxStyle}
           scrollerStyle={scrollerStyle}
+          instanceId={instanceId}
         >
           {text}&nbsp;
         </VelocityText>
