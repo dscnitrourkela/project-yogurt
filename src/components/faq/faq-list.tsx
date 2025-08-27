@@ -7,15 +7,19 @@ export const FaqList: React.FC = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center py-20 w-full bg-on-black mt-60">
       <div className="relative w-full">
-        {/* Squares in the top-left corner */}
-        <div className="absolute top-4 left-4 md:top-8 md:left-8 flex mt-5 ml-20">
-          <div className="w-12 h-12 md:w-14 md:h-14 bg-gray-700 border-2 border-black mt-14"></div>
-          <div className="w-12 h-12 md:w-14 md:h-14 bg-gray-700 border-2 border-black"></div>
+        {/* Squares fixed at top-left */}
+        <div className="absolute top-5 left-10 sm:top-9 sm:left-15 md:top-20 md:left-20">
+          <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
+            {/* First square */}
+            <div className="absolute top-0 left-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-700"></div>
+            {/* Second square (shifted down-right) */}
+            <div className="absolute top-8 left-8 sm:top-10 sm:left-10 md:top-12 md:left-12 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-700"></div>
+          </div>
         </div>
 
-        {/* FAQ Title */}
-        <div className="flex items-center justify-center gap-4 p-8 w-full text-center">
-          <Typography.H1 className="font-wc-rough-trad text-[#f2f3f7]">
+        {/* Centered FAQ Title */}
+        <div className="flex items-center justify-center p-8 w-full text-center">
+          <Typography.H1 className="font-wc-rough-trad text-[#f2f3f7] ">
             FAQ's
           </Typography.H1>
         </div>
@@ -29,6 +33,7 @@ export const FaqList: React.FC = () => {
             answer={question.answer}
             finalHeightAnswer={question.answerStyle}
             finalHeightQuestion={question.questionStyle}
+            fontSizeScaling={question.fontSizeScaling}
           />
         ))}
       </div>

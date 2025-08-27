@@ -9,6 +9,7 @@ type DropdownProps = {
   answer: string;
   finalHeightAnswer?: string;
   finalHeightQuestion?: string;
+  fontSizeScaling?: string;
 };
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -16,11 +17,12 @@ export const Dropdown: React.FC<DropdownProps> = ({
   answer,
   finalHeightAnswer,
   finalHeightQuestion,
+  fontSizeScaling,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
-  const answerStyle = `absolute left-10 right-10 bg-white rounded-t-2xl z-1 min-w-40 mt-5
+  const answerStyle = `absolute left-5 right-5 bg-white rounded-t-2xl z-1 mt-5
             transition-all duration-200 ease-in ${!isOpen ? 'h-8' : finalHeightAnswer} 
             transition-all duration-100 ${!isHover ? '-top-1' : '-top-2'}
             justify-center`;
@@ -30,6 +32,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   const questionStyle = `relative bg-[#181818] rounded-2xl px-4 py-4 border-2 border-[#ACACAC] min-h-[80px] min-w-60 z-10
             transition-all duration-200 ease-in ${!isOpen ? 'mb-0 -bottom-0' : finalHeightQuestion} `;
+
+  const typography = `mt-5 ml-5 mr-5 transition-all ease-in duration-200 ${!isOpen ? 'opacity-0' : 'opacity-100'} ${fontSizeScaling}`;
 
   return (
     <div className=" relative w-full max-w-2xl mx-auto mb-4 mt-10 px-4 ">
@@ -45,11 +49,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           ></div>
           <div className={backgroundStyle}>
             <div className={answerStyle}>
-              <Typography.P
-                className={`mt-5 ml-5 mr-5 transition-all ease-in duration-200 ${!isOpen ? 'opacity-0' : 'opacity-100'}`}
-              >
-                {answer}
-              </Typography.P>
+              <Typography.P className={typography}>{answer}</Typography.P>
             </div>
           </div>
         </div>
@@ -60,8 +60,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
         >
-          <div className="w-full flex items-center justify-between relative top-[0.4em] z-1">
-            <Typography.H6 className="text-white">{question}</Typography.H6>
+          <div className="w-full flex items-center justify-between relative top-[0.4em] z-1 min-h-5">
+            <Typography.H6 className="  text-white">{question}</Typography.H6>
             <div>
               <Plus
                 size={32}

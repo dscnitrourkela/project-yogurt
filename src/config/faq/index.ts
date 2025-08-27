@@ -3,6 +3,7 @@ export interface Question {
   answer: string;
   answerStyle: string;
   questionStyle: string;
+  fontSizeScaling?: string;
 }
 
 export const questions: Question[] = [
@@ -11,6 +12,7 @@ export const questions: Question[] = [
     answer: 'Coming Soon!',
     answerStyle: 'h-25',
     questionStyle: 'mb-15 -bottom-15',
+    fontSizeScaling: 'text-[clamp(0.8rem,2vw,1rem)]',
   },
   {
     question: 'What could be the size of the team?',
@@ -18,6 +20,7 @@ export const questions: Question[] = [
       "We're only looking for groups of 2 to 4 heroes this time. No solo adventurers allowed. Gather your buddies and get ready for an epic adventure together!",
     answerStyle: 'h-40',
     questionStyle: 'mb-30 -bottom-30',
+    fontSizeScaling: 'text-[clamp(0.8rem,3vw,1rem)]',
   },
   {
     question: 'What is the participation fee?',
@@ -25,6 +28,7 @@ export const questions: Question[] = [
       'Only a creative mind, enthusiasm, and interest are required to participate in the hackathon. In short, the hackathon is entirely free and without monetary charges.',
     answerStyle: 'h-40',
     questionStyle: 'mb-30 -bottom-30',
+    fontSizeScaling: 'text-[clamp(0.7rem,3vw,1rem)]',
   },
   {
     question: 'Will my travel expenses be reimbursed?',
@@ -32,6 +36,7 @@ export const questions: Question[] = [
       'Since HackNITR 7.0 is a student-run hackathon, we will not be able to cover your travel expenses.',
     answerStyle: 'h-30',
     questionStyle: 'mb-22 -bottom-22',
+    fontSizeScaling: 'text-[clamp(0.78rem,2vw,1rem)]',
   },
   {
     question: 'Who can participate?',
@@ -40,6 +45,7 @@ export const questions: Question[] = [
       'application can be changed anytime by the organizing team. The final decision is vested with the organizing team and the candidature can be changed based on the undertaking.',
     answerStyle: 'h-60',
     questionStyle: 'mb-45 -bottom-45',
+    fontSizeScaling: 'text-[clamp(0.75rem,3vw,1rem)]',
   },
   {
     question: 'Can I participate online?',
@@ -47,6 +53,7 @@ export const questions: Question[] = [
       'No, since HackNITR 7.0 is a completely offline hackathon, online participation is not encouraged.',
     answerStyle: 'h-30',
     questionStyle: 'mb-22 -bottom-22',
+    fontSizeScaling: 'text-[clamp(0.8rem,3vw,1rem)]',
   },
   {
     question:
@@ -57,6 +64,7 @@ export const questions: Question[] = [
       'For further information please look at Things to carry for HackNITR 6.0 notion link. Students failing to submit the MoU within the stipulated time will be disqualified from the event.',
     answerStyle: 'h-85',
     questionStyle: 'mb-73 -bottom-73',
+    fontSizeScaling: 'text-[clamp(0.75rem,3vw,1rem)]',
   },
   {
     question: 'Will food be provided at the hackathon?',
@@ -64,5 +72,6 @@ export const questions: Question[] = [
       'Of course!! Meals, water, snacks and most importantly- Coffee, will be provided FREE OF COST.',
     answerStyle: 'h-30',
     questionStyle: 'mb-22 -bottom-22',
+    fontSizeScaling: 'text-[clamp(0.85rem,3vw,1rem)]',
   },
 ];
