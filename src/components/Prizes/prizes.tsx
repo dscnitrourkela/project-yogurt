@@ -7,7 +7,6 @@ import { secondPrize } from '@/config/prizes';
 import { thirdPrize } from '@/config/prizes';
 import { prizeheader } from '@/config/prizes';
 import { firstxori } from '@/config/prizes';
-import { qubes } from '@/config/prizes';
 import { useState } from 'react';
 
 export default function Prizes() {
@@ -23,7 +22,7 @@ export default function Prizes() {
         quality={100}
         className="w-full mb-20 h-auto"
       />
-      <Typography.H1 className="my-[2rem] text-6xl sm:text-6xl md:text-8xl lg:text-9xl  font-wc-rough-trad text-blue-800 font-medium flex-wrap">
+      <Typography.H1 className="my-[2rem] text-6xl sm:text-6xl md:text-8xl lg:text-9xl  font-wc-rough-trad text-center text-blue-800 font-medium flex-wrap">
         {prizeheader.title}
       </Typography.H1>
       <div className="absolute top-[18rem] left-[8rem] w-[clamp(4rem,8vw,6.75rem)] h-[clamp(4rem,8vw,6.75rem)] mx-auto">
