@@ -76,6 +76,7 @@
   --font-sketch-block: var(--font-sketch-block);
   --font-wc-rough-trad: var(--font-wc-rough-trad);
   --font-cabin-sketch: var(--font-cabin-sketch);
+  --font-prompt: var(--font-prompt);
 }
 
 html {
@@ -145,4 +146,9 @@ body::before {
 
 @theme {
   --breakpoint-lg: 54rem;
+  --breakpoint-xlg:70.25rem;
+  --breakpoint-3xl:105.25rem;
+  --breakpoint-4xl:114.375rem;
+  --breakpoint-5xl:126.5rem;
+  --breakpoint-6xl:149.75rem;
 }
