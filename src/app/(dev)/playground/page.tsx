@@ -2,9 +2,9 @@ import React from 'react';
 
 import About from '@/components/about/about';
 import { FaqList } from '@/components/faq/faq-list';
+import Prizes from '@/components/Prizes/prizes';
 import Gallery from '@/components/gallery/gallery';
 import Hero from '@/components/hero/hero';
-import Footer from '@/components/marginals/footer';
 import Testimonials from '@/components/testimonials/testimonials';
 import ScrollMarquee from '@/components/ui/marquee';
 
@@ -18,9 +18,8 @@ export default function Page() {
       <div className="bg-on-black">
         <Gallery />
       </div>
-
+      <Prizes />
       <ScrollMarquee />
-
       <Timeline />
       <div className="bg-on-black">
         <ScrollMarquee />
@@ -31,7 +30,6 @@ export default function Page() {
         <FaqList />
       </div>
       <ScrollMarquee />
-      <Footer />
     </>
   );
 }
