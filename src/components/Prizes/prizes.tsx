@@ -66,7 +66,7 @@ export default function Prizes() {
               src={firstPrize.image}
               height={393}
               width={324}
-              className="bg-[#f2f3f7]"
+              className="bg-[#ffffff]"
               alt="prize1"
             />
             <Typography.H1 className="text-[5rem] font-wc-rough-trad text-blue-800 mt-5 mb-[-22] font-normal">
