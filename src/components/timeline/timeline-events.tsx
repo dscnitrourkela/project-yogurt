@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Typography from '../Typography';
 import Image from 'next/image';
 import Event from './events';
 import { timelineData } from '@/config/timeline';
-
-import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 function TimelineEvents() {
@@ -17,18 +15,6 @@ function TimelineEvents() {
     window.addEventListener('resize', checkScreenSize);
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
-  const events = () => {
-    return timelineData.events.map((event, i) => (
-      <Event
-        key={i}
-        className={event.className}
-        eventNumber={event.eventNumber}
-        title={event.title}
-        duration={event.duration}
-        description={event.description}
-      />
-    ));
-  };
 
   return (
     <div className=" relative  mx-10 sm:mx-20 mt-56 ">
@@ -46,7 +32,16 @@ function TimelineEvents() {
             : ' flex flex-col justify-center items-center gap-5 mt-10'
         )}
       >
-        {events()}
+        {timelineData.events.map((event, i) => (
+          <Event
+            key={i}
+            className={event.className}
+            eventNumber={event.eventNumber}
+            title={event.title}
+            duration={event.duration}
+            description={event.description}
+          />
+        ))}
       </div>
     </div>
   );

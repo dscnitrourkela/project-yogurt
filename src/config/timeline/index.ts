@@ -6,7 +6,7 @@ export const timelineData = {
       duration: 'Duration - 15 oct to 15 dec',
       description: 'Get extra perks with early registration',
       className:
-        'absolute lg:top-[125%]  lg:left-[4%] xlg:left-[6%] xl:left-[10%]',
+        'absolute lg:top-[125%]  lg:left-[7%] xlg:left-[6%] xl:left-[12%]',
     },
     {
       eventNumber: 2,

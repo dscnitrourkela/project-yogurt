@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { svgs } from '@/config/timeline';
 import Typography from '../Typography';
 import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
 function Event({
   eventNumber,
   title,
@@ -19,6 +21,15 @@ function Event({
   duration: string;
   description: string;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start 60%', 'end 60%'],
+  });
+
+  const color = useTransform(scrollYProgress, [0, 0.4], ['#ADADAD', '#000000']);
+
   const { border } = svgs;
   const [isLgScreen, setIsLgScreen] = useState(false);
 
@@ -36,19 +47,23 @@ function Event({
   return (
     <>
       <div
+        ref={ref}
         className={cn(
           '   flex  lg:flex-row w-full max-w-[380px] sm:max-w-[540px] lg:max-w-[480px] xlg:max-w-[680px] xl:max-w-[750px] 2xl:max-w-[850px]     ',
           isLgScreen ? className : undefined
         )}
       >
         <div className=" sm:self-center  ">
-          <Typography.H2 className="  font-sketch-block font-normal text-[70px]  sm:text-[100px]  md:text-[130px] lg:text-[130px] xlg:text-[200px] xl:text-[220px] 2xl:text-[280px] leading-[120%] text-[#ADADAD]  tracking-[6px]">
+          <motion.h2
+            style={{ color }}
+            className="  font-sketch-block font-normal text-[70px]  sm:text-[100px]  md:text-[130px] lg:text-[130px] xlg:text-[200px] xl:text-[220px] 2xl:text-[280px] leading-[120%] text-[#ADADAD]  tracking-[6px]"
+          >
             {eventNumber}
-          </Typography.H2>
+          </motion.h2>
         </div>
-        <div className=" lg:py-4 px-4 sm:px-6 flex flex-col">
+        <div className=" lg:py-4 px-2 sm:px-6 flex flex-col">
           <Typography.H5
-            className=" text-[#0617B0] leading-none pt-4 lg:pt-0 sm:leading-10 font-prompt font-semibold
+            className=" text-[#0617B0] leading-none pt-2 lg:pt-0 sm:leading-10 font-prompt font-semibold
           text-base     sm:text-xl lg:text-xl xlg:text-3xl 2xl:text-4xl "
           >
             {title}

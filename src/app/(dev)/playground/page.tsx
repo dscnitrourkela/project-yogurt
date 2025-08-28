@@ -11,8 +11,8 @@ export default function Page() {
     <>
       <Hero />
       <About />
-      <Timeline />
       <Gallery />
+      <Timeline />
       <Footer />
     </>
   );
