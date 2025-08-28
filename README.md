@@ -1,7 +1,7 @@
 [![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -203,6 +203,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/devsw-prayas"><img src="https://avatars.githubusercontent.com/u/64429051?v=4?s=100" width="100px;" alt="DevSw"/><br /><sub><b>DevSw</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=devsw-prayas" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/raaz-tilak"><img src="https://avatars.githubusercontent.com/u/221827602?v=4?s=100" width="100px;" alt="raaz-tilak"/><br /><sub><b>raaz-tilak</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=raaz-tilak" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/srikant3691"><img src="https://avatars.githubusercontent.com/u/180011583?v=4?s=100" width="100px;" alt="Srikant Panigrahy"/><br /><sub><b>Srikant Panigrahy</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=srikant3691" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
