@@ -28,7 +28,7 @@ export default function Home() {
               hackathonSlug="hacknitr7"
               theme="light"
               className="mt-8"
-            /> 
+            />
           </div>
         </div>
       </section>

@@ -8,6 +8,8 @@ import Footer from '@/components/marginals/footer';
 import Testimonials from '@/components/testimonials/testimonials';
 import ScrollMarquee from '@/components/ui/marquee';
 
+import { Timeline } from '@/components/timeline/timeline';
+
 export default function Page() {
   return (
     <>
@@ -15,6 +17,12 @@ export default function Page() {
       <About />
       <div className="bg-on-black">
         <Gallery />
+      </div>
+
+      <ScrollMarquee />
+
+      <Timeline />
+      <div className="bg-on-black">
         <ScrollMarquee />
         <Testimonials />
         <div className="py-20">
