@@ -23,7 +23,7 @@ export const FaqList: React.FC = () => {
 
         {/* Centered FAQ Title */}
         <div className="flex items-center justify-center p-8 w-full text-center">
-          <Typography.H1 className="font-wc-rough-trad text-[#f2f3f7] text-[clamp(3.5rem,5vw,6rem)]">
+          <Typography.H1 className=" font-normal font-wc-rough-trad text-[#f2f3f7] text-[clamp(3.5rem,5vw,6rem)]">
             FAQ's
           </Typography.H1>
         </div>

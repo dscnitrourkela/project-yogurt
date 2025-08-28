@@ -8,6 +8,8 @@ import Hero from '@/components/hero/hero';
 import Testimonials from '@/components/testimonials/testimonials';
 import ScrollMarquee from '@/components/ui/marquee';
 
+import { Timeline } from '@/components/timeline/timeline';
+
 export default function Page() {
   return (
     <>
@@ -17,6 +19,8 @@ export default function Page() {
         <Gallery />
       </div>
       <Prizes />
+      <ScrollMarquee />
+      <Timeline />
       <div className="bg-on-black">
         <ScrollMarquee />
         <Testimonials />
