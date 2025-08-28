@@ -148,7 +148,6 @@ html {
 }
 
 body {
-    position: relative;
 
     z-index: 1;
 
@@ -157,7 +156,6 @@ body {
 
 body::before {
     content: '';
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -165,7 +163,6 @@ body::before {
     background: url(https://res.cloudinary.com/dscnitrourkela/image/upload/v1756245870/hacknitr/o31lzgdhnrkyvfbwwg33.png);
     background-repeat: repeat;
     opacity: 0.4;
-    z-index: -10;
     background-color: #fefefe;
 }
 

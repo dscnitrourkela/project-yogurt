@@ -1,3 +1,5 @@
+// import { image } from 'motion/react-client';
+
 export const firstPrize = {
   image:
     'https://res.cloudinary.com/dscnitrourkela/image/upload/v1756052111/hacknitr/ct8dpoxnd7wg8ligyzs0.png',
@@ -24,7 +26,6 @@ export const firstxori = {
     'https://res.cloudinary.com/dscnitrourkela/image/upload/v1756052950/hacknitr/ohoazbugjnrrcvm0bmzm.png',
 };
 export const prizeheader = {
-  image:
-    'https://res.cloudinary.com/dscnitrourkela/image/upload/v1756027454/hacknitr/ndxyral0hpqlrv8zzcwg.png',
+  image: '/pagebreak.svg',
   title: 'PRIZES',
 };
