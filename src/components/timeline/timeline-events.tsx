@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Typography from '../Typography';
-import Image from 'next/image';
+
 import Event from './events';
 import { timelineData } from '@/config/timeline';
 import { cn } from '@/lib/utils';
@@ -17,7 +17,7 @@ function TimelineEvents() {
   }, []);
 
   return (
-    <div className=" relative  mx-10 sm:mx-20 mt-56 ">
+    <div className=" relative  mx-5 sm:mx-20  ">
       <div className=" flex items-center justify-center   ">
         <Typography.H1 className=" font-wc-rough-trad font-normal leading-none text-[10vw] text-[#150BDE]">
           {' '}

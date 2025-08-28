@@ -17,6 +17,12 @@ export default function Page() {
       <About />
       <div className="bg-on-black">
         <Gallery />
+      </div>
+
+      <ScrollMarquee />
+
+      <Timeline />
+      <div className="bg-on-black">
         <ScrollMarquee />
         <Testimonials />
         <div className="py-20">
@@ -25,7 +31,6 @@ export default function Page() {
         <FaqList />
       </div>
       <ScrollMarquee />
-      <Timeline />
       <Footer />
     </>
   );

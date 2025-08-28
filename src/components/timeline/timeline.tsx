@@ -14,7 +14,11 @@ export function Timeline() {
   const pathLengthFirst = useTransform(scrollYProgress, [0.21, 0.9], [0, 1.2]);
 
   return (
-    <div className=" my-20  lg:h-[128vw] xlg:h-[126vw] xl:h-[118vw] " ref={ref}>
+    <div
+      id="timeline"
+      className=" mt-28 md:mt-56 mb-28  lg:h-[128vw] xlg:h-[126vw] xl:h-[118vw] "
+      ref={ref}
+    >
       <TimelineEvents />
       <TimelineEffect
         className="  hidden lg:block"
