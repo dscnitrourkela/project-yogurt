@@ -35,7 +35,6 @@ export const TimelineEffect = ({
     return () => window.removeEventListener('resize', checkHeight);
   }, []);
 
-  // Transform pathLength to x,y coordinates
   const pathProgress = useTransform(pathLengths[0], [0, 1], [0, 1]);
 
   const getPointAtLength = (progress: number) => {
@@ -46,7 +45,6 @@ export const TimelineEffect = ({
     return point;
   };
 
-  // Create motion values for x and y positions
   const tipX = useTransform(pathProgress, (progress) => {
     const point = getPointAtLength(progress);
     return point.x;
