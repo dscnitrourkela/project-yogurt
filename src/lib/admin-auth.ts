@@ -21,6 +21,8 @@ export const getAdminSession = (): AdminSession | null => {
       return null;
     }
   } catch (error) {
+    console.error('Error parsing admin session from localStorage:', error);
+
     localStorage.removeItem('adminSession');
     return null;
   }

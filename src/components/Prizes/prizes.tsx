@@ -13,14 +13,14 @@ export default function Prizes() {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <section className="relative">
+    <section className="relative mb-28">
       <Image
         src={prizeheader.image}
         height={199}
         width={1786}
         alt="w"
         quality={100}
-        className="absolute top-[1rem] -translate-y-full w-full -z-10"
+        className="absolute top-[1rem] -translate-y-full w-full z-10"
       />
       <Typography.H1 className="py-30 text-6xl sm:text-6xl md:text-8xl lg:text-9xl  font-wc-rough-trad text-center text-blue-800 font-medium">
         {prizeheader.title}
