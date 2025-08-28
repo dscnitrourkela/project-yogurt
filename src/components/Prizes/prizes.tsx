@@ -22,18 +22,12 @@ export default function Prizes() {
         quality={100}
         className="absolute top-[1rem] -translate-y-full w-full -z-10"
       />
-      {/* <div className="flex flex-wrap align-center justify-center relative  "> */}
-
-      <Typography.H1 className="pt-[1rem] mb-[8rem] text-6xl sm:text-6xl md:text-8xl lg:text-9xl  font-wc-rough-trad text-center text-blue-800 font-medium flex-wrap">
+      <Typography.H1 className="py-30 text-6xl sm:text-6xl md:text-8xl lg:text-9xl  font-wc-rough-trad text-center text-blue-800 font-medium">
         {prizeheader.title}
       </Typography.H1>
-      {/* <div className="absolute top-[18rem] left-[8rem] w-[clamp(4rem,8vw,6.75rem)] h-[clamp(4rem,8vw,6.75rem)] mx-auto">
-        <div className="absolute top-0 left-[40%] w-[clamp(2rem,3vw,3.38rem)] h-[clamp(2rem,4vw,3.38rem)] bg-[#EAEAEA]"></div>
-        <div className="absolute bottom-0 right-[60%] w-[clamp(2rem,3vw,3.38rem)] h-[clamp(2rem,4vw,3.38rem)] bg-[#EAEAEA]"></div>
-      </div> */}
-      <div className="flex items-center relative justify-center gap-[10vw] w-auto h-auto mt-20 [@media(max-width:600px)]:h-[1rem] [@media(max-width:600px)]:scale-70 flex-wrap">
-        <div className="flex flex-col items-center [@media(max-width:1050px)]:order-2  justify-center flex-wrap mt-15 [@media(max-width:1050px)]:mt-0 ">
-          {/* <div className=" flex flex-col items-center justify-center flex-wrap "> */}
+
+      <div className="flex items-center relative justify-center gap-[10vw] w-auto h-auto mt-20 [@media(max-width:764px)]:h-[2rem] [@media(max-width:764px)]:scale-70 flex-wrap">
+        <div className="flex flex-col items-center [@media(max-width:1050px)]:order-2  justify-center flex-wrap mt-15 transform transition duration-300 hover:scale-110 [@media(max-width:1050px)]:mt-0 ">
           <Image
             src={secondPrize.image}
             height={316}
@@ -50,9 +44,8 @@ export default function Prizes() {
           <Typography.H5 className="font-wc-rough-trad text-center text-black mt-6 font-normal">
             {secondPrize.title}
           </Typography.H5>
-          {/* </div> */}
         </div>
-        <div className="relative flex flex-col items-center  [@media(max-width:1050px)]:order-1 [@media(max-width:1050px)]:mx-[20%] [@media(max-width:600px)]:mx-[0%] justify-center flex-wrap relative group mt-5 [@media(max-width:600px)]:-mt-5 ">
+        <div className="relative flex flex-col items-center justify-center flex-wrap relative group mt-5 transform transition duration-300 hover:scale-110 [@media(max-width:1050px)]:order-1 [@media(max-width:1050px)]:mx-[20%] [@media(max-width:600px)]:mx-[0%]  [@media(max-width:764px)]:-mt-5 ">
           <div
             className={`absolute -translate-y-76 [@media(max-width:600px)]:top-65 group-hover:scale-150 group-hover:-translate-y-92 duration-300  ${isClicked ? '-translate-y-92 scale-120 duration-100 ' : ''}`}
           >
@@ -60,6 +53,7 @@ export default function Prizes() {
               src={firstxori.image}
               height={107}
               width={127}
+              quality={100}
               alt="xori"
               className=""
             />
@@ -86,7 +80,7 @@ export default function Prizes() {
             </Typography.H4>
           </div>
         </div>
-        <div className="flex flex-col items-center  [@media(max-width:1050px)]:-mt-10 [@media(max-width:1050px)]:order-3 justify-center flex-wrap mt-15 [@media(max-width:1050px)]:mt-0 ">
+        <div className="flex flex-col items-center justify-center flex-wrap mt-15 [@media(max-width:1050px)]:-mt-10 transform transition duration-300 hover:scale-110 [@media(max-width:1050px)]:order-3  [@media(max-width:1050px)]:mt-0 ">
           <div className="flex flex-col items-center justify-center flex-wrap">
             <Image
               src={thirdPrize.image}
@@ -106,7 +100,6 @@ export default function Prizes() {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 }
