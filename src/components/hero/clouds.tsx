@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { HERO_CLOUDS_CONFIG } from '@/config/hero/clouds';
-import PreRegisterButton from '../pre-register/pre-register';
 
 export default function Clouds() {
   const [isSmall, setIsSmall] = useState(false);

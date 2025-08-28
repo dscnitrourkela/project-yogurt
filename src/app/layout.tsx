@@ -1,14 +1,18 @@
-import type { Metadata } from 'next';
 import './globals.css';
+
+import type { Metadata } from 'next';
+
+import HOC from '@/components/hoc/hoc';
 import { metaDataObject } from '@/config/seo';
 import {
   avertaStd,
+  cabinSketch,
   grutchShaded,
   museo,
   sketchBlock,
   wcRoughTrad,
-  cabinSketch,
 } from '@/fonts';
+
 export const metadata = metaDataObject as Metadata;
 
 export default function RootLayout({
@@ -21,7 +25,7 @@ export default function RootLayout({
       <body
         className={` ${avertaStd.variable} ${grutchShaded.variable} ${museo.variable} ${sketchBlock.variable} ${wcRoughTrad.variable} ${cabinSketch.variable}  antialiased`}
       >
-        {children}
+        <HOC>{children}</HOC>
       </body>
     </html>
   );
