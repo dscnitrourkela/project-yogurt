@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import SponsTemp from '@/components/sponsors/spons-temp';
 import { TEMP_HERO_CONFIG } from '@/config/hero/clouds';
+import DevfolioButton from '@/components/devfolio/devfolio-button';
 
 export default function Home() {
   return (
@@ -23,11 +24,11 @@ export default function Home() {
               className="scale-100"
               alt="dates"
             />
-            {/* <DevfolioButton
+            <DevfolioButton
               hackathonSlug="hacknitr7"
               theme="light"
               className="mt-8"
-            /> */}
+            /> 
           </div>
         </div>
       </section>
