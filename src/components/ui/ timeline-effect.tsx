@@ -21,24 +21,18 @@ export const TimelineEffect = ({
   const { pencil: PencilIcon, robot: RobotIcon } = svgs;
 
   const [isheight, setIsheight] = useState(0);
-  const [isWidth, setIsWidth] = useState(0);
+
   const [pathElement, setPathElement] = useState<SVGPathElement | null>(null);
 
   useEffect(() => {
     const checkHeight = () => {
       setIsheight(window.innerHeight);
     };
-    const checkWidth = () => {
-      setIsWidth(window.innerWidth);
-    };
-    checkWidth();
+
     checkHeight();
-    window.addEventListener('resize', checkWidth);
+
     window.addEventListener('resize', checkHeight);
-    return () => (
-      window.removeEventListener('resize', checkWidth),
-      window.removeEventListener('resize', checkHeight)
-    );
+    return () => window.removeEventListener('resize', checkHeight);
   }, []);
 
   // Transform pathLength to x,y coordinates
