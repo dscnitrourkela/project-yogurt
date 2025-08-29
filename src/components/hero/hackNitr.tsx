@@ -124,7 +124,7 @@ export const HackNitr = () => {
           </div>
         </div>
       </div>
-      <div className="font-sketch-block text-[1.85vw] text-center">
+      <div className="-mt-[1vw] font-sketch-block text-[1.85vw] text-center">
         November <span className="text-[#0534C7]">1st–2nd</span>, 2025 | NIT
         Rourkela
       </div>

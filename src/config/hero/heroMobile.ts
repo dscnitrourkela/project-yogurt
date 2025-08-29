@@ -60,7 +60,7 @@ export const measurementData = {
     {
       id: 'l12',
       src: '/lines/line-133.svg',
-      style: { width: '1.5%', height: '20.4%', top: '75.2%', left: '10.5%' },
+      style: { width: '1.5%', height: '20.4%', top: '75.2%', left: '11.5%' },
       isSvg: true,
     },
   ],

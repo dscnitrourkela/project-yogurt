@@ -12,15 +12,15 @@ export const HeroMobile = React.memo(() => {
     <div className="w-full">
       <div className="flex flex-col ">
         {/* Top Section */}
-        <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-8 pb-18">
-          <div className="text-black text-center text-sm xl:text-base font-light font-averta-std leading-[22.4px] tracking-widest">
+        <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-4 pb-[4svh]">
+          <div className="text-black text-center text-[3vw] font-light font-averta-std leading-[5vw] tracking-widest">
             LARGEST STUDENT
             <br />
             RUN HACKATHON
           </div>
-          <div className="w-20 h-20 xl:w-[6.75rem] xl:h-[6.75rem]">
-            <div className="w-10 h-10 xl:w-[3.38rem] xl:h-[3.38rem] ml-10 xl:ml-[3.38rem] bg-[#EAEAEA]"></div>
-            <div className="w-10 h-10 xl:w-[3.38rem] xl:h-[3.38rem] bg-[#EAEAEA]"></div>
+          <div className="w-[16vw] h-[16vw] ">
+            <div className="w-[8vw] h-[8vw] ml-[8vw] bg-[#EAEAEA]"></div>
+            <div className="w-[8vw] h-[8vw]  bg-[#EAEAEA]"></div>
           </div>
         </div>
 
@@ -91,8 +91,8 @@ export const HeroMobile = React.memo(() => {
         </div>
 
         {/* Vertical Text on the Right */}
-        <div className="absolute top-[16%] left-[90%] flex-shrink-0">
-          <div className="flex flex-col items-center gap-4 font-averta-std">
+        <div className="absolute top-[1.85%] left-[90%] flex-shrink-0">
+          <div className="flex flex-col items-center gap-[2.2vw] font-averta-std">
             {textItems.map((item) => (
               <div key={item.id} className="flex flex-col items-center">
                 {item.text.split('').map((char, charIndex) => (
@@ -109,6 +109,10 @@ export const HeroMobile = React.memo(() => {
             ))}
             <div className="w-[6vw] h-[6vw] bg-[#EAEAEA] mt-2 xl:mt-4" />
           </div>
+        </div>
+        <div className="mt-[50%] font-sketch-block text-[3.85vw] text-center">
+          November <span className="text-[#0534C7]">1st–2nd</span>, 2025 | NIT
+          Rourkela
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ export const HERO_CLOUDS_CONFIG = {
       'https://res.cloudinary.com/dscnitrourkela/image/upload/v1754332288/hacknitr/oe1yxuhkcon3cdpxsnkd.png',
     desktop:
       'https://res.cloudinary.com/dscnitrourkela/image/upload/v1754332162/hacknitr/t6hwqqvgad8dypakamwt.png',
+    repeat: `https://res.cloudinary.com/dscnitrourkela/image/upload/v1756397094/hacknitr/bhczxleoncj4sxbhqnns.png`,
   },
 } as const;
 

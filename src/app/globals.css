@@ -251,3 +251,9 @@ body::before {
     @apply bg-background text-foreground;
   }
 }
+
+.mobileClouds {
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+}
