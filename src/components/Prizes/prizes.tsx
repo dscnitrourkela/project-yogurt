@@ -30,11 +30,11 @@ export default function Prizes() {
         quality={100}
         className="absolute top-[1rem] -translate-y-full w-full z-10"
       /> */}
-      <Typography.H1 className="text-center font-normal font-wc-rough-trad text-blue-800 text-[clamp(3.5rem,5vw,6rem)]">
+      <Typography.H1 className="text-center font-normal font-wc-rough-trad text-blue-800 text-[clamp(3.5rem,5vw,6rem)] md:mb-0 mb-10">
         {prizeheader.title}
       </Typography.H1>
 
-      <div className="flex items-center relative justify-center gap-[10vw] w-auto h-auto mt-20 [@media(max-width:520px)]:-mb-35 [@media(max-width:764px)]:-mt-35 [@media(max-width:764px)]:scale-70 flex-wrap ">
+      <div className="flex items-end relative justify-center gap-[10vw] w-auto h-auto mt-20 [@media(max-width:520px)]:-mb-35 [@media(max-width:764px)]:-mt-35 [@media(max-width:764px)]:scale-70 flex-wrap ">
         <div className="flex flex-col items-center [@media(max-width:1050px)]:order-2  justify-center flex-wrap mt-15">
           <Image
             src={secondPrize.image}
@@ -56,7 +56,9 @@ export default function Prizes() {
         </div>
         <div className="relative flex flex-col items-center justify-center flex-wrap group pt-20 px-5 transform transition duration-300 [@media(max-width:1050px)]:order-1 [@media(max-width:1050px)]:mx-[20%] [@media(max-width:600px)]:mx-[0%]  [@media(max-width:764px)]:-mt-5 [@media(max-width:500px)]:-mt- ">
           <div
-            className={`absolute -translate-y-56 group-hover:-translate-y-60 duration-300 `}
+            className={`absolute -translate-y-56 group-hover:-translate-y-60 duration-300 ${
+              isClicked ? '-translate-y-60' : ''
+            }`}
           >
             <Image
               src={firstxori.image}
