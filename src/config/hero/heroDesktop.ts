@@ -58,29 +58,29 @@ export const measurementData = {
     },
   ],
   labels: [
-    { label: '20cm', style: { top: '5%', left: '31%' } },
+    { label: '20cm', style: { top: '4%', left: '31%' } },
     { label: '25cm', style: { top: '11%', left: '67.3%' } },
     { label: '0.5cm', style: { top: '78%', left: '49.5%' }, isSmall: true },
-    { label: '5cm', style: { top: '78%', left: '89%' } },
+    { label: '5cm', style: { top: '77%', left: '89%' } },
   ],
 };
 
 export const textElements = [
   {
     component: 'Hack',
-    style: { top: '48%', left: '31%' },
+    style: { top: '29%', left: '14%' },
     className: 'font-sketch-block font-normal text-primary',
     type: 'Display',
   },
   {
     component: 'NITR',
-    style: { top: '43%', left: '67.5%' },
+    style: { top: '26.5%', left: '50.8%' },
     className: 'font-grutch-shaded font-normal',
     type: 'Display',
   },
   {
     component: '7.0',
-    style: { top: '80%', left: '79.5%' },
+    style: { top: '62%', left: '74.7%' },
     className: 'font-sketch-block font-normal',
     type: 'H1',
   },

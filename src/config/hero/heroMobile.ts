@@ -60,7 +60,7 @@ export const measurementData = {
     {
       id: 'l12',
       src: '/lines/line-133.svg',
-      style: { width: '1.5%', height: '20.4%', top: '75.2%', left: '10.5%' },
+      style: { width: '1.5%', height: '20.4%', top: '75.2%', left: '11.5%' },
       isSvg: true,
     },
   ],
@@ -80,14 +80,14 @@ export const textElements = [
   {
     id: 'te1',
     component: 'Hack',
-    style: { top: '6%', left: '-14.5%' },
+    style: { top: '4%', left: '-14.2%' },
     className: 'font-sketch-block font-normal text-primary text-[24.6vw]',
     type: 'Display',
   },
   {
     id: 'te2',
     component: 'NITR',
-    style: { top: '86%', left: '-2%' },
+    style: { top: '82%', left: '-2%' },
     className: 'font-grutch-shaded font-normal text-[20vw]',
     type: 'Display',
   },
