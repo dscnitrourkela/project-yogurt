@@ -63,7 +63,7 @@ function Event({
         </div>
         <div className=" lg:py-4 px-2 sm:px-6 flex flex-col">
           <Typography.H5
-            className=" text-[#0617B0] leading-none pt-2 lg:pt-0 sm:leading-10 font-prompt font-semibold
+            className=" text-[#0617B0] leading-none pt-2 lg:pt-0 sm:leading-10 font-semibold
           text-base     sm:text-xl lg:text-xl xlg:text-3xl 2xl:text-4xl "
           >
             {title}
@@ -76,10 +76,10 @@ function Event({
             className="w-[54vw] "
           />
           <div className=" mt-3">
-            <Typography.H6 className=" text-base sm:text-lg font-prompt font-normal text-[#454545] leading-none sm:leading-7">
+            <Typography.H6 className=" text-base sm:text-lg font-semibold text-[#454545] leading-none sm:leading-7">
               {duration}
             </Typography.H6>
-            <Typography.P className="font-prompt text-sm sm:text-base  font-normal text-[#454545] leading-none sm:leading-7">
+            <Typography.P className="text-sm sm:text-base  font-normal text-[#454545] leading-none sm:leading-7">
               {description}
             </Typography.P>
           </div>
