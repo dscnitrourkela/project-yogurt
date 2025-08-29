@@ -1,11 +1,14 @@
 import React from 'react';
-import Typography from '../Typography';
+
 import Image from 'next/image';
+
 import {
   measurementData,
   textElements,
   textItems,
 } from '@/config/hero/heroDesktop';
+
+import Typography from '../Typography';
 
 const filesToKeepAsImages = ['line-132.svg', 'line-134.svg', 'line-133.svg'];
 

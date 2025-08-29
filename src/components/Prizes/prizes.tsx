@@ -1,13 +1,18 @@
 'use client';
 
-import Image from 'next/image';
-import Typography from '../Typography';
-import { firstPrize } from '@/config/prizes';
-import { secondPrize } from '@/config/prizes';
-import { thirdPrize } from '@/config/prizes';
-import { prizeheader } from '@/config/prizes';
-import { firstxori } from '@/config/prizes';
 import { useState } from 'react';
+
+import Image from 'next/image';
+
+import {
+  firstPrize,
+  firstxori,
+  prizeheader,
+  secondPrize,
+  thirdPrize,
+} from '@/config/prizes';
+
+import Typography from '../Typography';
 
 export default function Prizes() {
   const [isClicked, setIsClicked] = useState(false);
@@ -15,21 +20,21 @@ export default function Prizes() {
   return (
     <section
       id="prizes"
-      className="relative mb-28 pb-32 [@media(max-width:764px)]:-mb-15 "
+      className="relative mt-20 mb-28 pb-32 [@media(max-width:764px)]:-mb-15 "
     >
-      <Image
+      {/* <Image
         src={prizeheader.image}
         height={199}
         width={1786}
         alt="w"
         quality={100}
         className="absolute top-[1rem] -translate-y-full w-full z-10"
-      />
-      <Typography.H1 className="text-center font-normal font-wc-rough-trad text-blue-800 text-[clamp(3.5rem,5vw,6rem)]">
+      /> */}
+      <Typography.H1 className="text-center font-normal font-wc-rough-trad text-blue-800 text-[clamp(3.5rem,5vw,6rem)] md:mb-0 mb-10">
         {prizeheader.title}
       </Typography.H1>
 
-      <div className="flex items-center relative justify-center gap-[10vw] w-auto h-auto mt-20 [@media(max-width:520px)]:-mb-35 [@media(max-width:764px)]:-mt-35 [@media(max-width:764px)]:scale-70 flex-wrap ">
+      <div className="flex items-end relative justify-center gap-[10vw] w-auto h-auto mt-20 [@media(max-width:520px)]:-mb-35 [@media(max-width:764px)]:-mt-35 [@media(max-width:764px)]:scale-70 flex-wrap ">
         <div className="flex flex-col items-center [@media(max-width:1050px)]:order-2  justify-center flex-wrap mt-15">
           <Image
             src={secondPrize.image}
@@ -51,7 +56,9 @@ export default function Prizes() {
         </div>
         <div className="relative flex flex-col items-center justify-center flex-wrap group pt-20 px-5 transform transition duration-300 [@media(max-width:1050px)]:order-1 [@media(max-width:1050px)]:mx-[20%] [@media(max-width:600px)]:mx-[0%]  [@media(max-width:764px)]:-mt-5 [@media(max-width:500px)]:-mt- ">
           <div
-            className={`absolute -translate-y-60 group-hover:-translate-y-67 duration-300 `}
+            className={`absolute -translate-y-56 group-hover:-translate-y-60 duration-300 ${
+              isClicked ? '-translate-y-60' : ''
+            }`}
           >
             <Image
               src={firstxori.image}

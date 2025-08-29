@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { X } from 'lucide-react';
 import Image from 'next/image';
@@ -8,7 +8,6 @@ import Link from 'next/link';
 import { hamburgerIcon, logo, navItems } from '@/config/marginals';
 
 import Typography from '../Typography';
-import Button from '../ui/button';
 
 function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
   return (
@@ -43,9 +42,9 @@ function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
           ))}
         </div>
       </div>
-      <div className="absolute right-0 flex justify-end items-center ml-auto">
+      {/* <div className="absolute right-0 flex justify-end items-center ml-auto">
         <Button>Brochure</Button>
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -131,7 +130,6 @@ export default function Navbar() {
       let currentSection = '';
       let minDistance = Infinity;
 
-      // Check all sections to find which one is most prominent in viewport
       [...blackSections, ...whiteSections].forEach((sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -139,7 +137,6 @@ export default function Navbar() {
           const elementTop = rect.top + window.scrollY;
           const elementBottom = elementTop + rect.height;
 
-          // Check if scroll position is within this section
           if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
             const distance = Math.abs(
               scrollPosition - (elementTop + rect.height / 2)
@@ -152,12 +149,11 @@ export default function Navbar() {
         }
       });
 
-      // Set navbar style based on current section
       setIsBlackSection(blackSections.includes(currentSection));
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial state
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

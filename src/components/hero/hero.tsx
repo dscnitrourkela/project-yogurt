@@ -1,7 +1,8 @@
+import React, { useEffect, useState } from 'react';
+
+import Clouds from '@/components/hero/clouds';
 import { HackNitr } from '@/components/hero/hackNitr';
 import { HeroMobile } from '@/components/hero/heroMobile';
-import Clouds from '@/components/hero/clouds';
-import React, { useEffect, useState } from 'react';
 
 export default function Hero() {
   const [padCheck, setPadCheck] = useState(false);

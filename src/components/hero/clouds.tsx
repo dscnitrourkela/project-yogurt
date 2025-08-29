@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
+
 import Image from 'next/image';
+
 import { HERO_CLOUDS_CONFIG } from '@/config/hero/clouds';
 
 export default function Clouds() {

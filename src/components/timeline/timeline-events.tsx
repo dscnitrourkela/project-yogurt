@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Typography from '../Typography';
+import React, { useEffect, useState } from 'react';
 
-import Event from './events';
 import { timelineData } from '@/config/timeline';
 import { cn } from '@/lib/utils';
+
+import Typography from '../Typography';
+import Event from './events';
 
 function TimelineEvents() {
   const [isLgScreen, setIsLgScreen] = useState(false);
@@ -19,7 +20,7 @@ function TimelineEvents() {
   return (
     <div className=" relative  mx-5 sm:mx-20  ">
       <div className=" flex items-center justify-center   ">
-        <Typography.H1 className=" font-wc-rough-trad font-normal leading-none text-[clamp(3.5rem,5vw,6rem)] h-[15vw] text-[#150BDE]">
+        <Typography.H1 className=" font-wc-rough-trad font-normal leading-none text-[clamp(3.5rem,5vw,6rem)] h-[15vw] text-[#150BDE] mb-10 md:mb-0">
           TIMELINE
         </Typography.H1>
       </div>
