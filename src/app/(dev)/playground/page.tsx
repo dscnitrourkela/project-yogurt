@@ -21,6 +21,8 @@ export default function Page() {
       <div className="bg-on-black">
         <Gallery />
       </div>
+      <ScrollMarquee />
+
       <Prizes />
       <ScrollMarquee />
       <Timeline />
