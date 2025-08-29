@@ -77,12 +77,13 @@ const Testimonials: React.FC = () => {
 
       <div
         ref={containerRef}
-        className="container w-[300px] sm:w-[420px] 2xl:w-[560px] mx-auto py-8 relative z-10 px-4"
+        className="container w-[300px] sm:w-[420px] 2xl:w-[560px] mx-auto relative z-10 md:px-4"
+        style={{
+          paddingTop: '2rem',
+          paddingBottom: 'calc(70vh - 44vh)',
+        }}
       >
-        <ul
-          id="cards"
-          className="list-none p-0 grid grid-cols-1 gap-[36vh] pb-[calc(var(--cards)_*_1.5em)] mb-[4vw]"
-        >
+        <ul id="cards" className="list-none p-0 grid grid-cols-1 gap-[44vh]">
           {testimonialInfo.map((cardNum, index) => (
             <li
               key={`card${cardNum.id}`}
@@ -90,13 +91,11 @@ const Testimonials: React.FC = () => {
               id={`card${cardNum}`}
               className="card sticky top-[30vh]"
               style={{
-                paddingTop: `calc(${index + 1} * 1.5em)`,
                 rotate: index % 2 === 0 ? '-5deg' : '5deg',
-                marginTop: `${index * 5}vh`,
               }}
             >
               <div
-                className={`card-body box-border p-6 2xl:p-10 rounded-xl shadow-[0_0_30px_0_rgba(0,0,0,0.3)] flex justify-center items-center transition-all duration-500 bg-white border border-black`}
+                className={`card-body min-w-[300px] box-border p-6 2xl:p-10 rounded-xl shadow-[0_0_30px_0_rgba(0,0,0,0.3)] flex justify-center items-center transition-all duration-500 bg-white border border-black`}
               >
                 <div className="w-full flex flex-col gap-6">
                   <div className="flex justify-between w-full">
