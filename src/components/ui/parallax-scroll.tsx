@@ -29,10 +29,17 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
   const leftCol: string[] = [];
   const centerCol: string[] = [];
   const rightCol: string[] = [];
+
+  const mobileLeftCol: string[] = [];
+  const mobileRightCol: string[] = [];
+
   images.forEach((img, idx) => {
     if (idx % 3 === 0) leftCol.push(img);
     else if (idx % 3 === 1) centerCol.push(img);
     else rightCol.push(img);
+
+    if (idx % 2 === 0) mobileLeftCol.push(img);
+    else mobileRightCol.push(img);
   });
 
   const renderColumn = (
@@ -65,18 +72,21 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
         {overlay}
       </div>
 
-      {/* Images layer ABOVE content */}
-      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 pt-[25vh]">
+      {/* Mobile Layout: 2 columns */}
+      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 gap-6 sm:gap-8 pt-[25vh] lg:hidden">
+        {renderColumn(mobileLeftCol, colLeftY, 'mobile-left')}
+        {renderColumn(mobileRightCol, colRightY, 'mobile-right')}
+      </div>
+
+      {/* Desktop Layout: 3 columns */}
+      <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 hidden lg:grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 pt-[25vh]">
         {renderColumn(leftCol, colLeftY, 'left')}
-        {/* Center column */}
-        <div className="hidden lg:block ">
-          {renderColumn(
-            centerCol,
-            colCenterY,
-            'center',
-            'gap-16 md:gap-20 lg:gap-190'
-          )}
-        </div>
+        {renderColumn(
+          centerCol,
+          colCenterY,
+          'center',
+          'gap-16 md:gap-20 lg:gap-190'
+        )}
         {renderColumn(rightCol, colRightY, 'right')}
       </div>
     </div>

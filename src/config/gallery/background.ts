@@ -1,13 +1,3 @@
-export const GALLERY_BACKGROUND = {
-  image:
-    'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755334230/hacknitr/hgqkxtx6ydgdcgfcncfi.png',
-  text: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755335976/hacknitr/xs2a3zh6upf6fotcqts2.png',
-  image2:
-    'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755354763/hacknitr/ujtl7xlxcb3wwn0gdkqs.png',
-  image3:
-    'https://res.cloudinary.com/dscnitrourkela/image/upload/v1755357912/hacknitr/gnly2rxtk1ovwswuvmat.png',
-} as const;
-
 export const textItems = [
   { text: 'THINK', isBold: false },
   { text: 'BUILD', isBold: false },
