@@ -7,7 +7,7 @@ import Gallery from '@/components/gallery/gallery';
 import Hero from '@/components/hero/hero';
 import Testimonials from '@/components/testimonials/testimonials';
 import ScrollMarquee from '@/components/ui/marquee';
-
+import Footer from '@/components/marginals/footer';
 import { Timeline } from '@/components/timeline/timeline';
 
 export default function Page() {
@@ -30,6 +30,8 @@ export default function Page() {
         <FaqList />
       </div>
       <ScrollMarquee />
+      <Footer />
+
     </>
   );
 }
