@@ -15,14 +15,14 @@ export const HackNitr = () => {
       <div className="flex flex-row px-[5vw]">
         {/* Left Column */}
         <div className="flex flex-col h-[25dvh] justify-between  flex-shrink-0">
-          <div className="text-black text-center text-[1vw]  font-light font-averta-std leading-[22.4px] tracking-widest">
+          <div className="text-black text-center text-[1vw]  font-light font-averta-std leading-[1.5vw] tracking-widest">
             LARGEST STUDENT
             <br />
             RUN HACKATHON
           </div>
-          <div className="relative w-[clamp(4rem,8vw,6.75rem)] h-[clamp(4rem,8vw,6.75rem)] mx-auto">
-            <div className="absolute top-0 left-[40%] w-[clamp(2rem,4vw,3.38rem)] h-[clamp(2rem,4vw,3.38rem)] bg-[#EAEAEA]" />
-            <div className="absolute bottom-0 right-[60%] w-[clamp(2rem,4vw,3.38rem)] h-[clamp(2rem,4vw,3.38rem)] bg-[#EAEAEA]" />
+          <div className="relative w-[8vw] h-[8vw] mx-auto">
+            <div className="absolute top-0 left-[40%] w-[4vw] h-[4vw] bg-[#EAEAEA]" />
+            <div className="absolute bottom-0 right-[60%] w-[4vw] h-[4vw] bg-[#EAEAEA]" />
           </div>
         </div>
 
@@ -88,9 +88,7 @@ export const HackNitr = () => {
                   style={{
                     fontWeight: 300,
                     letterSpacing: '3.01px',
-                    fontSize: item.isSmall
-                      ? 'clamp(0.5rem, 1.5vw, 0.75rem)'
-                      : 'clamp(0.7rem, 2vw, 1rem)',
+                    fontSize: item.isSmall ? '1.1vw' : '1.1vw',
                     lineHeight: '1.4',
                     ...item.style,
                   }}

@@ -9,8 +9,8 @@ import {
 
 export const HeroMobile = React.memo(() => {
   return (
-    <div className="w-full">
-      <div className="flex flex-col ">
+    <div className="w-full overflow-hidden">
+      <div className="flex flex-col border-2">
         {/* Top Section */}
         <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-4 pb-[4svh]">
           <div className="text-black text-center text-[3vw] font-light font-averta-std leading-[5vw] tracking-widest">
@@ -91,7 +91,7 @@ export const HeroMobile = React.memo(() => {
         </div>
 
         {/* Vertical Text on the Right */}
-        <div className="absolute top-[1.85%] left-[90%] flex-shrink-0">
+        <div className="absolute top-[18.85%] left-[90%] flex-shrink-0">
           <div className="flex flex-col items-center gap-[2.2vw] font-averta-std">
             {textItems.map((item) => (
               <div key={item.id} className="flex flex-col items-center">

@@ -23,7 +23,9 @@ export default function Hero() {
           <HackNitr />
         </div>
 
-        <div className={`pt-14 sticky top-0  ${padCheck ? '' : 'lg:hidden'}`}>
+        <div
+          className={`pt-14 max-h-[100vh] sticky top-0  ${padCheck ? '' : 'lg:hidden'}`}
+        >
           <HeroMobile />
         </div>
 

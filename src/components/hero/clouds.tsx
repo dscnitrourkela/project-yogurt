@@ -2,8 +2,10 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { HERO_CLOUDS_CONFIG } from '@/config/hero/clouds';
+
 export default function Clouds() {
   const [isSmall, setIsSmall] = useState(false);
+  const repeatScale = isSmall ? 'scale-100' : 'scale-150';
 
   useEffect(() => {
     const checkScreen = () =>
@@ -35,7 +37,7 @@ export default function Clouds() {
           alt="clouds"
           width={2120}
           height={1280}
-          className={`mobileClouds ${
+          className={`mobileClouds ${repeatScale} ${
             isSmall
               ? ' absolute object-center my-[37svh] left-[-5%]'
               : 'mx-[6%] -my-[17%]'
@@ -47,7 +49,7 @@ export default function Clouds() {
           alt="clouds"
           width={1920}
           height={1280}
-          className={`mobileClouds ${
+          className={`mobileClouds ${repeatScale} ${
             isSmall
               ? 'absolute object-center my-[51svh] left-[-11%]'
               : ' mx-[8%] -my-[17%]'
@@ -59,7 +61,7 @@ export default function Clouds() {
           alt="clouds"
           width={1920}
           height={1280}
-          className={`mobileClouds ${
+          className={`mobileClouds ${repeatScale} ${
             isSmall
               ? 'absolute object-center my-[60svh] left-[-18%]'
               : 'mx-[10%] -my-[17%]'
@@ -71,7 +73,7 @@ export default function Clouds() {
           alt="clouds"
           width={1920}
           height={1280}
-          className={`mobileClouds ${
+          className={`mobileClouds ${repeatScale} ${
             isSmall
               ? 'absolute object-center my-[80svh] left-[-4%]'
               : '-mx-[10%] -my-[32%]'
@@ -83,7 +85,7 @@ export default function Clouds() {
           alt="clouds"
           width={1920}
           height={1280}
-          className={`mobileClouds ${
+          className={`mobileClouds ${repeatScale} ${
             isSmall
               ? 'absolute object-center my-[70svh] left-[-25%]'
               : '-mx-[10%] -my-[5%]'
@@ -95,7 +97,7 @@ export default function Clouds() {
           alt="clouds"
           width={1920}
           height={1280}
-          className={`mobileClouds ${
+          className={`mobileClouds ${repeatScale} ${
             isSmall
               ? 'absolute object-center my-[85svh] left-[-25%]'
               : '-mx-[10%] -my-[1%]'
@@ -107,7 +109,7 @@ export default function Clouds() {
           alt="clouds"
           width={1920}
           height={1280}
-          className={`mobileClouds ${
+          className={`mobileClouds ${repeatScale} ${
             isSmall
               ? 'absolute object-center my-[95svh] left-[-5%]'
               : '-mx-[10%] -my-[15%]'
@@ -119,7 +121,7 @@ export default function Clouds() {
           alt="clouds"
           width={1920}
           height={1280}
-          className={`mobileClouds ${
+          className={`mobileClouds ${repeatScale} ${
             isSmall
               ? 'absolute object-center my-[90svh] left-[-30%]'
               : 'mx-[15%] -my-[28%]'

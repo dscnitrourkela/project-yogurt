@@ -13,7 +13,10 @@ export default function Prizes() {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <section className="relative mb-28 [@media(max-width:764px)]:-mb-15 ">
+    <section
+      id="prizes"
+      className="relative mb-28 [@media(max-width:764px)]:-mb-15 "
+    >
       <Image
         src={prizeheader.image}
         height={199}
