@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+
 import Image from 'next/image';
 
 type PortraitProps = {
@@ -24,15 +25,7 @@ export const PortraitSVG: React.FC<PortraitProps> = ({
       className={`relative ${className}`}
       aria-hidden={alt ? 'false' : 'true'}
     >
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-contain"
-        style={{
-          clipPath: `url(#${clipId})`,
-        }}
-      />
+      <Image src={src} alt={alt} fill className="object-contain" />
 
       {/* SVG Overlay for clipping path and border */}
       <svg

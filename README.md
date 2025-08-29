@@ -2,7 +2,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -201,6 +201,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AshutoshMishra1615"><img src="https://avatars.githubusercontent.com/u/135343059?v=4?s=100" width="100px;" alt="AshutoshMishra1615"/><br /><sub><b>AshutoshMishra1615</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=AshutoshMishra1615" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AishwaryJhunjhunwala"><img src="https://avatars.githubusercontent.com/u/195850165?v=4?s=100" width="100px;" alt="AishwaryJhunjhunwala"/><br /><sub><b>AishwaryJhunjhunwala</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=AishwaryJhunjhunwala" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/HIMANSHU6001"><img src="https://avatars.githubusercontent.com/u/92459082?v=4?s=100" width="100px;" alt="Himanshu Kaushik"/><br /><sub><b>Himanshu Kaushik</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=HIMANSHU6001" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/devsw-prayas"><img src="https://avatars.githubusercontent.com/u/64429051?v=4?s=100" width="100px;" alt="DevSw"/><br /><sub><b>DevSw</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=devsw-prayas" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/raaz-tilak"><img src="https://avatars.githubusercontent.com/u/221827602?v=4?s=100" width="100px;" alt="raaz-tilak"/><br /><sub><b>raaz-tilak</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=raaz-tilak" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/srikant3691"><img src="https://avatars.githubusercontent.com/u/180011583?v=4?s=100" width="100px;" alt="Srikant Panigrahy"/><br /><sub><b>Srikant Panigrahy</b></sub></a><br /><a href="https://github.com/dscnitrourkela/project-yogurt/commits?author=srikant3691" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

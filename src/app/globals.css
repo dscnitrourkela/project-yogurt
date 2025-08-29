@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /*Background Image*/
+  --bg-img: url('https://res.cloudinary.com/dscnitrourkela/image/upload/v1756245870/hacknitr/o31lzgdhnrkyvfbwwg33.png');
+
   /* Background Colors */
   --color-background: #f2f3f7;
   --color-foreground: #000000;
@@ -111,6 +114,7 @@
   --font-sketch-block: var(--font-sketch-block);
   --font-wc-rough-trad: var(--font-wc-rough-trad);
   --font-cabin-sketch: var(--font-cabin-sketch);
+  --font-prompt: var(--font-prompt);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -149,10 +153,7 @@ html {
 
 body {
   position: relative;
-
-  z-index: 1;
-
-  min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body::before {
@@ -162,11 +163,19 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(https://res.cloudinary.com/dscnitrourkela/image/upload/v1756245870/hacknitr/o31lzgdhnrkyvfbwwg33.png);
+  background: var(--bg-img);
   background-repeat: repeat;
   opacity: 0.4;
   z-index: -10;
   background-color: #fefefe;
+}
+
+.bg-on-black {
+  background:
+    linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),
+    var(--bg-img) 0 0 / 100px 100px,
+    #181818;
+  background-repeat: repeat;
 }
 
 .loader {
@@ -206,6 +215,11 @@ body::before {
 
 @theme {
   --breakpoint-lg: 54rem;
+  --breakpoint-xlg: 70.25rem;
+  --breakpoint-3xl: 105.25rem;
+  --breakpoint-4xl: 114.375rem;
+  --breakpoint-5xl: 126.5rem;
+  --breakpoint-6xl: 149.75rem;
 }
 
 .dark {
