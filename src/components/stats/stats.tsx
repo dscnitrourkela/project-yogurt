@@ -115,7 +115,7 @@ const Stats: React.FC = () => {
   }, [isMobile]);
 
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen" id="stats">
       <Typography.H1 className="text-center font-normal font-wc-rough-trad text-blue-800 text-[clamp(3.5rem,5vw,6rem)]">
         STATS
       </Typography.H1>
