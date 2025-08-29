@@ -4,7 +4,7 @@ import Clouds from '@/components/hero/clouds';
 
 export default function Hero() {
   return (
-    <>
+    <section id="hero">
       <div className=" min-h-[90vh] hidden lg:flex justify-center items-center">
         <HackNitr />
       </div>
@@ -12,6 +12,6 @@ export default function Hero() {
         <HeroMobile />
       </div>
       <Clouds />
-    </>
+    </section>
   );
 }

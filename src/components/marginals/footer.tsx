@@ -9,7 +9,10 @@ export default function Footer() {
   const leftSocials = SOCIALS.slice(0, 2);
   const rightSocials = SOCIALS.slice(2);
   return (
-    <footer className="relative w-full flex flex-col justify-end min-h-screen">
+    <footer
+      id="footer"
+      className="relative w-full flex flex-col justify-end min-h-screen"
+    >
       <div
         className="hidden min-[850px]:flex w-full justify-between items-center 
   px-20 lg:px-15 xl:px-17 2xl:px-40  absolute 

@@ -41,7 +41,7 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
     key: string,
     customGap?: string
   ) => (
-    <div className={`grid  ${customGap || 'gap-12 md:gap-16 lg:gap-20'}`}>
+    <div className={`grid  ${customGap || 'gap-12 md:gap-16 lg:gap-20 '}`}>
       {column.map((el, idx) => (
         <motion.div
           key={`${key}-${idx}`}
@@ -51,7 +51,7 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
           <PortraitSVG
             src={el}
             id={`${key}-${idx}`}
-            className="w-full h-full  "
+            className="w-full h-full"
           />
         </motion.div>
       ))}
@@ -69,7 +69,7 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
       <div className="absolute inset-0 z-30 pointer-events-none w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 pt-[25vh]">
         {renderColumn(leftCol, colLeftY, 'left')}
         {/* Center column */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:block ">
           {renderColumn(
             centerCol,
             colCenterY,
