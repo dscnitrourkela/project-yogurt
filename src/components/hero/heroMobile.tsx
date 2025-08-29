@@ -1,16 +1,19 @@
 import React from 'react';
-import Typography from '../Typography';
+
 import Image from 'next/image';
+
 import {
   measurementData,
   textElements,
   textItems,
 } from '@/config/hero/heroMobile';
 
+import Typography from '../Typography';
+
 export const HeroMobile = React.memo(() => {
   return (
     <div className="w-full overflow-hidden">
-      <div className="flex flex-col border-2">
+      <div className="flex flex-col">
         {/* Top Section */}
         <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-4 pb-[4svh]">
           <div className="text-black text-center text-[3vw] font-light font-averta-std leading-[5vw] tracking-widest">

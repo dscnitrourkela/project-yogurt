@@ -95,7 +95,7 @@ const Testimonials: React.FC = () => {
               }}
             >
               <div
-                className={`card-body min-w-[300px] box-border p-6 2xl:p-10 rounded-xl shadow-[0_0_30px_0_rgba(0,0,0,0.3)] flex justify-center items-center transition-all duration-500 bg-white border border-black`}
+                className={`card-body min-w-[300px] box-border p-6 2xl:p-10 rounded-xl shadow-[0_0_30px_0_rgba(0,0,0,0.3)] flex justify-center items-center transition-all duration-500 bg-white`}
               >
                 <div className="w-full flex flex-col gap-6">
                   <div className="flex justify-between w-full">
