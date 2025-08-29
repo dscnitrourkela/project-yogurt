@@ -149,7 +149,6 @@
 
 html {
   height: 100%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -216,13 +215,10 @@ body::before {
 }
 
 @theme {
-  --breakpoint-ssmd: 32rem;
-  --breakpoint-smd: 40rem; /* 640px */
-  --breakpoint-lg: 54rem; /* 864px */
-  --breakpoint-xlg: 70.25rem; /* 1124px */
-  --breakpoint-2xlg: 80rem; /* 1360px */
-  --breakpoint-3xl: 105.25rem; /* 1684px */
-  --breakpoint-4xl: 114.375rem; /* 1830px */
-  --breakpoint-5xl: 126.5rem; /* 2024px */
-  --breakpoint-6xl: 149.75rem; /* 2396px */
+  --breakpoint-lg: 54rem;
+  --breakpoint-xlg: 70.25rem;
+  --breakpoint-3xl: 105.25rem;
+  --breakpoint-4xl: 114.375rem;
+  --breakpoint-5xl: 126.5rem;
+  --breakpoint-6xl: 149.75rem;
 }

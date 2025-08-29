@@ -19,9 +19,8 @@ function TimelineEvents() {
   return (
     <div className=" relative  mx-5 sm:mx-20  ">
       <div className=" flex items-center justify-center   ">
-        <Typography.H1 className=" font-wc-rough-trad font-normal leading-none text-[10vw] text-[#150BDE]">
-          {' '}
-          TIMELINE{' '}
+        <Typography.H1 className=" font-wc-rough-trad font-normal leading-none text-[clamp(3.5rem,5vw,6rem)] h-[15vw] text-[#150BDE]">
+          TIMELINE
         </Typography.H1>
       </div>
 

@@ -48,8 +48,8 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
 
           <div className="flex flex-wrap justify-center gap-x-2 gap-y-3 text-center text-lg font-normal md:text-xl lg:text-2xl">
             {words.map((word, i) => {
-              const start = i / words.length;
-              const end = start + 1 / words.length;
+              const start = 0.6 + (i / words.length) * 0.4;
+              const end = start + 0.4 / words.length;
               return (
                 <Word key={i} progress={scrollYProgress} range={[start, end]}>
                   {word}

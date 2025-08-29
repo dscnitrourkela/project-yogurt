@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { X } from 'lucide-react';
 import Image from 'next/image';
@@ -10,7 +10,7 @@ import { hamburgerIcon, logo, navItems } from '@/config/marginals';
 import Typography from '../Typography';
 import Button from '../ui/button';
 
-function DesktopNavbar() {
+function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
   return (
     <div className="hidden relative lg:flex w-full items-center justify-between py-3">
       <div className="absolute left-0 h-full">
@@ -31,7 +31,12 @@ function DesktopNavbar() {
               href={item.href}
               className="transition-colors"
             >
-              <Typography.P className="!text-sm md:!text-base text-gray-700 hover:text-primary mb-0 text-center font-semibold">
+              <Typography.P
+                className="!text-sm md:!text-base hover:text-primary mb-0 text-center font-semibold transition-colors duration-300"
+                style={{
+                  color: isBlackSection ? 'white' : 'rgb(55, 65, 81)',
+                }}
+              >
                 {item.name}
               </Typography.P>
             </Link>
@@ -48,9 +53,11 @@ function DesktopNavbar() {
 function MobileNavbar({
   isOpen,
   setIsOpen,
+  isBlackSection,
 }: {
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
+  isBlackSection: boolean;
 }) {
   return (
     <>
@@ -65,7 +72,10 @@ function MobileNavbar({
         </Link>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-gray-700 z-50"
+          className="z-50 transition-colors duration-300"
+          style={{
+            color: isBlackSection ? 'white' : 'rgb(55, 65, 81)',
+          }}
         >
           {isOpen ? (
             <X size={24} />
@@ -75,6 +85,9 @@ function MobileNavbar({
               alt={hamburgerIcon.alt}
               width={hamburgerIcon.width}
               height={hamburgerIcon.height}
+              style={{
+                filter: isBlackSection ? 'brightness(0) invert(1)' : 'none',
+              }}
             />
           )}
         </button>
@@ -105,12 +118,64 @@ function MobileNavbar({
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isBlackSection, setIsBlackSection] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const blackSections = ['gallery', 'faqs', 'testimonials'];
+      const whiteSections = ['hero', 'about', 'prizes', 'footer'];
+
+      const viewportHeight = window.innerHeight;
+      const scrollPosition = window.scrollY + viewportHeight / 5;
+
+      let currentSection = '';
+      let minDistance = Infinity;
+
+      // Check all sections to find which one is most prominent in viewport
+      [...blackSections, ...whiteSections].forEach((sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top + window.scrollY;
+          const elementBottom = elementTop + rect.height;
+
+          // Check if scroll position is within this section
+          if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
+            const distance = Math.abs(
+              scrollPosition - (elementTop + rect.height / 2)
+            );
+            if (distance < minDistance) {
+              minDistance = distance;
+              currentSection = sectionId;
+            }
+          }
+        }
+      });
+
+      // Set navbar style based on current section
+      setIsBlackSection(blackSections.includes(currentSection));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 py-2 bg-neutral-100">
+    <nav
+      className="fixed top-0 left-0 w-full z-50 py-2 transition-all duration-500 ease-out"
+      style={{
+        backgroundColor: isBlackSection ? '#121212' : '#ffffff',
+      }}
+    >
       <div className="px-4 sm:px-6 lg:px-10">
-        <DesktopNavbar />
-        <MobileNavbar isOpen={isOpen} setIsOpen={setIsOpen} />
+        <DesktopNavbar isBlackSection={isBlackSection} />
+        <MobileNavbar
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          isBlackSection={isBlackSection}
+        />
       </div>
     </nav>
   );

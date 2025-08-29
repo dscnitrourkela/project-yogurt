@@ -14,20 +14,20 @@ export const HackNitr = () => {
     <div className="w-full overflow-hidden ">
       <div className="flex flex-row px-[5vw]">
         {/* Left Column */}
-        <div className="flex flex-col h-[25dvh] justify-between pt-5  flex-shrink-0">
-          <div className="text-black text-center text-[1vw]  font-light font-averta-std leading-[22.4px] tracking-widest">
+        <div className="flex flex-col h-[25dvh] justify-between  flex-shrink-0">
+          <div className="text-black text-center text-[1vw]  font-light font-averta-std leading-[1.5vw] tracking-widest">
             LARGEST STUDENT
             <br />
             RUN HACKATHON
           </div>
-          <div className="relative w-[clamp(4rem,8vw,6.75rem)] h-[clamp(4rem,8vw,6.75rem)] mx-auto">
-            <div className="absolute top-0 left-[40%] w-[clamp(2rem,3vw,3.38rem)] h-[clamp(2rem,4vw,3.38rem)] bg-[#EAEAEA]" />
-            <div className="absolute bottom-0 right-[60%] w-[clamp(2rem,3vw,3.38rem)] h-[clamp(2rem,4vw,3.38rem)] bg-[#EAEAEA]" />
+          <div className="relative w-[8vw] h-[8vw] mx-auto">
+            <div className="absolute top-0 left-[40%] w-[4vw] h-[4vw] bg-[#EAEAEA]" />
+            <div className="absolute bottom-0 right-[60%] w-[4vw] h-[4vw] bg-[#EAEAEA]" />
           </div>
         </div>
 
         {/* Center Column */}
-        <div className="flex-1  mx-auto p-2 xl:p-4">
+        <div className="flex-1  mx-auto ">
           <div className="relative w-full" style={{ paddingTop: '37.09%' }}>
             <div className="absolute top-0 -left-5 w-full h-full">
               {/* Measurement Lines */}
@@ -68,7 +68,7 @@ export const HackNitr = () => {
                 return (
                   <div
                     key={`text-${index}`}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2"
+                    className="absolute "
                     style={textEl.style}
                   >
                     <TypographyComponent
@@ -88,9 +88,7 @@ export const HackNitr = () => {
                   style={{
                     fontWeight: 300,
                     letterSpacing: '3.01px',
-                    fontSize: item.isSmall
-                      ? 'clamp(0.5rem, 1.5vw, 0.75rem)'
-                      : 'clamp(0.7rem, 2vw, 1rem)',
+                    fontSize: item.isSmall ? '1.1vw' : '1.1vw',
                     lineHeight: '1.4',
                     ...item.style,
                   }}
@@ -123,6 +121,10 @@ export const HackNitr = () => {
             <div className="w-8 h-8 xl:w-[3vw] xl:h-[3vw] bg-[#EAEAEA] mt-2 xl:mt-4" />
           </div>
         </div>
+      </div>
+      <div className="-mt-[1vw] font-sketch-block text-[1.85vw] text-center">
+        November <span className="text-[#0534C7]">1st–2nd</span>, 2025 | NIT
+        Rourkela
       </div>
     </div>
   );

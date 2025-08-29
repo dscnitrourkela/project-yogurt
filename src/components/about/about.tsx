@@ -8,7 +8,7 @@ const About: React.FC = () => {
   const textRevealRef = useRef<HTMLDivElement>(null);
   return (
     <section
-      className=" grid place-items-center min-h-screen  pt-10"
+      className=" -mt-[55vw] grid place-items-center min-h-screen  pt-10"
       id="about"
     >
       <div ref={textRevealRef} className="w-full flex justify-center">
