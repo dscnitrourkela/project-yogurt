@@ -1,11 +1,14 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
-import { cn } from '@/lib/utils';
-import { svgs } from '@/config/timeline';
-import Typography from '../Typography';
-import Image from 'next/image';
+import React, { useEffect, useRef, useState } from 'react';
+
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
+
+import { svgs } from '@/config/timeline';
+import { cn } from '@/lib/utils';
+
+import Typography from '../Typography';
 
 function Event({
   eventNumber,
@@ -49,11 +52,11 @@ function Event({
       <div
         ref={ref}
         className={cn(
-          '   flex  lg:flex-row w-full max-w-[380px] sm:max-w-[540px] lg:max-w-[480px] xlg:max-w-[680px] xl:max-w-[750px] 2xl:max-w-[850px]     ',
+          'flex  lg:flex-row w-full max-w-[380px] sm:max-w-[540px] lg:max-w-[480px] xlg:max-w-[680px] xl:max-w-[750px] 2xl:max-w-[850px]  items-start',
           isLgScreen ? className : undefined
         )}
       >
-        <div className=" sm:self-center  ">
+        <div className=" sm:self-start  ">
           <motion.h2
             style={{ color }}
             className="  font-sketch-block font-normal text-[70px]  sm:text-[100px]  md:text-[130px] lg:text-[130px] xlg:text-[200px] xl:text-[220px] 2xl:text-[280px] leading-[120%] text-[#ADADAD]  tracking-[6px]"
