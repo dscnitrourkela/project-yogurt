@@ -8,7 +8,7 @@ import ScrollVelocity from '../testimonials/scrollvelocity';
 
 const ScrollMarquee = () => {
   return (
-    <div className="relative w-full border overflow-x-clip">
+    <div className="relative w-full overflow-x-clip">
       <div className="w-full bg-black text-white relative z-10">
         <ScrollVelocity
           texts={[

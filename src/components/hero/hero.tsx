@@ -1,10 +1,12 @@
+import React, { useEffect, useState } from 'react';
+
+import Clouds from '@/components/hero/clouds';
 import { HackNitr } from '@/components/hero/hackNitr';
 import { HeroMobile } from '@/components/hero/heroMobile';
-import Clouds from '@/components/hero/clouds';
-import React, { useEffect, useState } from 'react';
 
 export default function Hero() {
   const [padCheck, setPadCheck] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const checkScreen = () =>
@@ -14,17 +16,30 @@ export default function Hero() {
     return () => window.removeEventListener('resize', checkScreen);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const opacity = Math.max(0, 1 - scrollY / 500);
+
   return (
     <>
       <div className="">
         <div
           className={` min-h-[90vh] sticky top-0 hidden ${padCheck ? '' : 'lg:flex'} justify-center items-center`}
+          style={{ opacity }}
         >
           <HackNitr />
         </div>
 
         <div
           className={`pt-14 max-h-[100vh] sticky top-0  ${padCheck ? '' : 'lg:hidden'}`}
+          style={{ opacity }}
         >
           <HeroMobile />
         </div>

@@ -162,7 +162,7 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 w-full z-50 py-2 transition-all duration-500 ease-out"
       style={{
-        backgroundColor: isBlackSection ? '#121212' : '#ffffff',
+        backgroundColor: isBlackSection ? '#141414' : '#ffffff',
       }}
     >
       <div className="px-4 sm:px-6 lg:px-10">

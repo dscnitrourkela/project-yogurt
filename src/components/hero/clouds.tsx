@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
+
 import Image from 'next/image';
+
 import { HERO_CLOUDS_CONFIG } from '@/config/hero/clouds';
 
 export default function Clouds() {
@@ -28,7 +30,7 @@ export default function Clouds() {
           src={HERO_CLOUDS_CONFIG.backgrounds.desktop}
           alt="clouds"
           width={1920}
-          height={1280}
+          height={1290}
           className={`mobileClouds ${isSmall ? 'absolute object-center  my-[19svh] left-[-7%]' : ' -my-[8%]'}`}
           priority
         />

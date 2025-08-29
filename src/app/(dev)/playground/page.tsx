@@ -9,6 +9,7 @@ import Hero from '@/components/hero/hero';
 import Footer from '@/components/marginals/footer';
 import Prizes from '@/components/prizes/prizes';
 import { Sponsors } from '@/components/sponsors/sponsors';
+import Stats from '@/components/stats/stats';
 import Testimonials from '@/components/testimonials/testimonials';
 import { Timeline } from '@/components/timeline/timeline';
 import ScrollMarquee from '@/components/ui/marquee';
@@ -18,6 +19,7 @@ export default function Page() {
     <>
       <Hero />
       <About />
+      <Stats />
       <div className="bg-on-black">
         <Gallery />
       </div>
