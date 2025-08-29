@@ -21,7 +21,6 @@ export default function DevfolioButton({
     document.body.appendChild(script);
 
     return () => {
-      // Clean up script when component unmounts
       const existingScript = document.querySelector(
         'script[src="https://apply.devfolio.co/v2/sdk.js"]'
       );
