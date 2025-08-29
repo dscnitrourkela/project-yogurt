@@ -18,12 +18,12 @@ export default function Hero() {
     <>
       <div className="">
         <div
-          className={` min-h-[90vh] hidden ${padCheck ? '' : 'lg:flex'} justify-center items-center`}
+          className={` min-h-[90vh] sticky top-0 hidden ${padCheck ? '' : 'lg:flex'} justify-center items-center`}
         >
           <HackNitr />
         </div>
 
-        <div className={`pt-14 ${padCheck ? '' : 'lg:hidden'}`}>
+        <div className={`pt-14 sticky top-0  ${padCheck ? '' : 'lg:hidden'}`}>
           <HeroMobile />
         </div>
 

@@ -17,15 +17,17 @@ export default function Clouds() {
 
   return (
     <div
-      className={`overflow-x-clip ${isSmall ? 'relative  -mt-[18svh]' : ''} `}
+      className={`overflow-x-clip relative z-50 ${isSmall ? ' -mt-[18svh]' : ''} `}
     >
-      <div className={`relative ${isSmall ? '  w-[150%]  h-[100svh] ' : ''} `}>
+      <div
+        className={`relative ${isSmall ? '  w-[150%]  min-h-[100svh] ' : ''} `}
+      >
         <Image
           src={HERO_CLOUDS_CONFIG.backgrounds.desktop}
           alt="clouds"
           width={1920}
           height={1280}
-          className={`mobileClouds ${isSmall ? 'absolute object-center my-[19svh] left-[-7%]' : ' -my-[8%]'}`}
+          className={`mobileClouds ${isSmall ? 'absolute object-center  my-[19svh] left-[-7%]' : ' -my-[8%]'}`}
           priority
         />
         <Image
@@ -35,7 +37,7 @@ export default function Clouds() {
           height={1280}
           className={`mobileClouds ${
             isSmall
-              ? ' absolute object-center my-[42svh] left-[-5%]'
+              ? ' absolute object-center my-[37svh] left-[-5%]'
               : 'mx-[6%] -my-[17%]'
           }`}
           priority
@@ -85,6 +87,42 @@ export default function Clouds() {
             isSmall
               ? 'absolute object-center my-[70svh] left-[-25%]'
               : '-mx-[10%] -my-[5%]'
+          }`}
+          priority
+        />
+        <Image
+          src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
+          alt="clouds"
+          width={1920}
+          height={1280}
+          className={`mobileClouds ${
+            isSmall
+              ? 'absolute object-center my-[85svh] left-[-25%]'
+              : '-mx-[10%] -my-[1%]'
+          }`}
+          priority
+        />
+        <Image
+          src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
+          alt="clouds"
+          width={1920}
+          height={1280}
+          className={`mobileClouds ${
+            isSmall
+              ? 'absolute object-center my-[95svh] left-[-5%]'
+              : '-mx-[10%] -my-[15%]'
+          }`}
+          priority
+        />
+        <Image
+          src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
+          alt="clouds"
+          width={1920}
+          height={1280}
+          className={`mobileClouds ${
+            isSmall
+              ? 'absolute object-center my-[90svh] left-[-30%]'
+              : 'mx-[15%] -my-[28%]'
           }`}
           priority
         />
