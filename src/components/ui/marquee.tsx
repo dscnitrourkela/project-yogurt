@@ -8,8 +8,8 @@ import ScrollVelocity from '../testimonials/scrollvelocity';
 
 const ScrollMarquee = () => {
   return (
-    <div className="relative w-full">
-      <div className="w-full bg-black text-white relative z-10 ">
+    <div className="relative w-full border overflow-x-clip">
+      <div className="w-full bg-black text-white relative z-10">
         <ScrollVelocity
           texts={[
             <div key="student-run" className="flex items-center">
@@ -20,16 +20,16 @@ const ScrollMarquee = () => {
                 height={400}
                 className="h-8 w-8 ml-4 2xl:ml-6 inline-block"
               />
-              <span className="ml-4 2xl:ml-6 uppercase font-bold font-averta-std text-xl lg:text-3xl py-3 inline-block">
+              <span className="ml-4 2xl:ml-6 uppercase font-bold font-averta-std text-xl lg:text-3xl inline-block">
                 student run
               </span>
             </div>,
           ]}
           velocity={-100}
-          className="flex items-center"
+          className="flex items-center h-16"
         />
       </div>
-      <div className="bg-[#0617B0] text-white absolute top-0 -rotate-12 lg:-rotate-[8deg] w-full">
+      <div className="absolute top-1/2 -translate-y-1/2 -left-5 -rotate-12 lg:-rotate-[8deg] bg-[#0617B0] text-white w-[110%]">
         <ScrollVelocity
           texts={[
             <div key="biggest-hackathon" className="flex items-center">
@@ -46,7 +46,7 @@ const ScrollMarquee = () => {
             </div>,
           ]}
           velocity={100}
-          className="flex items-center"
+          className="flex items-center h-16"
         />
       </div>
     </div>
