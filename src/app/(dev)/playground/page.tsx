@@ -13,6 +13,7 @@ import Stats from '@/components/stats/stats';
 import Testimonials from '@/components/testimonials/testimonials';
 import { Timeline } from '@/components/timeline/timeline';
 import ScrollMarquee from '@/components/ui/marquee';
+import AsciiLogger from '@/components/ASCIIconsole/ASCIIlogger';
 
 export default function Page() {
   return (
@@ -40,6 +41,7 @@ export default function Page() {
       </div>
       <ScrollMarquee />
       <Footer />
+      <AsciiLogger />
     </>
   );
 }
