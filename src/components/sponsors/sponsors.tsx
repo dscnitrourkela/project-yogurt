@@ -73,7 +73,10 @@ const SponsorGrid: React.FC<SponsorGridProps> = ({ sponsors, cardType }) => {
 
 export const Sponsors = () => {
   return (
-    <div className="min-h-screen pb-40 pt-32 relative mt-52 overflow-x-clip">
+    <div
+      id="sponsors"
+      className="min-h-screen pb-40 pt-32 relative mt-52 overflow-x-clip"
+    >
       <Image
         src={PAPER_CRACK}
         width={1920}

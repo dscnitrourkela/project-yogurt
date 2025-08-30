@@ -121,7 +121,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const blackSections = ['gallery', 'faqs', 'testimonials'];
+      const blackSections = ['gallery', 'faqs', 'testimonials', 'sponsors'];
       const whiteSections = ['hero', 'about', 'prizes', 'footer'];
 
       const viewportHeight = window.innerHeight;
