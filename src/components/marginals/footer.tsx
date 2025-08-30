@@ -15,7 +15,7 @@ export default function Footer() {
       className="relative w-full flex flex-col justify-end mt-24 md:mt-32 lg:mt-48 xl:mt-64"
     >
       {/* Desktop Social Links - Above Logo */}
-      <div className="hidden lg:flex w-full justify-center items-center gap-[35vw]">
+      <div className="hidden lg:flex w-full justify-center items-center gap-[30vw]">
         {/* Left Socials */}
         <div className="flex gap-6 lg:gap-8 mr-16 ">
           {leftSocials.map((social) => (
