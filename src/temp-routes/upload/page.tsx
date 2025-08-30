@@ -1,16 +1,17 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+
 import {
-  Upload,
+  AlertCircle,
+  CheckCircle,
+  CloudUpload,
   Copy,
   ExternalLink,
-  Trash2,
   Image as ImageIcon,
-  CheckCircle,
-  AlertCircle,
-  CloudUpload,
   Info,
+  Trash2,
+  Upload,
 } from 'lucide-react';
 
 interface CloudinaryUploadResult {
@@ -51,7 +52,6 @@ export default function UploadPage() {
   const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    // Load Cloudinary script
     if (!window.cloudinary) {
       const script = document.createElement('script');
       script.src = 'https://upload-widget.cloudinary.com/global/all.js';
@@ -167,6 +167,8 @@ export default function UploadPage() {
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }, []);
+
+  return null;
 
   return (
     <div className=" bg-gray-50">

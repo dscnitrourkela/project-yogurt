@@ -15,7 +15,7 @@ import Typography from '../Typography';
 // Memoized components
 const StatItem = React.memo<StatItemProps>(({ stat, index, isMobile }) => (
   <div className="flex flex-col mt-auto">
-    <Typography.H3 className="font-wc-rough-trad text-center">
+    <Typography.H3 className="font-wc-rough-trad font-normal text-center">
       {stat.number}
     </Typography.H3>
     <Typography.P className="text-center font-semibold text-black">
@@ -49,7 +49,7 @@ const MobileStatItem = React.memo<MobileStatItemProps>(
       <div className="flex flex-col mt-auto">
         {index === 1 && (
           <div className="mb-20">
-            <Typography.H3 className="font-wc-rough-trad text-[#11004E] text-center">
+            <Typography.H3 className="font-wc-rough-trad font-normal text-[#11004E] text-center">
               {statsData[0]?.number}
             </Typography.H3>
             <Typography.P className="text-center font-semibold text-black -mt-5">
@@ -59,7 +59,7 @@ const MobileStatItem = React.memo<MobileStatItemProps>(
         )}
         {index === 3 && (
           <div className="mb-20">
-            <Typography.H3 className="font-wc-rough-trad text-[#11004E] text-center">
+            <Typography.H3 className="font-wc-rough-trad font-normal text-[#11004E] text-center">
               {statsData[4]?.number}
             </Typography.H3>
             <Typography.P className="text-center font-semibold text-black -mt-5">
@@ -68,7 +68,7 @@ const MobileStatItem = React.memo<MobileStatItemProps>(
           </div>
         )}
         <Typography.H3
-          className={`font-wc-rough-trad text-[#11004E] text-center ${index === 2 ? 'scale-150' : 'scale-100'}`}
+          className={`font-wc-rough-trad font-normal text-[#11004E] text-center ${index === 2 ? 'scale-150' : 'scale-100'}`}
         >
           {stat.number}
         </Typography.H3>
@@ -125,7 +125,7 @@ const Stats: React.FC = () => {
 
   return (
     <section className={`relative`} id="stats">
-      <Typography.H1 className="text-center font-normal font-wc-rough-trad text-blue-800 text-[clamp(3.5rem,5vw,6rem)]">
+      <Typography.H1 className="text-center font-normal font-wc-rough-trad font-normal text-blue-800 text-[clamp(3.5rem,5vw,6rem)]">
         STATS
       </Typography.H1>
 

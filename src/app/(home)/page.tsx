@@ -1,38 +1,40 @@
-import Image from 'next/image';
-
-import SponsTemp from '@/components/sponsors/spons-temp';
-import { TEMP_HERO_CONFIG } from '@/config/hero/clouds';
-import DevfolioButton from '@/components/devfolio/devfolio-button';
+'use client';
+import About from '@/components/about/about';
+import { FaqList } from '@/components/faq/faq-list';
+import Gallery from '@/components/gallery/gallery';
+import Hero from '@/components/hero/hero';
+import Prizes from '@/components/prizes/prizes';
+import { Sponsors } from '@/components/sponsors/sponsors';
+import Stats from '@/components/stats/stats';
+import Testimonials from '@/components/testimonials/testimonials';
+import { Timeline } from '@/components/timeline/timeline';
+import ScrollMarquee from '@/components/ui/marquee';
 
 export default function Home() {
   return (
     <>
-      <section className="min-h-screen w-full flex flex-col">
-        <div className="grid place-items-center min-h-screen w-full">
-          <div className="flex items-center flex-col gap-20 px-8">
-            <Image
-              src={TEMP_HERO_CONFIG.main}
-              height={500}
-              width={500}
-              alt="hero-main"
-              className="scale-120 md:scale-150"
-            />
-            <Image
-              src={TEMP_HERO_CONFIG.dates}
-              height={100}
-              width={500}
-              className="scale-100"
-              alt="dates"
-            />
-            <DevfolioButton
-              hackathonSlug="hacknitr7"
-              theme="light"
-              className="mt-8"
-            />
-          </div>
+      <Hero />
+      <About />
+      <Stats />
+      <div className="bg-on-black">
+        <Gallery />
+      </div>
+      <ScrollMarquee />
+
+      <Prizes />
+      <ScrollMarquee />
+      <Timeline />
+
+      <div className="bg-on-black">
+        <Sponsors />
+        <ScrollMarquee />
+        <Testimonials />
+        <div className="py-20">
+          <ScrollMarquee />
         </div>
-      </section>
-      <SponsTemp />
+        <FaqList />
+      </div>
+      <ScrollMarquee />
     </>
   );
 }

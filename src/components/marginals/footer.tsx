@@ -1,9 +1,8 @@
-import { Typography } from '@/components';
-import Link from 'next/link';
-import { SOCIALS } from '@/config/marginals/footer';
 import Image from 'next/image';
-import { HERO_IMAGES } from '@/config/marginals/footer';
-import { FOOTER_TEXT } from '@/config/marginals/footer';
+import Link from 'next/link';
+
+import { Typography } from '@/components';
+import { FOOTER_TEXT, HERO_IMAGES, SOCIALS } from '@/config/marginals';
 
 export default function Footer() {
   const leftSocials = SOCIALS.slice(0, 2);
@@ -129,7 +128,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Text */}
-      <Typography.Lead className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-black text-center mt-3">
+      <Typography.Lead className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-black text-center mt-5">
         {FOOTER_TEXT}
       </Typography.Lead>
     </footer>

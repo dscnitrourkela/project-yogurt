@@ -6,7 +6,6 @@ import About from '@/components/about/about';
 import { FaqList } from '@/components/faq/faq-list';
 import Gallery from '@/components/gallery/gallery';
 import Hero from '@/components/hero/hero';
-import Footer from '@/components/marginals/footer';
 import Prizes from '@/components/prizes/prizes';
 import { Sponsors } from '@/components/sponsors/sponsors';
 import Stats from '@/components/stats/stats';
@@ -39,7 +38,6 @@ export default function Page() {
         <FaqList />
       </div>
       <ScrollMarquee />
-      <Footer />
     </>
   );
 }
