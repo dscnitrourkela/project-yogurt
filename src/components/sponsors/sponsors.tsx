@@ -73,7 +73,7 @@ const SponsorGrid: React.FC<SponsorGridProps> = ({ sponsors, cardType }) => {
 
 export const Sponsors = () => {
   return (
-    <div className="min-h-screen pb-40 pt-32 relative mt-52">
+    <div className="min-h-screen pb-40 pt-32 relative mt-52 overflow-x-clip">
       <Image
         src={PAPER_CRACK}
         width={1920}
@@ -90,10 +90,10 @@ export const Sponsors = () => {
           height={100}
           width={100}
           alt="crown"
-          className="absolute top-0 left-0 -translate-x-[15%] -translate-y-[60%] h-[5vw] w-[5vw]"
+          className="absolute -top-1 left-0 md:-left-1 3xl:-top-2 3xl:-left-2 -translate-x-[10%] -translate-y-[60%] size-[8vw] smd:size-[6vw] md:h-[5vw] md:w-[5vw]"
         />
 
-        <Typography.H1 className="text-white font-normal font-wc-rough-trad">
+        <Typography.H1 className=" font-normal font-wc-rough-trad text-[#f2f3f7] text-[clamp(3.5rem,5vw,6rem)]">
           SPONSORS
         </Typography.H1>
       </div>
@@ -104,7 +104,6 @@ export const Sponsors = () => {
       </div>
       <div className="flex flex-col gap-4 md:gap-8 w-full">
         <SponsorGrid sponsors={SponsorsData.Alpha} cardType="alpha" />
-        {/* <SponsorGrid sponsors={SponsorsData.Beta} cardType="beta" /> */}
       </div>
 
       <div className="flex w-full justify-center mb-12 mt-20" id="PastSponsors">

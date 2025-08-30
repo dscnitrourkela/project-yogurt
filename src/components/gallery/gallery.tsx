@@ -10,7 +10,7 @@ import { ParallaxScroll } from '../ui/parallax-scroll';
 export default function Gallery() {
   const overlay = (
     <div
-      className="w-full max-w-screen px-4 sm:px-[5vw] pt-24 md:pt-32 lg:pt-50 pb-28 md:pb-36 lg:pb-50 relative z-20"
+      className="w-full max-w-screen px-4 sm:px-[5vw] pt-0 pb-0 md:pt-32 lg:pt-50  md:pb-36 lg:pb-50 relative z-20"
       id="gallery"
     >
       <div className="grid grid-cols-[auto_1fr_auto] items-start gap-4 sm:gap-6 md:gap-12 lg:gap-20">
@@ -71,7 +71,7 @@ export default function Gallery() {
   );
 
   return (
-    <div className="relative w-full py-40 sm:70 md:py-70 lg:py-70 ">
+    <div className="relative w-full py-10 sm:py-40 md:py-52 lg:py-70">
       <ParallaxScroll images={GALLERY_PARALLAX_IMAGES} overlay={overlay} />
     </div>
   );
