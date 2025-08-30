@@ -23,7 +23,7 @@ function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
         </Link>
       </div>
       <div className=" h-full flex justify-center mx-auto">
-        <div className="flex gap-5 w-full justify-center">
+        <div className="flex gap-[5vw] w-full justify-center">
           {navItems.map((item: { name: string; href: string }) => (
             <Link
               key={item.name}
@@ -121,7 +121,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const blackSections = ['gallery', 'faqs', 'testimonials'];
+      const blackSections = ['gallery', 'faqs', 'testimonials', 'sponsors'];
       const whiteSections = ['hero', 'about', 'prizes', 'footer'];
 
       const viewportHeight = window.innerHeight;

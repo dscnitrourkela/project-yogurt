@@ -18,7 +18,9 @@ const StatItem = React.memo<StatItemProps>(({ stat, index, isMobile }) => (
     <Typography.H3 className="font-wc-rough-trad text-center">
       {stat.number}
     </Typography.H3>
-    <Typography.P className="text-center text-black">{stat.label}</Typography.P>
+    <Typography.P className="text-center font-semibold text-black">
+      {stat.label}
+    </Typography.P>
     <Image
       src={index % 2 === 0 ? IMAGES.barLong : IMAGES.barShort}
       alt="bar"
@@ -47,28 +49,32 @@ const MobileStatItem = React.memo<MobileStatItemProps>(
       <div className="flex flex-col mt-auto">
         {index === 1 && (
           <div className="mb-20">
-            <Typography.H3 className="font-wc-rough-trad text-center">
+            <Typography.H3 className="font-wc-rough-trad text-[#11004E] text-center">
               {statsData[0]?.number}
             </Typography.H3>
-            <Typography.P className="text-center text-black">
+            <Typography.P className="text-center font-semibold text-black -mt-5">
               {statsData[0]?.label}
             </Typography.P>
           </div>
         )}
         {index === 3 && (
           <div className="mb-20">
-            <Typography.H3 className="font-wc-rough-trad text-center">
+            <Typography.H3 className="font-wc-rough-trad text-[#11004E] text-center">
               {statsData[4]?.number}
             </Typography.H3>
-            <Typography.P className="text-center text-black">
+            <Typography.P className="text-center font-semibold text-black -mt-5">
               {statsData[4]?.label}
             </Typography.P>
           </div>
         )}
-        <Typography.H3 className="font-wc-rough-trad text-center">
+        <Typography.H3
+          className={`font-wc-rough-trad text-[#11004E] text-center ${index === 2 ? 'scale-150' : 'scale-100'}`}
+        >
           {stat.number}
         </Typography.H3>
-        <Typography.P className="text-center text-black">
+        <Typography.P
+          className={`text-center font-semibold text-black ${index === 2 ? 'scale-120' : 'scale-100'}`}
+        >
           {stat.label}
         </Typography.P>
         <Image
@@ -76,8 +82,8 @@ const MobileStatItem = React.memo<MobileStatItemProps>(
           alt="bar"
           width={100}
           height={20}
-          className={`mx-auto mt-2 w-11 ${
-            index % 2 === 0 ? 'h-[300px]' : 'h-[200px]'
+          className={`mx-auto mt-2 w-16 ${
+            index % 2 === 0 ? 'h-[280px]' : 'h-[200px]'
           }`}
         />
       </div>
@@ -118,14 +124,12 @@ const Stats: React.FC = () => {
   }, [isMobile]);
 
   return (
-    <div className="relative h-screen" id="stats">
+    <section className={`relative`} id="stats">
       <Typography.H1 className="text-center font-normal font-wc-rough-trad text-blue-800 text-[clamp(3.5rem,5vw,6rem)]">
         STATS
       </Typography.H1>
 
-      <div className={`absolute bottom-0 grid ${gridCols} w-full`}>
-        {renderStats}
-      </div>
+      <div className={`mt-20 grid ${gridCols} w-full`}>{renderStats}</div>
 
       <Image
         src={IMAGES.clouds}
@@ -135,7 +139,7 @@ const Stats: React.FC = () => {
         className="absolute scale-y-100 lg:scale-y-85 bottom-5 translate-y-1/2"
         priority
       />
-    </div>
+    </section>
   );
 };
 
