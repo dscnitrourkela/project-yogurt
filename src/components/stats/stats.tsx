@@ -232,7 +232,7 @@ const Stats: React.FC = () => {
 
   return (
     <section className={`relative`} id="stats">
-      <Typography.H1 className="text-center font-normal font-wc-rough-trad font-normal text-blue-800 text-[clamp(3.5rem,5vw,6rem)]">
+      <Typography.H1 className="text-center font-wc-rough-trad font-normal text-blue-800 text-[clamp(3.5rem,5vw,6rem)]">
         STATS
       </Typography.H1>
 

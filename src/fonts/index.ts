@@ -1,5 +1,5 @@
-import localFont from 'next/font/local';
 import { Cabin_Sketch } from 'next/font/google';
+import localFont from 'next/font/local';
 
 export const avertaStd = localFont({
   src: [
@@ -149,29 +149,6 @@ export const cabinSketch = Cabin_Sketch({
   variable: '--font-cabin-sketch',
   display: 'swap',
   weight: ['400', '700'],
-});
-
-export const prompt = localFont({
-  src: [
-    {
-      path: './prompt/Prompt-SemiBold.ttf',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: './prompt/Prompt-Medium.ttf',
-
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './prompt/Prompt-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-prompt',
-  display: 'swap',
 });
 
 export const fonts = {
