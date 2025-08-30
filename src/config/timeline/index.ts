@@ -28,7 +28,7 @@ export const timelineData = {
       eventNumber: 4,
       title: `On-spot registration at venue (final check-in)`,
       duration: '',
-      description: `Final Check-In - Verify, setttle in, and gear up to hack.`,
+      description: `Final Check-In - Verify, settle in, and gear up to hack.`,
       className:
         'absolute lg:top-[685%] xlg:top-[700%] xl:top-[650%] 2xl:top-[680%] lg:right-[-8%] xlg:right-[-6%] xl:right-[-2%]',
     },
