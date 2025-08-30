@@ -1,13 +1,16 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import Typography from '../Typography';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+
 import Image from 'next/image';
+
 import {
-  statsData,
   IMAGES,
   MOBILE_BREAKPOINT,
-  StatItemProps,
   MobileStatItemProps,
+  StatItemProps,
+  statsData,
 } from '@/config/stats';
+
+import Typography from '../Typography';
 
 // Memoized components
 const StatItem = React.memo<StatItemProps>(({ stat, index, isMobile }) => (
