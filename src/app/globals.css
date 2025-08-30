@@ -215,6 +215,7 @@ body::before {
 
 @theme {
   --breakpoint-xs: 25rem;
+  --breakpoint-smd: 38rem;
   --breakpoint-lg: 54rem;
   --breakpoint-xlg: 70.25rem;
   --breakpoint-3xl: 105.25rem;
