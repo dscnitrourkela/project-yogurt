@@ -74,3 +74,12 @@ export const HERO_IMAGES = {
 };
 
 export const FOOTER_TEXT = 'Crafted with ❤️ by HackNITR Team';
+
+export const playgroundMenu = [
+  { name: 'Home', href: '/' },
+  { name: 'Playground', href: '/playground' },
+  // { name: 'Admin', href: '/admin' },
+  // { name: 'Fonts', href: '/fonts' },
+  // { name: 'Typography', href: '/typography' },
+  // { name: 'Upload Asset', href: '/upload' },
+];
