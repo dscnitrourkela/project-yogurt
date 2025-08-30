@@ -29,7 +29,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="">
+      <div id="hero">
         <div
           className={` min-h-[90vh] sticky top-0 hidden ${padCheck ? '' : 'lg:flex'} justify-center items-center`}
           style={{ opacity }}

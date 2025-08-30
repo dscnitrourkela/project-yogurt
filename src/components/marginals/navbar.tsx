@@ -9,6 +9,26 @@ import { hamburgerIcon, logo, navItems } from '@/config/marginals';
 
 import Typography from '../Typography';
 
+const SCROLL_OFFSET = 80;
+const handleScrollToSection = (href: string) => {
+  if (href.startsWith('/#')) {
+    const targetId = href.substring(2);
+    const currentPage = window.location.pathname;
+    if (currentPage !== '/') window.location.href = '/#' + targetId;
+    const element = document.getElementById(targetId);
+    if (element) {
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - SCROLL_OFFSET;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  }
+};
+
 function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
   return (
     <div className="hidden relative lg:flex w-full items-center justify-between py-3">
@@ -25,20 +45,23 @@ function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
       <div className=" h-full flex justify-center mx-auto">
         <div className="flex gap-[5vw] w-full justify-center">
           {navItems.map((item: { name: string; href: string }) => (
-            <Link
+            <button
               key={item.name}
-              href={item.href}
-              className="transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollToSection(item.href);
+              }}
+              className="transition-colors cursor-pointer"
             >
               <Typography.P
-                className="!text-sm md:!text-base hover:text-primary mb-0 text-center font-semibold transition-colors duration-300"
+                className="!text-sm md:!text-base mb-0 text-center font-semibold transition-colors duration-300"
                 style={{
                   color: isBlackSection ? 'white' : 'rgb(55, 65, 81)',
                 }}
               >
                 {item.name}
               </Typography.P>
-            </Link>
+            </button>
           ))}
         </div>
       </div>
@@ -77,7 +100,7 @@ function MobileNavbar({
           }}
         >
           {isOpen ? (
-            <X size={24} />
+            <X size={24} className={`text-black`} />
           ) : (
             <Image
               src={hamburgerIcon.src}
@@ -99,16 +122,19 @@ function MobileNavbar({
         }`}
       >
         {navItems.map((item: { name: string; href: string }) => (
-          <Link
+          <button
             key={item.name}
-            href={item.href}
-            onClick={() => setIsOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              handleScrollToSection(item.href);
+              setIsOpen(false);
+            }}
             className="transition-colors"
           >
             <Typography.P className="text-gray-800 text-xl font-semibold text-center hover:text-primary">
               {item.name}
             </Typography.P>
-          </Link>
+          </button>
         ))}
       </div>
     </>

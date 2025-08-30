@@ -1,10 +1,11 @@
 'use client';
-import { cn } from '@/lib/utils';
-import { motion, MotionValue, useTransform } from 'framer-motion';
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { svgs } from '@/config/timeline';
+import React, { useEffect, useState } from 'react';
+
+import { motion, MotionValue, useTransform } from 'motion/react';
 import Image from 'next/image';
+
+import { svgs } from '@/config/timeline';
+import { cn } from '@/lib/utils';
 
 const transition = {
   duration: 0,

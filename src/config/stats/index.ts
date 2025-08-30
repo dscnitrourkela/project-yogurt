@@ -7,7 +7,7 @@ export interface StatData {
 export const statsData: StatData[] = [
   { id: 1, number: '4000+', label: 'Communities' },
   { id: 2, number: '630+', label: 'Projects' },
-  { id: 3, number: '11.5k+', label: 'Registrations' },
+  { id: 3, number: '11.5K+', label: 'Registrations' },
   { id: 4, number: '600+', label: 'Colleges' },
   { id: 5, number: '20+', label: 'Countries' },
 ];
