@@ -12,6 +12,7 @@ import Stats from '@/components/stats/stats';
 import Testimonials from '@/components/testimonials/testimonials';
 import { Timeline } from '@/components/timeline/timeline';
 import ScrollMarquee from '@/components/ui/marquee';
+import AsciiLogger from '@/components/ASCII/ASCIIlog';
 
 export default function Page() {
   return (
@@ -38,6 +39,7 @@ export default function Page() {
         <FaqList />
       </div>
       <ScrollMarquee />
+      <AsciiLogger />
     </>
   );
 }
