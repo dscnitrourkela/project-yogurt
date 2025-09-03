@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
       {
         hostname: 'res.cloudinary.com',
       },
+      {
+        hostname: 'pbs.twimg.com',
+      },
     ],
   },
 };

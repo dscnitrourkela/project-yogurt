@@ -10,6 +10,21 @@ export const globeLogo =
 export const testimonialInfo = [
   {
     id: 1,
+    title: 'Devfolio',
+    img: 'https://pbs.twimg.com/profile_images/1507066571633864711/fYsHUznU_400x400.png',
+    subtitle: '@devfolio',
+    content: `
+              Time to celebrate the hackathons that really stood out and left us in awe:
+              🏆 Hackahton with the most projects submitted 🏆
+              ‣🛠️ Overall: @ETHIndiaco 2023 with 482 projects
+              ‣ 🎓 University: @HackNITR 4.0 with 334 projects
+            `,
+    time: '9:00 PM',
+    date: 'Mar 14, 2024',
+    hacknitr: 'HackNITR 4.0',
+  },
+  {
+    id: 2,
     title: 'Azim Warzi',
     img: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1756325955/hacknitr/bj1j3roiopyr95dspizq.jpg',
     subtitle: '@AzimWarsii',
@@ -20,7 +35,7 @@ export const testimonialInfo = [
     hacknitr: 'HackNITR 5.0',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Sambit Singha',
     img: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1756326007/hacknitr/nd8wpenegy73yapip03s.jpg',
     subtitle: '@sambitsingha01',
@@ -31,7 +46,7 @@ export const testimonialInfo = [
     hacknitr: 'HackNITR 5.0',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Manik Sheoran',
     img: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1756326028/hacknitr/otdamfkqfpaar6fwbh1f.jpg',
     subtitle: '@ManikSheoran',
@@ -42,7 +57,7 @@ export const testimonialInfo = [
     hacknitr: 'HackNITR 5.0',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Amogh',
     img: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1756326067/hacknitr/r5ozi4og2pbj2gdcr1w6.jpg',
     subtitle: '@JeSuisAmogh',
@@ -53,7 +68,7 @@ export const testimonialInfo = [
     hacknitr: 'HackNITR 5.0',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Soham R.',
     img: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1756326094/hacknitr/jcaeyorourckv6grzlt6.jpg',
     subtitle: '@neuralxtract',
