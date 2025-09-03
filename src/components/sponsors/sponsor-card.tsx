@@ -1,11 +1,13 @@
 import React from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Sponsor {
   name: string;
   logo: string;
   category: string;
+  link: string;
 }
 
 interface SponsorCardProps {
@@ -31,7 +33,11 @@ const SponsorCard: React.FC<SponsorCardProps> = ({ sponsor, cardType }) => {
   };
 
   return (
-    <div className={getCardStyles()}>
+    <Link
+      href={sponsor.link || '#'}
+      target="_blank"
+      className={getCardStyles()}
+    >
       <div className="flex flex-col justify-center items-center">
         <Image
           src={sponsor.logo}
@@ -41,7 +47,7 @@ const SponsorCard: React.FC<SponsorCardProps> = ({ sponsor, cardType }) => {
           height={500}
         />
       </div>
-    </div>
+    </Link>
   );
 };
 

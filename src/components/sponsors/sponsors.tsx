@@ -18,6 +18,7 @@ interface SponsorGridProps {
     name: string;
     logo: string;
     category: string;
+    link: string;
   }>;
   cardType: 'alpha' | 'beta' | 'delta';
 }
