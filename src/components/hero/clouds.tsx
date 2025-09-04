@@ -22,7 +22,7 @@ export default function Clouds() {
 
   return (
     <div
-      className={`overflow-x-clip relative z-30 ${isSmall ? ' -mt-[18svh]' : ''} `}
+      className={`overflow-x-clip relative z-30 ${isSmall ? ' -mt-[18svh]' : 'mt-20'} `}
     >
       <div
         className={`relative ${isSmall ? '  w-[150%]  min-h-[100svh] ' : ''} `}
