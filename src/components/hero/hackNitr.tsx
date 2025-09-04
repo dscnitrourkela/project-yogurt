@@ -9,7 +9,7 @@ import {
 } from '@/config/hero/heroDesktop';
 
 import Typography from '../Typography';
-import { DevfolioButton } from '@/components';
+import DevfolioAndDiscordButtons from '@/components/hero/hero-buttons';
 
 const filesToKeepAsImages = ['line-132.svg', 'line-134.svg', 'line-133.svg'];
 
@@ -130,7 +130,7 @@ export const HackNitr = () => {
         November <span className="text-[#0534C7]">1st–2nd</span>, 2025 | NIT
         Rourkela
       </div>
-      <DevfolioButton />
+      <DevfolioAndDiscordButtons />
     </div>
   );
 };

@@ -168,8 +168,6 @@ export default function UploadPage() {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }, []);
 
-  return null;
-
   return (
     <div className=" bg-gray-50">
       <div className=" mx-auto px-4 py-8 max-w-4xl">
