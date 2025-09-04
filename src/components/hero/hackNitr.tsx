@@ -9,7 +9,7 @@ import {
 } from '@/config/hero/heroDesktop';
 
 import Typography from '../Typography';
-import DevfolioAndDiscordButtons from '@/components/devfolio/devfolio-button';
+import DevfolioAndDiscordButtons from '@/components/hero/hero-buttons';
 
 const filesToKeepAsImages = ['line-132.svg', 'line-134.svg', 'line-133.svg'];
 

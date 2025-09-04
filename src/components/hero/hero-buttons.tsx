@@ -30,7 +30,6 @@ export default function DevfolioAndDiscordButtons() {
           height={100}
           className={'size-6 block'}
         />
-        <span className={'font-bold text-lg'}></span>
 
         <Typography.P className="text-white text-lg font-semibold text-center mb-0">
           Apply With Devfolio

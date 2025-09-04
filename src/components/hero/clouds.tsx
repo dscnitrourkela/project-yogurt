@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { HERO_CLOUDS_CONFIG } from '@/config/hero/clouds';
-import DevfolioAndDiscordButtons from '@/components/devfolio/devfolio-button';
+import DevfolioAndDiscordButtons from '@/components/hero/hero-buttons';
 
 export default function Clouds() {
   const [isSmall, setIsSmall] = useState(false);
