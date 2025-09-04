@@ -9,7 +9,7 @@ interface DevfolioButtonProps {
 }
 
 export default function DevfolioButton({
-  hackathonSlug = 'YOUR-HACKATHON-SLUG',
+  hackathonSlug = 'hacknitr7',
   theme = 'light',
   className = '',
 }: DevfolioButtonProps) {

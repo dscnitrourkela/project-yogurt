@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { HERO_CLOUDS_CONFIG } from '@/config/hero/clouds';
+import { DevfolioButton } from '@/components';
 
 export default function Clouds() {
   const [isSmall, setIsSmall] = useState(false);
@@ -130,11 +131,11 @@ export default function Clouds() {
           }`}
           priority
         />
-        {/* {isSmall && (
-        <div className="absolute bottom-1/3 left-0 w-full flex justify-center items-center ">
-          <PreRegisterButton />
-        </div>
-      )} */}
+        {isSmall && (
+          <div className="absolute w-[100vw] top-[50svh]">
+            <DevfolioButton className="mx-auto" />
+          </div>
+        )}
       </div>
     </div>
   );
