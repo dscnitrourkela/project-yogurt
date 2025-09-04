@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { HERO_CLOUDS_CONFIG } from '@/config/hero/clouds';
-import { DevfolioButton } from '@/components';
+import DevfolioAndDiscordButtons from '@/components/devfolio/devfolio-button';
 
 export default function Clouds() {
   const [isSmall, setIsSmall] = useState(false);
@@ -133,7 +133,7 @@ export default function Clouds() {
         />
         {isSmall && (
           <div className="absolute w-[100vw] top-[50svh]">
-            <DevfolioButton className="mx-auto" />
+            <DevfolioAndDiscordButtons className="mx-auto" />
           </div>
         )}
       </div>
