@@ -6,23 +6,6 @@ import { DEVFOLIO_LINK, DISCORD_LINK } from '@/config/marginals';
 import Typography from '../Typography';
 
 export default function DevfolioAndDiscordButtons() {
-  // useEffect(() => {
-  //   const script = document.createElement('script');
-  //   script.src = 'https://apply.devfolio.co/v2/sdk.js';
-  //   script.async = true;
-  //   script.defer = true;
-  //   document.body.appendChild(script);
-  //
-  //   return () => {
-  //     const existingScript = document.querySelector(
-  //       'script[src="https://apply.devfolio.co/v2/sdk.js"]'
-  //     );
-  //     if (existingScript) {
-  //       document.body.removeChild(existingScript);
-  //     }
-  //   };
-  // }, []);
-
   function handleClick(type: 'devfolio' | 'discord') {
     let dest = '';
     if (type == 'devfolio') dest = DEVFOLIO_LINK;
@@ -32,7 +15,7 @@ export default function DevfolioAndDiscordButtons() {
 
   return (
     <div
-      className={`flex flex-col mt-10 xs:mt-0 xs:flex-row justify-center w-full scale-90 items-center gap-0 xs:gap-5`}
+      className={`flex flex-col mt-10 xs:mt-5 xs:flex-row justify-center w-full scale-90 items-center gap-0 xs:gap-5`}
     >
       <Button
         className={

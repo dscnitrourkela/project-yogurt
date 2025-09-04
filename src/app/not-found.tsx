@@ -35,7 +35,9 @@ export default function NotFound() {
         </Typography.Lead>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link href="/">
-            <Button className="min-w-[150px]">Go Home</Button>
+            <Button className="min-w-[150px] text-white font-medium">
+              Go Home
+            </Button>
           </Link>
         </div>
       </div>

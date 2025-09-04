@@ -133,7 +133,7 @@ export default function Clouds() {
         />
         {isSmall && (
           <div className="absolute w-[100vw] top-[50svh]">
-            <DevfolioAndDiscordButtons className="mx-auto" />
+            <DevfolioAndDiscordButtons />
           </div>
         )}
       </div>
