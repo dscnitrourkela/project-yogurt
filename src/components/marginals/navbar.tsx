@@ -65,9 +65,6 @@ function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
           ))}
         </div>
       </div>
-      {/* <div className="absolute right-0 flex justify-end items-center ml-auto">
-        <Button>Brochure</Button>
-      </div> */}
     </div>
   );
 }
@@ -115,7 +112,7 @@ function MobileNavbar({
         </button>
       </div>
       <div
-        className={`fixed inset-0 bg-white z-40 flex flex-col justify-center items-center space-y-6 px-4 transition-opacity duration-300 ease-in-out min-[800px]:hidden ${
+        className={`fixed inset-0 bg-white z-40 flex flex-col justify-center items-center space-y-6 px-4 transition-opacity duration-300 ease-in-out lg:hidden ${
           isOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
