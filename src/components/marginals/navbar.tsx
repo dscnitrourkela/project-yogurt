@@ -7,7 +7,9 @@ import Link from 'next/link';
 
 import { hamburgerIcon, logo, navItems } from '@/config/marginals';
 
+import { handleRedirect } from '../hero/hero-buttons';
 import Typography from '../Typography';
+import Button from '../ui/button';
 
 const SCROLL_OFFSET = 80;
 const handleScrollToSection = (href: string) => {
@@ -133,6 +135,25 @@ function MobileNavbar({
             </Typography.P>
           </button>
         ))}
+
+        <Button
+          className={
+            'h-14 mb-0.5 !p-0 min-w-[320px] mt-5 xs:mt-0  my-auto flex flex-row items-center justify-center gap-4'
+          }
+          onClick={() => handleRedirect('discord')}
+        >
+          <Image
+            src={'./discord.svg'}
+            alt={'Discord Button'}
+            width={100}
+            height={100}
+            className={'size-8 block'}
+          />
+
+          <Typography.P className="text-white text-[1.10rem] font-semibold text-center mb-0">
+            Join Discord
+          </Typography.P>
+        </Button>
       </div>
     </>
   );

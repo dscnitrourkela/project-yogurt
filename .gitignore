@@ -48,3 +48,5 @@ yarn.lock
 temp/
 
 certificates
+
+.vscode/
