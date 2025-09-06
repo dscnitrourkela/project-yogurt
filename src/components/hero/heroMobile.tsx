@@ -9,6 +9,7 @@ import {
 } from '@/config/hero/heroMobile';
 
 import Typography from '../Typography';
+import DevfolioAndDiscordButtons from './hero-buttons';
 
 export const HeroMobile = React.memo(() => {
   return (
@@ -113,9 +114,12 @@ export const HeroMobile = React.memo(() => {
             <div className="w-[6vw] h-[6vw] bg-[#EAEAEA] mt-2 xl:mt-4" />
           </div>
         </div>
-        <div className="mt-[50%] font-sketch-block text-[3.85vw] text-center">
+        <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center">
           November <span className="text-[#0534C7]">1st–2nd</span>, 2025 | NIT
           Rourkela
+        </div>
+        <div>
+          <DevfolioAndDiscordButtons />
         </div>
       </div>
     </div>
