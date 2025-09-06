@@ -16,7 +16,7 @@ export function handleRedirect(type: 'devfolio' | 'discord') {
 export default function DevfolioAndDiscordButtons() {
   return (
     <div
-      className={`flex flex-col mt-10 xs:mt-5 xs:flex-row justify-center w-full scale-90 items-center gap-0 xs:gap-5`}
+      className={`relative z-40 flex flex-col mt-10 xs:mt-5 xs:flex-row justify-center w-full scale-90 items-center gap-0 xs:gap-5`}
     >
       <Button
         className={
