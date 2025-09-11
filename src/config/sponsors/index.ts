@@ -13,24 +13,34 @@ export const SponsorsData = {
       category: 'Platform',
       link: 'https://devfolio.co',
     },
-    {
+    /*   {
       name: 'ETH India',
       logo: 'https://res.cloudinary.com/dhv234qct/image/upload/v1736925948/hn6/6.0%20spons/x8c696hj5wqhumhqcwol.png',
       category: 'Gamma',
       link: 'https://ethindia.co',
-    },
+    }, */
   ],
   Beta: [
-    // {
-    //   name: 'ETH India',
-    //   logo: 'https://res.cloudinary.com/dhv234qct/image/upload/v1736925948/hn6/6.0%20spons/x8c696hj5wqhumhqcwol.png',
-    //   category: 'Gamma',
-    // },
-    // {
-    //   name: 'Polygon',
-    //   logo: 'https://res.cloudinary.com/dhv234qct/image/upload/v1736925948/hn6/6.0%20spons/xd10ghvhzdktiqwdalxj.png',
-    //   category: 'Gamma',
-    // },
+    {
+      name: 'ETH India',
+      logo: 'https://res.cloudinary.com/dhv234qct/image/upload/v1736925948/hn6/6.0%20spons/x8c696hj5wqhumhqcwol.png',
+      category: 'Beta',
+      link: 'https://ethindia.co',
+    },
+    {
+      name: 'Polygon',
+      logo: 'https://res.cloudinary.com/dhv234qct/image/upload/v1736925948/hn6/6.0%20spons/xd10ghvhzdktiqwdalxj.png',
+      category: 'Beta',
+      link: 'https://polygon.technology/',
+    },
+  ],
+  Gamma: [
+    {
+      name: 'Vrbwire',
+      logo: 'https://res.cloudinary.com/dfe8sdlkc/image/upload/v1757622762/verbwire_logo.svg_c3fwsl.svg',
+      category: 'Gamma',
+      link: 'https://www.verbwire.com/',
+    },
   ],
 };
 

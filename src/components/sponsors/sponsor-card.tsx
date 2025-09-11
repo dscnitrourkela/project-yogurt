@@ -12,7 +12,7 @@ interface Sponsor {
 
 interface SponsorCardProps {
   sponsor: Sponsor;
-  cardType: 'alpha' | 'beta' | 'delta';
+  cardType: 'alpha' | 'beta' | 'gamma' | 'delta';
 }
 
 const SponsorCard: React.FC<SponsorCardProps> = ({ sponsor, cardType }) => {
@@ -24,6 +24,8 @@ const SponsorCard: React.FC<SponsorCardProps> = ({ sponsor, cardType }) => {
       case 'alpha':
         return `${baseStyles} w-[290px] h-[140px] md:w-[360px] md:h-[160px] mb-16`;
       case 'beta':
+        return `${baseStyles} w-[290px] h-[140px] md:w-[300px] md:h-[140px] mb-12`;
+      case 'gamma':
         return `${baseStyles} w-[290px] h-[140px] md:w-[300px] md:h-[140px] mb-12`;
       case 'delta':
         return `${baseStyles} w-[260px] h-[130px] mt-1 mb-3`;
