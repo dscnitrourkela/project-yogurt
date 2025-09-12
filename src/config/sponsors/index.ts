@@ -27,12 +27,6 @@ export const SponsorsData = {
       category: 'Beta',
       link: 'https://ethindia.co',
     },
-    {
-      name: 'Polygon',
-      logo: 'https://res.cloudinary.com/dhv234qct/image/upload/v1736925948/hn6/6.0%20spons/xd10ghvhzdktiqwdalxj.png',
-      category: 'Beta',
-      link: 'https://polygon.technology/',
-    },
   ],
   Gamma: [
     {
