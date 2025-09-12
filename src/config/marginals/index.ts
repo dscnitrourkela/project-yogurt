@@ -24,7 +24,7 @@ export const hamburgerIcon = {
   height: 30,
 };
 
-export const DISCORD_LINK = 'https://discord.gg/MTP5dESx';
+export const DISCORD_LINK = 'https://discord.gg/KhuxUg9vkt';
 export const DEVFOLIO_LINK = 'https://hacknitr7.devfolio.co/';
 
 export const background =
