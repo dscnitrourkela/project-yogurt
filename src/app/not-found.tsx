@@ -1,20 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
 import Link from 'next/link';
 
 import Typography from '@/components/Typography';
 import Button from '@/components/ui/button';
 
 export default function NotFound() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
+  
 
   return (
     <div className="min-h-screen bg-[var(--color-background)] flex items-center justify-center px-4">
@@ -24,7 +16,7 @@ export default function NotFound() {
             404
           </Typography.H1>
         </div>
-        ={' '}
+        {' '}
         <Typography.H2 className="text-[var(--color-heading)] mb-4 font-averta-std">
           Page Not Found
         </Typography.H2>
