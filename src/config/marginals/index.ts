@@ -6,6 +6,7 @@ export const navItems = [
   { name: 'Timeline', href: '/#timeline' },
   { name: 'Sponsors', href: '/#sponsors' },
   { name: 'FAQs', href: '/#faqs' },
+  { name: 'Brochure', href: '/brochure' },
   // { name: 'Coming Soon', href: '/#' },
 ];
 
