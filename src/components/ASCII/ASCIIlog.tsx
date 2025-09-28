@@ -24,7 +24,7 @@ The console spoke, but its voice grows faint.
 If you wish to find the next clue’s paint,
 Follow the path where whispers travel,
 Requests and answers slowly unravel`,
-      'font-family: monospace; white-space: pre; line-height: 1.2;'
+      'font-family: monospace; white-space: pre;'
     );
     console.error(`Error 404: Help Xori Reach Home`);
     console.info(`You get two clues here`);

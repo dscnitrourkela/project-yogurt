@@ -1,5 +1,6 @@
 'use client';
 import About from '@/components/about/about';
+import AsciiLogger from '@/components/ASCII/ASCIIlog';
 import { FaqList } from '@/components/faq/faq-list';
 import Gallery from '@/components/gallery/gallery';
 import Hero from '@/components/hero/hero';
@@ -9,6 +10,7 @@ import Stats from '@/components/stats/stats';
 import Testimonials from '@/components/testimonials/testimonials';
 import { Timeline } from '@/components/timeline/timeline';
 import ScrollMarquee from '@/components/ui/marquee';
+import React from 'react';
 
 export default function Home() {
   return (
@@ -35,6 +37,7 @@ export default function Home() {
         <FaqList />
       </div>
       <ScrollMarquee />
+      <AsciiLogger />
     </>
   );
 }
