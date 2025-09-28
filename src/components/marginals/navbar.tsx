@@ -7,7 +7,9 @@ import Link from 'next/link';
 
 import { hamburgerIcon, logo, navItems } from '@/config/marginals';
 
+import { handleRedirect } from '../hero/hero-buttons';
 import Typography from '../Typography';
+import Button from '../ui/button';
 
 const SCROLL_OFFSET = 80;
 const handleScrollToSection = (href: string) => {
@@ -65,9 +67,6 @@ function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
           ))}
         </div>
       </div>
-      {/* <div className="absolute right-0 flex justify-end items-center ml-auto">
-        <Button>Brochure</Button>
-      </div> */}
     </div>
   );
 }
@@ -115,7 +114,7 @@ function MobileNavbar({
         </button>
       </div>
       <div
-        className={`fixed inset-0 bg-white z-40 flex flex-col justify-center items-center space-y-6 px-4 transition-opacity duration-300 ease-in-out min-[800px]:hidden ${
+        className={`fixed inset-0 bg-white z-40 flex flex-col justify-center items-center space-y-6 px-4 transition-opacity duration-300 ease-in-out lg:hidden ${
           isOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
@@ -136,6 +135,25 @@ function MobileNavbar({
             </Typography.P>
           </button>
         ))}
+
+        <Button
+          className={
+            'h-14 mb-0.5 !p-0 min-w-[320px] mt-5 xs:mt-0  my-auto flex flex-row items-center justify-center gap-4'
+          }
+          onClick={() => handleRedirect('discord')}
+        >
+          <Image
+            src={'./discord.svg'}
+            alt={'Discord Button'}
+            width={100}
+            height={100}
+            className={'size-8 block'}
+          />
+
+          <Typography.P className="text-white text-[1.10rem] font-semibold text-center mb-0">
+            Join Discord
+          </Typography.P>
+        </Button>
       </div>
     </>
   );

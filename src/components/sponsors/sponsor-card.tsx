@@ -1,16 +1,18 @@
 import React from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Sponsor {
   name: string;
   logo: string;
   category: string;
+  link: string;
 }
 
 interface SponsorCardProps {
   sponsor: Sponsor;
-  cardType: 'alpha' | 'beta' | 'delta';
+  cardType: 'alpha' | 'beta' | 'gamma' | 'delta';
 }
 
 const SponsorCard: React.FC<SponsorCardProps> = ({ sponsor, cardType }) => {
@@ -23,6 +25,8 @@ const SponsorCard: React.FC<SponsorCardProps> = ({ sponsor, cardType }) => {
         return `${baseStyles} w-[290px] h-[140px] md:w-[360px] md:h-[160px] mb-16`;
       case 'beta':
         return `${baseStyles} w-[290px] h-[140px] md:w-[300px] md:h-[140px] mb-12`;
+      case 'gamma':
+        return `${baseStyles} w-[290px] h-[140px] md:w-[300px] md:h-[140px] mb-12`;
       case 'delta':
         return `${baseStyles} w-[260px] h-[130px] mt-1 mb-3`;
       default:
@@ -31,7 +35,11 @@ const SponsorCard: React.FC<SponsorCardProps> = ({ sponsor, cardType }) => {
   };
 
   return (
-    <div className={getCardStyles()}>
+    <Link
+      href={sponsor.link || '#'}
+      target="_blank"
+      className={getCardStyles()}
+    >
       <div className="flex flex-col justify-center items-center">
         <Image
           src={sponsor.logo}
@@ -41,7 +49,7 @@ const SponsorCard: React.FC<SponsorCardProps> = ({ sponsor, cardType }) => {
           height={500}
         />
       </div>
-    </div>
+    </Link>
   );
 };
 

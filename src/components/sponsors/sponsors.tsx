@@ -18,8 +18,9 @@ interface SponsorGridProps {
     name: string;
     logo: string;
     category: string;
+    link: string;
   }>;
-  cardType: 'alpha' | 'beta' | 'delta';
+  cardType: 'alpha' | 'beta' | 'gamma' | 'delta';
 }
 
 const SponsorGrid: React.FC<SponsorGridProps> = ({ sponsors, cardType }) => {
@@ -107,6 +108,22 @@ export const Sponsors = () => {
       </div>
       <div className="flex flex-col gap-4 md:gap-8 w-full">
         <SponsorGrid sponsors={SponsorsData.Alpha} cardType="alpha" />
+      </div>
+      <div>
+        <Typography.H3 className="text-white font-semibold text-center mb-12">
+          Beta Sponsors
+        </Typography.H3>
+      </div>
+      <div className="flex flex-col gap-4 md:gap-8 w-full">
+        <SponsorGrid sponsors={SponsorsData.Beta} cardType="beta" />
+      </div>
+      <div>
+        <Typography.H3 className="text-white font-semibold text-center mb-12">
+          Gamma Sponsors
+        </Typography.H3>
+      </div>
+      <div className="flex flex-col gap-4 md:gap-8 w-full">
+        <SponsorGrid sponsors={SponsorsData.Gamma} cardType="gamma" />
       </div>
 
       <div className="flex w-full justify-center mb-12 mt-20" id="PastSponsors">

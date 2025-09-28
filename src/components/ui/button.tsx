@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Typography from '../Typography';
-
 type ButtonProps = {
   children: React.ReactNode;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -19,9 +17,7 @@ export default function Button({
       onClick={onClick}
       className={`bg-[#0035d5] border-2 border-[#11004E] outline-red-500 px-8  py-1 w-fit rounded transition-transform hover:brightness-110 duration-150 shadow-[0px_4px_0px_0px_#11004E,inset_0_0_0_2px_#0617b0] cursor-pointer ${className}`}
     >
-      <Typography.P className="text-white text-sm! font-semibold text-center my-auto">
-        {children}
-      </Typography.P>
+      {children}
     </button>
   );
 }

@@ -6,6 +6,7 @@ export const navItems = [
   { name: 'Timeline', href: '/#timeline' },
   { name: 'Sponsors', href: '/#sponsors' },
   { name: 'FAQs', href: '/#faqs' },
+  { name: 'Brochure', href: '/brochure' },
   // { name: 'Coming Soon', href: '/#' },
 ];
 
@@ -24,7 +25,8 @@ export const hamburgerIcon = {
   height: 30,
 };
 
-export const DISCORD_LINK = 'https://discord.gg/hacknitr';
+export const DISCORD_LINK = 'https://discord.gg/KhuxUg9vkt';
+export const DEVFOLIO_LINK = 'https://hacknitr7.devfolio.co/';
 
 export const background =
   'https://res.cloudinary.com/dscnitrourkela/image/upload/v1754225393/hacknitr/kih0gsyskoslbgd9frvz.png';
