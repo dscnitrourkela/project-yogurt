@@ -1,9 +1,17 @@
-import React from 'react';
-
+"use client";
+import React, { useEffect } from 'react';
 import { Typography } from '@/components';
 import PreRegisterButton from '@/components/pre-register/pre-register';
 
 export default function Page() {
+  
+  useEffect(() => {
+    fetch("/api/clue")  
+      .then(res => res.json())
+      .then(data => console.log("API response:", data))
+      .catch(err => console.error(err));
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4">
