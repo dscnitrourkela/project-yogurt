@@ -46,3 +46,7 @@ temp/
 yarn.lock
 .idea/
 temp/
+
+certificates
+
+.vscode/

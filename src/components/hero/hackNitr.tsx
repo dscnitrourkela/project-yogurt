@@ -9,6 +9,7 @@ import {
 } from '@/config/hero/heroDesktop';
 
 import Typography from '../Typography';
+import DevfolioAndDiscordButtons from '@/components/hero/hero-buttons';
 
 const filesToKeepAsImages = ['line-132.svg', 'line-134.svg', 'line-133.svg'];
 
@@ -125,15 +126,11 @@ export const HackNitr = () => {
           </div>
         </div>
       </div>
-      {/* <DevfolioButton
-        hackathonSlug="hacknitr7"
-        theme="light"
-        className="-mt-"
-      /> */}
-      <div className="-mt-[1vw] font-sketch-block text-[1.85vw] text-center">
+      <div className="-mt-[2vw] font-sketch-block text-[1.85vw] text-center mb-3">
         November <span className="text-[#0534C7]">1st–2nd</span>, 2025 | NIT
         Rourkela
       </div>
+      <DevfolioAndDiscordButtons />
     </div>
   );
 };

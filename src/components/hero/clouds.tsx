@@ -21,7 +21,9 @@ export default function Clouds() {
 
   return (
     <div
-      className={`overflow-x-clip relative z-50 ${isSmall ? ' -mt-[18svh]' : ''} `}
+      className={`overflow-x-clip relative z-30 pointer-events-none ${
+        isSmall ? ' -mt-[18svh]' : 'mt-20'
+      } `}
     >
       <div
         className={`relative ${isSmall ? '  w-[150%]  min-h-[100svh] ' : ''} `}
@@ -130,11 +132,6 @@ export default function Clouds() {
           }`}
           priority
         />
-        {/* {isSmall && (
-        <div className="absolute bottom-1/3 left-0 w-full flex justify-center items-center ">
-          <PreRegisterButton />
-        </div>
-      )} */}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ export const timelineData = {
     {
       eventNumber: 1,
       title: 'Registrations Open',
-      duration: 'Duration - 2nd Sept to 15 Oct',
+      duration: 'Duration - 5th Sept to 15 Oct',
       description: `All Aboard! Save your spot at India's largest student-run hackathon.`,
       className:
         'absolute lg:top-[125%]  lg:left-[7%] xlg:left-[6%] xl:left-[12%]',

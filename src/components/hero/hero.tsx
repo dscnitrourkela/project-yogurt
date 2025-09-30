@@ -31,7 +31,7 @@ export default function Hero() {
     <>
       <div id="hero">
         <div
-          className={` min-h-[90vh] sticky top-0 hidden ${padCheck ? '' : 'lg:flex'} justify-center items-center`}
+          className={` min-h-[100vh] sticky top-0 hidden ${padCheck ? '' : 'lg:flex'} justify-center items-center`}
           style={{ opacity }}
         >
           <HackNitr />

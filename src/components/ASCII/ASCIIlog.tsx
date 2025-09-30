@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import Clue from '../clue-1/clue1';
 
 export default function AsciiLogger() {
   function addClue3() {
@@ -34,11 +33,16 @@ export default function AsciiLogger() {
    ##+++++++++++++++++++#+   
       #+#############+#      
    ##+++++#########++++++
-       HACKNITR 7.0`,
-      'font-family: monospace; white-space: pre; line-height: 1.2;'
+
+The console spoke, but its voice grows faint.
+If you wish to find the next clue’s paint,
+Follow the path where whispers travel,
+Requests and answers slowly unravel`,
+      'font-family: monospace; white-space: pre;'
     );
     addClue3();
+
   }, []);
 
-  return <Clue />;
+  return null;
 }
