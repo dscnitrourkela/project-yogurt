@@ -1,7 +1,20 @@
-"use client";
-import React, { useEffect } from 'react';
+
+'use client';
+
 import { Typography } from '@/components';
+import React, { useEffect } from 'react';
 import PreRegisterButton from '@/components/pre-register/pre-register';
+import About from '@/components/about/about';
+import { FaqList } from '@/components/faq/faq-list';
+import Gallery from '@/components/gallery/gallery';
+import Hero from '@/components/hero/hero';
+import Prizes from '@/components/prizes/prizes';
+import { Sponsors } from '@/components/sponsors/sponsors';
+import Stats from '@/components/stats/stats';
+import Testimonials from '@/components/testimonials/testimonials';
+import { Timeline } from '@/components/timeline/timeline';
+import ScrollMarquee from '@/components/ui/marquee';
+import AsciiLogger from '@/components/ASCII/ASCIIlog';
 
 export default function Page() {
   
@@ -13,14 +26,30 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="container mx-auto px-4">
-        <Typography.H1>Playground</Typography.H1>
-        <Typography.Muted className="text-left mb-4">
-          Todo: add the updated preregister button in navbar
-        </Typography.Muted>
-        <PreRegisterButton />
+    <>
+      <Hero />
+      <About />
+      <Stats />
+      <div className="bg-on-black">
+        <Gallery />
       </div>
-    </div>
+      <ScrollMarquee />
+
+      <Prizes />
+      <ScrollMarquee />
+      <Timeline />
+
+      <div className="bg-on-black">
+        <Sponsors />
+        <ScrollMarquee />
+        <Testimonials />
+        <div className="py-20">
+          <ScrollMarquee />
+        </div>
+        <FaqList />
+      </div>
+      <ScrollMarquee />
+      <AsciiLogger />
+    </>
   );
 }

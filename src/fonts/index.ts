@@ -1,5 +1,5 @@
-import localFont from 'next/font/local';
 import { Cabin_Sketch } from 'next/font/google';
+import localFont from 'next/font/local';
 
 export const avertaStd = localFont({
   src: [
