@@ -1,13 +1,13 @@
 "use client";
 import { Typography } from '@/components';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 export default function Home() {
-  const [msg, setMsg] = useState("");
+  
 
   useEffect(() => {
     fetch("/api/clue")
       .then((res) => res.json())
-      .then((data) => setMsg(data.message));
+      .then((data) => console.warn("help me pleaseee!"));
   }, []);
   return (
     <main className="min-h-screen w-full grid place-items-center">
