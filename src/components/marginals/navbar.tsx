@@ -28,6 +28,8 @@ const handleScrollToSection = (href: string) => {
         behavior: 'smooth',
       });
     }
+  } else {
+    window.open(href, '_blank');
   }
 };
 
