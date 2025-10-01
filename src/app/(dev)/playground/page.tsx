@@ -1,7 +1,9 @@
+
 'use client';
 
-import React from 'react';
-
+import { Typography } from '@/components';
+import React, { useEffect } from 'react';
+import PreRegisterButton from '@/components/pre-register/pre-register';
 import About from '@/components/about/about';
 import { FaqList } from '@/components/faq/faq-list';
 import Gallery from '@/components/gallery/gallery';
@@ -15,6 +17,14 @@ import ScrollMarquee from '@/components/ui/marquee';
 import AsciiLogger from '@/components/ASCII/ASCIIlog';
 
 export default function Page() {
+  
+  useEffect(() => {
+    fetch("/api/clue")  
+      .then(res => res.json())
+      .then(data => console.log("API response:", data))
+      .catch(err => console.error(err));
+  }, []);
+
   return (
     <>
       <Hero />

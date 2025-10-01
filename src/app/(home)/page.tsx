@@ -1,4 +1,6 @@
-'use client';
+
+import { Typography } from '@/components';
+import { useEffect } from "react";
 import About from '@/components/about/about';
 import AsciiLogger from '@/components/ASCII/ASCIIlog';
 import { FaqList } from '@/components/faq/faq-list';
@@ -13,6 +15,13 @@ import ScrollMarquee from '@/components/ui/marquee';
 import React from 'react';
 
 export default function Home() {
+  
+
+  useEffect(() => {
+    fetch("/api/clue")
+      .then((res) => res.json())
+      .then((data) => console.warn("help me pleaseee!"));
+  }, []);
   return (
     <>
       <Hero />
