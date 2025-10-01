@@ -13,6 +13,7 @@ export async function POST(req: NextRequest) {
       message: isCorrect ? 'Correct answer!' : 'Try again!',
     });
   } catch (error) {
+    console.error('Error processing answer:', error);
     return NextResponse.json(
       {
         success: false,

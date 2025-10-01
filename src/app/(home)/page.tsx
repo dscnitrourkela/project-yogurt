@@ -1,6 +1,6 @@
+'use client';
+import React, { useEffect } from 'react';
 
-import { Typography } from '@/components';
-import { useEffect } from "react";
 import About from '@/components/about/about';
 import AsciiLogger from '@/components/ASCII/ASCIIlog';
 import { FaqList } from '@/components/faq/faq-list';
@@ -12,16 +12,14 @@ import Stats from '@/components/stats/stats';
 import Testimonials from '@/components/testimonials/testimonials';
 import { Timeline } from '@/components/timeline/timeline';
 import ScrollMarquee from '@/components/ui/marquee';
-import React from 'react';
 
 export default function Home() {
-  
-
   useEffect(() => {
-    fetch("/api/clue")
+    fetch('/api/clue')
       .then((res) => res.json())
-      .then((data) => console.warn("help me pleaseee!"));
+      .then(() => console.warn('help me pleaseee!'));
   }, []);
+
   return (
     <>
       <Hero />
