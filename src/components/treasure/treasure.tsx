@@ -1,14 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import confetti from 'canvas-confetti';
 import React from 'react';
 import Typography from '../Typography';
+import Button from '../ui/button';
+
+import { handleRedirect } from '../hero/hero-buttons';
+import Link from 'next/link';
 
 export default function Treasure() {
   const [isSuccess, setIsSuccess] = useState(false);
-  const discordLink = 'YOUR_DISCORD_LINK_HERE';
 
   const handleSubmit = async (answer: string) => {
     try {
@@ -38,7 +41,7 @@ export default function Treasure() {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const answer = prompt('Enter your answer:');
     if (answer) {
       handleSubmit(answer);
@@ -47,8 +50,8 @@ export default function Treasure() {
 
   if (!isSuccess) {
     return (
-      <section className="flex min-h-screen items-center justify-center bg-gradient-to-b from-white to-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="flex min-h-screen items-center justify-center">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <Typography.H2 className="text-center font-wc-rough-trad text-2xl sm:text-3xl font-bold text-[#150BDE]">
             Verifying your answer...
           </Typography.H2>
@@ -58,8 +61,8 @@ export default function Treasure() {
   }
 
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-100">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <section className="relative flex min-h-screen w-full items-center justify-center">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -94,28 +97,27 @@ export default function Treasure() {
               transition={{ delay: 1 }}
               className="flex flex-col items-center gap-4 w-full"
             >
-              <motion.a
-                href={discordLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded-lg bg-[#150BDE] px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg md:text-xl font-semibold text-white transition-all hover:bg-[#0F08A8] hover:shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Button
+                className={
+                  'h-20 xlg:h-14 my-auto lg:flex flex-row items-center justify-center gap-2 hidden'
+                }
+                onClick={() => handleRedirect('discord')}
               >
-                Join the HackNITR Community
-              </motion.a>
-
-              <motion.a
-                href="/playground"
-                className="inline-block rounded-md border-2 border-[#150BDE] bg-transparent px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg md:text-xl font-semibold text-[#150BDE] transition-all hover:bg-[#150BDE] hover:text-white hover:shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.2 }}
-              >
-                Return to Home
-              </motion.a>
+                <Typography.P className="text-white text-lg font-semibold text-center mb-0 ">
+                  Join the HackNITR Community
+                </Typography.P>
+              </Button>
+              <Link href={'/'}>
+                <Button
+                  className={
+                    'h-20 xlg:h-14 my-auto lg:flex flex-row items-center justify-center gap-2 hidden'
+                  }
+                >
+                  <Typography.P className="text-white text-lg font-semibold text-center mb-0 ">
+                    Proceed to home!
+                  </Typography.P>
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </motion.div>
