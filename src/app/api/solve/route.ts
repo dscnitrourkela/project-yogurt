@@ -4,7 +4,7 @@ export async function POST(req: NextRequest) {
   try {
     const { answer } = await req.json();
 
-    const correctAnswer = process.env.CORRECT_ANSWER || 'hacknitr';
+    const correctAnswer = process.env.CORRECT_ANSWER!;
     const isCorrect =
       answer.toLowerCase().trim() === correctAnswer.toLowerCase();
 
