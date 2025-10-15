@@ -2,7 +2,7 @@ export const navItems = [
   // { name: 'Home', href: '/' },
   // { name: 'About', href: '#about' },
   { name: 'Stats', href: '/#stats' },
-  { name: 'Prizes', href: '/#prizes' },
+  // { name: 'Prizes', href: '/#prizes' },
   { name: 'Timeline', href: '/#timeline' },
   { name: 'Sponsors', href: '/#sponsors' },
   { name: 'FAQs', href: '/#faqs' },
