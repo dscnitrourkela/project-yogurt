@@ -6,7 +6,7 @@ import AsciiLogger from '@/components/ASCII/ASCIIlog';
 import { FaqList } from '@/components/faq/faq-list';
 import Gallery from '@/components/gallery/gallery';
 import Hero from '@/components/hero/hero';
-import Prizes from '@/components/prizes/prizes';
+// import Prizes from '@/components/prizes/prizes';
 import { Sponsors } from '@/components/sponsors/sponsors';
 import Stats from '@/components/stats/stats';
 import Testimonials from '@/components/testimonials/testimonials';
@@ -30,8 +30,8 @@ export default function Home() {
       </div>
       <ScrollMarquee />
 
-      <Prizes />
-      <ScrollMarquee />
+      {/* <Prizes />
+      <ScrollMarquee /> */}
       <Timeline />
 
       <div className="bg-on-black">
