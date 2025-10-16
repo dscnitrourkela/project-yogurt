@@ -7,14 +7,14 @@ export interface Question {
 }
 
 export const questions: Question[] = [
-  {
-    question: 'What are the dates for HackNITR 7.0?',
-    answer:
-      'HackNITR 7.0 will be held on 31st Oct 1st Nov and 2nd Nov 2025. We will be waiting for you with a warm welcome.\n',
-    answerStyle: 'h-35',
-    questionStyle: 'mb-25 -bottom-25',
-    fontSizeScaling: 'text-[clamp(.85rem,2vw,1rem)]',
-  },
+  //{
+   // question: 'What are the dates for HackNITR 7.0?',
+   // answer:
+   //   'HackNITR 7.0 will be held on 31st Oct 1st Nov and 2nd Nov 2025. We will be waiting for you with a warm welcome.\n',
+   // answerStyle: 'h-35',
+//  questionStyle: 'mb-25 -bottom-25',
+    //fontSizeScaling: 'text-[clamp(.85rem,2vw,1rem)]',
+  //},
   {
     question: 'What could be the size of the team?',
     answer:
