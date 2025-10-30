@@ -31,7 +31,7 @@ export const SponsorsData = {
   Gamma: [
     {
       name: 'Verbwire',
-      logo: 'https://res.cloudinary.com/dfe8sdlkc/image/upload/v1757622762/verbwire_logo.svg_c3fwsl.svg',
+      logo: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1761849168/hacknitr/dvujapeludctbgvzvxtb.svg',
       category: 'Gamma',
       link: 'https://www.verbwire.com/',
     },
