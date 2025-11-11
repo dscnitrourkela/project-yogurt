@@ -66,7 +66,10 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen font-sans relative" id="testimonials">
+    <div
+      className="min-h-screen font-sans relative !overflow-x-clip"
+      id="testimonials"
+    >
       <div className="sticky top-0 h-screen flex items-center justify-center pointer-events-none z-0">
         <div ref={headingRef} className="text-center">
           <H1 className="text-4xl sm:text-7xl lg:text-8xl 2xl:text-9xl uppercase text-white font-wc-rough-trad font-normal">
