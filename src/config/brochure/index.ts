@@ -11,7 +11,7 @@ export const brochures: Brochure[] = [
     id: 2,
     title: 'Sponsorship Brochure',
     pdfUrl:
-      'https://drive.google.com/file/d/1pO6DZykZnhjN11n-KmyEHZcQL0G1Dy4L/view?usp=sharing',
+      'https://drive.google.com/file/d/1paMq5jSud4C4f_EqQg2kWnuCxSt0hWBL/view?usp=sharing',
     description: 'Partnership and sponsorship opportunities',
     comingSoon: false,
   },
