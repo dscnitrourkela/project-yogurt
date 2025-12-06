@@ -35,6 +35,12 @@ export const SponsorsData = {
       category: 'Gamma',
       link: 'https://www.verbwire.com/',
     },
+    {
+      name: 'Lovable',
+      logo: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1765024871/hacknitr/gtnkr7mp7ug7x28a54at.png',
+      category: 'Gamma',
+      link: 'https://lovable.dev/',
+    },
   ],
 };
 

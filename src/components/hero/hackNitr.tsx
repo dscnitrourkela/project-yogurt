@@ -126,13 +126,13 @@ export const HackNitr = () => {
           </div>
         </div>
       </div>
-      <div className="-mt-[2vw] font-sketch-block text-[1.85vw] text-center mb-3">
-        Registration<span className="text-[#0534C7]"> Deadline </span> Extended
-      </div>
       {/* <div className="-mt-[2vw] font-sketch-block text-[1.85vw] text-center mb-3">
-        November <span className="text-[#0534C7]">1st–2nd</span>, 2025 | NIT
-        Rourkela
+        Registration<span className="text-[#0534C7]"> Deadline </span> Extended
       </div> */}
+      <div className="-mt-[2vw] font-sketch-block text-[1.85vw] text-center mb-3">
+        January <span className="text-[#0534C7]">3rd–4th</span>, 2026 | NIT
+        Rourkela
+      </div>
       <DevfolioAndDiscordButtons />
     </div>
   );

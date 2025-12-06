@@ -67,12 +67,12 @@ export const questions: Question[] = [
     questionStyle: 'mb-73 -bottom-73',
     fontSizeScaling: 'text-[clamp(0.7rem,3.4vw,.9rem)]',
   },
-  {
-    question: 'Will food be provided at the hackathon?',
-    answer:
-      'Of course!! Meals, water, snacks and most importantly- Coffee, will be provided FREE OF COST.',
-    answerStyle: 'h-30',
-    questionStyle: 'mb-22 -bottom-22',
-    fontSizeScaling: 'text-[clamp(0.85rem,3vw,1rem)]',
-  },
+  // {
+  //   question: 'Will food be provided at the hackathon?',
+  //   answer:
+  //     'Of course!! Meals, water, snacks and most importantly- Coffee, will be provided FREE OF COST.',
+  //   answerStyle: 'h-30',
+  //   questionStyle: 'mb-22 -bottom-22',
+  //   fontSizeScaling: 'text-[clamp(0.85rem,3vw,1rem)]',
+  // },
 ];

@@ -114,15 +114,15 @@ export const HeroMobile = React.memo(() => {
             <div className="w-[6vw] h-[6vw] bg-[#EAEAEA] mt-2 xl:mt-4" />
           </div>
         </div>
-        <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center">
+        {/* <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center">
           Registeration <span className="text-[#0534C7]">Deadline </span>
           Extended
-        </div>
-
-        {/* <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center">
-          November <span className="text-[#0534C7]">1st–2nd</span>, 2025 | NIT
-          Rourkela
         </div> */}
+
+        <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center">
+          January <span className="text-[#0534C7]">3rd–4th</span>, 2026 | NIT
+          Rourkela
+        </div>
         <div>
           <DevfolioAndDiscordButtons />
         </div>
