@@ -19,7 +19,7 @@ export const brochures: Brochure[] = [
     id: 1,
     title: 'Event Brochure',
     pdfUrl:
-      'https://drive.google.com/file/d/1avGeNfGIVMoP0B0rxqmwkWCPKD1tkOsN/view?usp=sharing',
+      'https://drive.google.com/file/d/13uAHJGYJoVjyVpUrP889SoPHeGvv-GJe/view',
     description: 'Complete details about HackNITR 7.0',
     comingSoon: false,
   },
