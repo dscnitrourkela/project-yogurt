@@ -26,6 +26,11 @@ export const SponsorsData = {
       logo: 'https://res.cloudinary.com/dhv234qct/image/upload/v1736925948/hn6/6.0%20spons/x8c696hj5wqhumhqcwol.png',
       category: 'Beta',
       link: 'https://ethindia.co',
+    },{
+      name: 'Pathway',
+      logo: 'https://res.cloudinary.com/dscnitrourkela/image/upload/v1766597974/hacknitr/a0mxv8dm0e3cjsdvmyxl.svg',
+      category: 'Beta',
+      link: 'https://pathway.com/',
     },
   ],
   Gamma: [
