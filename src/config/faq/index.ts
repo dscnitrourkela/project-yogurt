@@ -24,14 +24,6 @@ export const questions: Question[] = [
     fontSizeScaling: 'text-[clamp(0.8rem,3vw,1rem)]',
   },
   {
-    question: 'What is the participation fee?',
-    answer:
-      'Only a creative mind, enthusiasm, and interest are required to participate in the hackathon. In short, the hackathon is entirely free and without monetary charges.',
-    answerStyle: 'h-40',
-    questionStyle: 'mb-30 -bottom-30',
-    fontSizeScaling: 'text-[clamp(0.72rem,3vw,1rem)]',
-  },
-  {
     question: 'Will my travel expenses be reimbursed?',
     answer:
       'Since HackNITR 7.0 is a student-run hackathon, we will not be able to cover your travel expenses.',
